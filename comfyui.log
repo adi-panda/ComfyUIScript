@@ -1,212 +1,391 @@
 ## ComfyUI-Manager: installing dependencies done.
-[2024-05-21 02:12] ** ComfyUI startup time: 2024-05-21 02:12:24.235750
-[2024-05-21 02:12] ** Platform: Linux
-[2024-05-21 02:12] ** Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
-[2024-05-21 02:12] ** Python executable: /usr/bin/python
-[2024-05-21 02:12] ** Log path: /home/ubuntu/ComfyUIScript/comfyui.log
-[2024-05-21 02:12] 
-#######################################################################
-[2024-05-21 02:12] [ComfyUI-Manager] Starting dependency installation/(de)activation for the extension
-[2024-05-21 02:12] 
-[2024-05-21 02:12] Install: pip packages for '/home/ubuntu/ComfyUIScript/custom_nodes/was-node-suite-comfyui'
-[2024-05-21 02:12]  Defaulting to user installation because normal site-packages is not writeable
-[2024-05-21 02:12]  Collecting git+https://github.com/WASasquatch/img2texture.git
-[2024-05-21 02:12]    Cloning https://github.com/WASasquatch/img2texture.git to /tmp/pip-req-build-p_gz7d4w
-[2024-05-21 02:12] [!]   Running command git clone --filter=blob:none --quiet https://github.com/WASasquatch/img2texture.git /tmp/pip-req-build-p_gz7d4w
-[2024-05-21 02:12]    Resolved https://github.com/WASasquatch/img2texture.git to commit a546609a915caf1dcb84a15bf44b5b639ad924e6
-[2024-05-21 02:12]    Preparing metadata (setup.py): started
-[2024-05-21 02:12]    Preparing metadata (setup.py): finished with status 'done'
-[2024-05-21 02:12]  [!] DEPRECATION: flatbuffers 1.12.1-git20200711.33e2d80-dfsg1-0.6 has a non-standard version number. pip 24.0 will enforce this behaviour change. A possible replacement is to upgrade to a newer version of flatbuffers or contact the author to suggest that they release a version with a conforming version number. Discussion can be found at https://github.com/pypa/pip/issues/12063
-[2024-05-21 02:12] [!] 
-[2024-05-21 02:12] [!] [notice] A new release of pip is available: 23.3.1 -> 24.0
-[2024-05-21 02:12] [!] [notice] To update, run: python -m pip install --upgrade pip
-[2024-05-21 02:12]  Defaulting to user installation because normal site-packages is not writeable
-[2024-05-21 02:12]  Collecting git+https://github.com/WASasquatch/cstr
-[2024-05-21 02:12]    Cloning https://github.com/WASasquatch/cstr to /tmp/pip-req-build-j24yvfhq
-[2024-05-21 02:12] [!]   Running command git clone --filter=blob:none --quiet https://github.com/WASasquatch/cstr /tmp/pip-req-build-j24yvfhq
-[2024-05-21 02:12]    Resolved https://github.com/WASasquatch/cstr to commit 0520c29a18a7a869a6e5983861d6f7a4c86f8e9b
-[2024-05-21 02:12]    Preparing metadata (setup.py): started
-[2024-05-21 02:12]    Preparing metadata (setup.py): finished with status 'done'
-[2024-05-21 02:12] [!] DEPRECATION: flatbuffers 1.12.1-git20200711.33e2d80-dfsg1-0.6 has a non-standard version number. pip 24.0 will enforce this behaviour change. A possible replacement is to upgrade to a newer version of flatbuffers or contact the author to suggest that they release a version with a conforming version number. Discussion can be found at https://github.com/pypa/pip/issues/12063
-[2024-05-21 02:12] [!] 
-[2024-05-21 02:12] [!] [notice] A new release of pip is available: 23.3.1 -> 24.0
-[2024-05-21 02:12] [!] [notice] To update, run: python -m pip install --upgrade pip
-[2024-05-21 02:12]  Defaulting to user installation because normal site-packages is not writeable
-[2024-05-21 02:12]    [!] DEPRECATION: flatbuffers 1.12.1-git20200711.33e2d80-dfsg1-0.6 has a non-standard version number. pip 24.0 will enforce this behaviour change. A possible replacement is to upgrade to a newer version of flatbuffers or contact the author to suggest that they release a version with a conforming version number. Discussion can be found at https://github.com/pypa/pip/issues/12063
-[2024-05-21 02:12] [!] 
-[2024-05-21 02:12] [!] [notice] A new release of pip is available: 23.3.1 -> 24.0
-[2024-05-21 02:12] [!] [notice] To update, run: python -m pip install --upgrade pip
-[2024-05-21 02:12]  Defaulting to user installation because normal site-packages is not writeable
-[2024-05-21 02:12]   [!] WARNING: opencv-python-headless 4.7.0.72 does not provide the extra 'ffmpeg'
-[2024-05-21 02:12] [!] DEPRECATION: flatbuffers 1.12.1-git20200711.33e2d80-dfsg1-0.6 has a non-standard version number. pip 24.0 will enforce this behaviour change. A possible replacement is to upgrade to a newer version of flatbuffers or contact the author to suggest that they release a version with a conforming version number. Discussion can be found at https://github.com/pypa/pip/issues/12063
-[2024-05-21 02:12] [!] 
-[2024-05-21 02:12] [!] [notice] A new release of pip is available: 23.3.1 -> 24.0
-[2024-05-21 02:12] [!] [notice] To update, run: python -m pip install --upgrade pip
-[2024-05-21 02:12]  Defaulting to user installation because normal site-packages is not writeable
-[2024-05-21 02:12]  Collecting git+https://github.com/WASasquatch/ffmpy.git
-[2024-05-21 02:12]    Cloning https://github.com/WASasquatch/ffmpy.git to /tmp/pip-req-build-yckh9usd
-[2024-05-21 02:12] [!]   Running command git clone --filter=blob:none --quiet https://github.com/WASasquatch/ffmpy.git /tmp/pip-req-build-yckh9usd
-[2024-05-21 02:12]    Resolved https://github.com/WASasquatch/ffmpy.git to commit f000737698b387ffaeab7cd871b0e9185811230d
-[2024-05-21 02:12]    Preparing metadata (setup.py): started
-[2024-05-21 02:12]    Preparing metadata (setup.py): finished with status 'done'
-[2024-05-21 02:12] [!] DEPRECATION: flatbuffers 1.12.1-git20200711.33e2d80-dfsg1-0.6 has a non-standard version number. pip 24.0 will enforce this behaviour change. A possible replacement is to upgrade to a newer version of flatbuffers or contact the author to suggest that they release a version with a conforming version number. Discussion can be found at https://github.com/pypa/pip/issues/12063
-[2024-05-21 02:12] [!] 
-[2024-05-21 02:12] [!] [notice] A new release of pip is available: 23.3.1 -> 24.0
-[2024-05-21 02:12] [!] [notice] To update, run: python -m pip install --upgrade pip
-[2024-05-21 02:12] 
-[ComfyUI-Manager] Startup script completed.
-[2024-05-21 02:12] #######################################################################
-[2024-05-21 02:12] 
-[2024-05-21 02:12] 
+[2024-05-21 21:02] ** ComfyUI startup time: 2024-05-21 21:02:26.629577
+[2024-05-21 21:02] ** Platform: Linux
+[2024-05-21 21:02] ** Python version: 3.10.12 (main, Jun 11 2023, 05:26:28) [GCC 11.4.0]
+[2024-05-21 21:02] ** Python executable: /usr/bin/python
+[2024-05-21 21:02] ** Log path: /root/ComfyUIScript/comfyui.log
+[2024-05-21 21:02] 
 Prestartup times for custom nodes:
-[2024-05-21 02:12]   11.6 seconds: /home/ubuntu/ComfyUIScript/custom_nodes/ComfyUI_Manager
-[2024-05-21 02:12] 
-Total VRAM 22516 MB, total RAM 227489 MB
-[2024-05-21 02:12] pytorch version: 2.0.1
-[2024-05-21 02:12] Set vram state to: NORMAL_VRAM
-[2024-05-21 02:12] Device: cuda:0 NVIDIA A10 : cudaMallocAsync
-[2024-05-21 02:12] VAE dtype: torch.bfloat16
-[2024-05-21 02:12] Using pytorch cross attention
-[2024-05-21 02:12] [34mWAS Node Suite: [0mOpenCV Python installed.[0m
-[2024-05-21 02:12] [34mWAS Node Suite: [0mFinished.[0m [32mLoaded[0m [0m212[0m [32mnodes successfully.[0m
-[2024-05-21 02:12] 
-	[3m[93m"Be the change that you wish to see in the world."[0m[3m - Mahatma Gandhi[0m
-[2024-05-21 02:12] 
-[2024-05-21 02:12] ### Loading: ComfyUI-Manager (V2.34.1)
-[2024-05-21 02:12] ### ComfyUI Revision: 2198 [1900e511] | Released on '2024-05-20'
-[2024-05-21 02:12] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/alter-list.json
-[2024-05-21 02:12] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/model-list.json
-[2024-05-21 02:12] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/custom-node-list.json
-[2024-05-21 02:12] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/github-stats.json
-[2024-05-21 02:12] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/extension-node-map.json
-[2024-05-21 02:12] /home/ubuntu/.local/lib/python3.10/site-packages/numba/np/ufunc/parallel.py:371: NumbaWarning: [1mThe TBB threading layer requires TBB version 2021 update 6 or later i.e., TBB_INTERFACE_VERSION >= 12060. Found TBB_INTERFACE_VERSION = 12050. The TBB threading layer is disabled.[0m
-  warnings.warn(problem)
-[2024-05-21 02:12] Note: NumExpr detected 30 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
-[2024-05-21 02:12] NumExpr defaulting to 8 threads.
-[2024-05-21 02:12] [36;20m[comfy_mtb] | INFO -> loaded [96m75[0m nodes successfuly[0m
-[2024-05-21 02:12] [36;20m[comfy_mtb] | INFO -> Some nodes (3) could not be loaded. This can be ignored, but go to http://127.0.0.1:8188/mtb if you want more information.[0m
-[2024-05-21 02:12] 
+[2024-05-21 21:02]    0.1 seconds: /root/ComfyUIScript/custom_nodes/ComfyUI_Manager
+[2024-05-21 21:02] 
+Total VRAM 16109 MB, total RAM 225417 MB
+[2024-05-21 21:02] pytorch version: 2.1.0+cu118
+[2024-05-21 21:02] Set vram state to: NORMAL_VRAM
+[2024-05-21 21:02] Device: cuda:0 NVIDIA RTX A4000 : cudaMallocAsync
+[2024-05-21 21:02] VAE dtype: torch.bfloat16
+[2024-05-21 21:02] Using pytorch cross attention
+[2024-05-21 21:02] ### Loading: ComfyUI-Manager (V2.34.1)
+[2024-05-21 21:02] ### ComfyUI Revision: 2199 [ba8c0c78] | Released on '2024-05-21'
+[2024-05-21 21:02] 
 Import times for custom nodes:
-[2024-05-21 02:12]    0.0 seconds: /home/ubuntu/ComfyUIScript/custom_nodes/websocket_image_save.py
-[2024-05-21 02:12]    0.0 seconds: /home/ubuntu/ComfyUIScript/custom_nodes/masquerade-nodes-comfyui
-[2024-05-21 02:12]    0.0 seconds: /home/ubuntu/ComfyUIScript/custom_nodes/ComfyUI_JPS-Nodes
-[2024-05-21 02:12]    0.0 seconds: /home/ubuntu/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes
-[2024-05-21 02:12]    0.0 seconds: /home/ubuntu/ComfyUIScript/custom_nodes/ComfyUI_Manager
-[2024-05-21 02:12]    1.6 seconds: /home/ubuntu/ComfyUIScript/custom_nodes/was-node-suite-comfyui
-[2024-05-21 02:12]    2.1 seconds: /home/ubuntu/ComfyUIScript/custom_nodes/comfy_mtb
-[2024-05-21 02:12] 
-[2024-05-21 02:12] Starting server
+[2024-05-21 21:02]    0.0 seconds: /root/ComfyUIScript/custom_nodes/websocket_image_save.py
+[2024-05-21 21:02]    0.0 seconds: /root/ComfyUIScript/custom_nodes/ComfyUI_Manager
+[2024-05-21 21:02] 
+[2024-05-21 21:02] Starting server
 
-[2024-05-21 02:12] To see the GUI go to: http://127.0.0.1:8188
-[2024-05-21 02:12] FETCH DATA from: /home/ubuntu/ComfyUIScript/custom_nodes/ComfyUI_Manager/extension-node-map.json [DONE]
-[2024-05-21 02:12] got prompt
-[2024-05-21 02:12] model_type EPS
-[2024-05-21 02:12] Using pytorch attention in VAE
-[2024-05-21 02:12] Using pytorch attention in VAE
-[2024-05-21 02:12] Requested to load SDXLClipModel
-[2024-05-21 02:12] Loading 1 new model
-[2024-05-21 02:12] Requested to load AutoencoderKL
-[2024-05-21 02:12] Loading 1 new model
-[2024-05-21 02:12] Requested to load SDXL
-[2024-05-21 02:12] Loading 1 new model
-[2024-05-21 02:12] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:06<00:00,  3.27it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:06<00:00,  3.30it/s]
-[2024-05-21 02:12] Requested to load AutoencoderKL
-[2024-05-21 02:12] Loading 1 new model
-[2024-05-21 02:13] Prompt executed in 11.77 seconds
-[2024-05-21 02:15] got prompt
-[2024-05-21 02:15] Requested to load SDXL
-[2024-05-21 02:15] Loading 1 new model
-[2024-05-21 02:15] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.27it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.37it/s]
-[2024-05-21 02:15] Requested to load AutoencoderKL
-[2024-05-21 02:15] Loading 1 new model
-[2024-05-21 02:15] Prompt executed in 8.37 seconds
-[2024-05-21 02:15] got prompt
-[2024-05-21 02:15] Requested to load SDXL
-[2024-05-21 02:15] Loading 1 new model
-[2024-05-21 02:16] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.30it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.39it/s]
-[2024-05-21 02:16] Requested to load AutoencoderKL
-[2024-05-21 02:16] Loading 1 new model
-[2024-05-21 02:16] Prompt executed in 7.77 seconds
-[2024-05-21 02:16] got prompt
-[2024-05-21 02:16] Requested to load SDXL
-[2024-05-21 02:16] Loading 1 new model
-[2024-05-21 02:16] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.30it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.40it/s]
-[2024-05-21 02:16] Requested to load AutoencoderKL
-[2024-05-21 02:16] Loading 1 new model
-[2024-05-21 02:16] Prompt executed in 7.79 seconds
-[2024-05-21 02:16] got prompt
-[2024-05-21 02:16] Failed to validate prompt for output 297:
-[2024-05-21 02:16] * Images to RGB 329:
-[2024-05-21 02:16]   - Required input is missing: images
-[2024-05-21 02:16] Output will be ignored
-[2024-05-21 02:16] !!! Exception during processing!!! too many indices for tensor of dimension 3
-[2024-05-21 02:16] Traceback (most recent call last):
-  File "/home/ubuntu/ComfyUIScript/execution.py", line 151, in recursive_execute
-    output_data, output_ui = get_output_data(obj, input_data_all)
-  File "/home/ubuntu/ComfyUIScript/execution.py", line 81, in get_output_data
-    return_values = map_node_over_list(obj, input_data_all, obj.FUNCTION, allow_interrupt=True)
-  File "/home/ubuntu/ComfyUIScript/execution.py", line 74, in map_node_over_list
-    results.append(getattr(obj, func)(**slice_dict(input_data_all, i)))
-  File "/home/ubuntu/ComfyUIScript/comfy_extras/nodes_mask.py", line 129, in image_to_mask
-    mask = image[:, :, :, channels.index(channel)]
-IndexError: too many indices for tensor of dimension 3
-
-[2024-05-21 02:16] Prompt executed in 0.02 seconds
-[2024-05-21 02:16] got prompt
-[2024-05-21 02:16] !!! Exception during processing!!! too many indices for tensor of dimension 3
-[2024-05-21 02:16] Traceback (most recent call last):
-  File "/home/ubuntu/ComfyUIScript/execution.py", line 151, in recursive_execute
-    output_data, output_ui = get_output_data(obj, input_data_all)
-  File "/home/ubuntu/ComfyUIScript/execution.py", line 81, in get_output_data
-    return_values = map_node_over_list(obj, input_data_all, obj.FUNCTION, allow_interrupt=True)
-  File "/home/ubuntu/ComfyUIScript/execution.py", line 74, in map_node_over_list
-    results.append(getattr(obj, func)(**slice_dict(input_data_all, i)))
-  File "/home/ubuntu/ComfyUIScript/comfy_extras/nodes_mask.py", line 129, in image_to_mask
-    mask = image[:, :, :, channels.index(channel)]
-IndexError: too many indices for tensor of dimension 3
-
-[2024-05-21 02:16] Prompt executed in 0.02 seconds
-[2024-05-21 02:17] got prompt
-[2024-05-21 02:17] Requested to load SDXL
-[2024-05-21 02:17] Loading 1 new model
-[2024-05-21 02:17] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.31it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.38it/s]
-[2024-05-21 02:17] Requested to load AutoencoderKL
-[2024-05-21 02:17] Loading 1 new model
-[2024-05-21 02:17] Prompt executed in 7.83 seconds
-[2024-05-21 02:17] got prompt
-[2024-05-21 02:17] Requested to load SDXL
-[2024-05-21 02:17] Loading 1 new model
-[2024-05-21 02:18] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.30it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.40it/s]
-[2024-05-21 02:18] Requested to load AutoencoderKL
-[2024-05-21 02:18] Loading 1 new model
-[2024-05-21 02:18] Prompt executed in 7.74 seconds
-[2024-05-21 02:18] got prompt
-[2024-05-21 02:18] Requested to load SDXL
-[2024-05-21 02:18] Loading 1 new model
-[2024-05-21 02:18] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.29it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.40it/s]
-[2024-05-21 02:18] Requested to load AutoencoderKL
-[2024-05-21 02:18] Loading 1 new model
-[2024-05-21 02:18] Prompt executed in 7.77 seconds
-[2024-05-21 02:20] got prompt
-[2024-05-21 02:20] Requested to load SDXL
-[2024-05-21 02:20] Loading 1 new model
-[2024-05-21 02:20] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.31it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.38it/s]
-[2024-05-21 02:20] Requested to load AutoencoderKL
-[2024-05-21 02:20] Loading 1 new model
-[2024-05-21 02:20] Prompt executed in 8.29 seconds
-[2024-05-21 02:20] got prompt
-[2024-05-21 02:20] Requested to load SDXL
-[2024-05-21 02:20] Loading 1 new model
-[2024-05-21 02:20] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.30it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.40it/s]
-[2024-05-21 02:20] Requested to load AutoencoderKL
-[2024-05-21 02:20] Loading 1 new model
-[2024-05-21 02:20] Prompt executed in 7.66 seconds
-[2024-05-21 02:20] got prompt
-[2024-05-21 02:20] Requested to load SDXL
-[2024-05-21 02:20] Loading 1 new model
-[2024-05-21 02:20] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.29it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.39it/s]
-[2024-05-21 02:20] Requested to load AutoencoderKL
-[2024-05-21 02:20] Loading 1 new model
-[2024-05-21 02:21] Prompt executed in 7.98 seconds
-[2024-05-21 02:21] 
+[2024-05-21 21:02] To see the GUI go to: http://127.0.0.1:8188
+[2024-05-21 21:02] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/model-list.json
+[2024-05-21 21:02] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/extension-node-map.json
+[2024-05-21 21:02] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/alter-list.json
+[2024-05-21 21:02] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/custom-node-list.json
+[2024-05-21 21:02] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/github-stats.json
+[2024-05-21 21:02] FETCH DATA from: /root/ComfyUIScript/custom_nodes/ComfyUI_Manager/extension-node-map.json [DONE]
+[2024-05-21 21:02] FETCH DATA from: /root/ComfyUIScript/custom_nodes/ComfyUI_Manager/.cache/1514988643_custom-node-list.json [DONE]
+[2024-05-21 21:02] FETCH DATA from: /root/ComfyUIScript/custom_nodes/ComfyUI_Manager/.cache/746607195_github-stats.json [DONE]
+[2024-05-21 21:02] FETCH DATA from: /root/ComfyUIScript/custom_nodes/ComfyUI_Manager/.cache/1742899825_extension-node-map.json [DONE]
+[2024-05-21 21:02] FETCH DATA from: /root/ComfyUIScript/custom_nodes/ComfyUI_Manager/.cache/1742899825_extension-node-map.json [DONE]
+[2024-05-21 21:02] FETCH DATA from: /root/ComfyUIScript/custom_nodes/ComfyUI_Manager/custom-node-list.json [DONE]
+[2024-05-21 21:02] FETCH DATA from: https://github.com/ltdrdata/ComfyUI-Manager/raw/main/custom-node-list.json/custom-node-list.json[ComfyUI-Manager] Due to a network error, switching to local mode.
+=> custom-node-list.json
+=> Expecting value: line 7 column 1 (char 6)
+[2024-05-21 21:02] FETCH DATA from: /root/ComfyUIScript/custom_nodes/ComfyUI_Manager/custom-node-list.json [DONE]
+[2024-05-21 21:02] Install custom node 'WAS Node Suite'
+[2024-05-21 21:02] Install: ['https://github.com/WASasquatch/was-node-suite-comfyui']
+[2024-05-21 21:02] Download: git clone 'https://github.com/WASasquatch/was-node-suite-comfyui'
+[2024-05-21 21:02] 0it [00:00, ?it/s]100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 705.0/705.0 [00:00<00:00, 1144.58it/s]100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 705.0/705.0 [00:00<00:00, 1143.95it/s]100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 252.0/252.0 [00:00<00:00, 314.35it/s]100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 252.0/252.0 [00:00<00:00, 314.26it/s]100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2117.0/2117.0 [00:02<00:00, 759.48it/s]100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2117.0/2117.0 [00:02<00:00, 759.40it/s]100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1295.0/1295.0 [00:02<00:00, 447.97it/s]100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1295.0/1295.0 [00:02<00:00, 447.91it/s]100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1295.0/1295.0 [00:03<00:00, 419.36it/s]
+[2024-05-21 21:02] Install: pip packages
+[2024-05-21 21:02] 
+## ComfyUI-Manager: EXECUTE => ['/usr/bin/python', '-m', 'pip', 'install', 'cmake']
+[2024-05-21 21:02]  Collecting cmake
+[2024-05-21 21:02]    Downloading cmake-3.29.3-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.1 kB)
+[2024-05-21 21:02]  Downloading cmake-3.29.3-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (26.7 MB)
+[2024-05-21 21:02]     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 26.7/26.7 MB 90.8 MB/s eta 0:00:00
+[2024-05-21 21:02]  Installing collected packages: cmake
+[2024-05-21 21:03]  Successfully installed cmake-3.29.3
+[2024-05-21 21:03] [2024-05-21 21:03] [!] WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+[2024-05-21 21:03] [!] 
+[2024-05-21 21:03] [!] [notice] A new release of pip is available: 23.3.1 -> 24.0
+[2024-05-21 21:03] [!] [notice] To update, run: python -m pip install --upgrade pip
+[2024-05-21 21:03] 
+## ComfyUI-Manager: EXECUTE => ['/usr/bin/python', '-m', 'pip', 'install', 'fairscale>=0.4.4']
+[2024-05-21 21:03]  Collecting fairscale>=0.4.4
+[2024-05-21 21:03]    Downloading fairscale-0.4.13.tar.gz (266 kB)
+[2024-05-21 21:03]       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 266.3/266.3 kB 6.2 MB/s eta 0:00:00
+[2024-05-21 21:03]    Installing build dependencies: started
+[2024-05-21 21:03]    Installing build dependencies: finished with status 'done'
+[2024-05-21 21:03]    Getting requirements to build wheel: started
+[2024-05-21 21:03]    Getting requirements to build wheel: finished with status 'done'
+[2024-05-21 21:03]    Installing backend dependencies: started
+[2024-05-21 21:03]    Installing backend dependencies: finished with status 'done'
+[2024-05-21 21:03]    Preparing metadata (pyproject.toml): started
+[2024-05-21 21:03]    Preparing metadata (pyproject.toml): finished with status 'done'
+[2024-05-21 21:03]             Building wheels for collected packages: fairscale
+[2024-05-21 21:03]    Building wheel for fairscale (pyproject.toml): started
+[2024-05-21 21:03]    Building wheel for fairscale (pyproject.toml): finished with status 'done'
+[2024-05-21 21:03]    Created wheel for fairscale: filename=fairscale-0.4.13-py3-none-any.whl size=332108 sha256=18a799eb44e667cbe2893ca59d5ce04685c22e5f6ccb3f69040f1f10f8e5136c
+[2024-05-21 21:03]    Stored in directory: /root/.cache/pip/wheels/78/a4/c0/fb0a7ef03cff161611c3fa40c6cf898f76e58ec421b88e8cb3
+[2024-05-21 21:03]  Successfully built fairscale
+[2024-05-21 21:03]  Installing collected packages: fairscale
+[2024-05-21 21:03]  Successfully installed fairscale-0.4.13
+[2024-05-21 21:03] [!] WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+[2024-05-21 21:03] [!] 
+[2024-05-21 21:03] [!] [notice] A new release of pip is available: 23.3.1 -> 24.0
+[2024-05-21 21:03] [!] [notice] To update, run: python -m pip install --upgrade pip
+[2024-05-21 21:03] 
+## ComfyUI-Manager: EXECUTE => ['/usr/bin/python', '-m', 'pip', 'install', 'git+https://github.com/WASasquatch/img2texture.git']
+[2024-05-21 21:03]  Collecting git+https://github.com/WASasquatch/img2texture.git
+[2024-05-21 21:03]    Cloning https://github.com/WASasquatch/img2texture.git to /tmp/pip-req-build-2vkrqqva
+[2024-05-21 21:03] [!]   Running command git clone --filter=blob:none --quiet https://github.com/WASasquatch/img2texture.git /tmp/pip-req-build-2vkrqqva
+[2024-05-21 21:03]    Resolved https://github.com/WASasquatch/img2texture.git to commit a546609a915caf1dcb84a15bf44b5b639ad924e6
+[2024-05-21 21:03]    Preparing metadata (setup.py): started
+[2024-05-21 21:03]    Preparing metadata (setup.py): finished with status 'done'
+[2024-05-21 21:03]   Building wheels for collected packages: img2texture
+[2024-05-21 21:03]    Building wheel for img2texture (setup.py): started
+[2024-05-21 21:03]    Building wheel for img2texture (setup.py): finished with status 'done'
+[2024-05-21 21:03]    Created wheel for img2texture: filename=img2texture-1.0.6-py3-none-any.whl size=8367 sha256=413b7b48d97b4d484a8d3e76604efb06468f54aa8e25fb6541f54e10fce6a422
+[2024-05-21 21:03]    Stored in directory: /tmp/pip-ephem-wheel-cache-6sz6smy2/wheels/ef/01/9f/2a02c1af22973c81e59b3e7c5a63a57bc73050b9176aa479d2
+[2024-05-21 21:03]  Successfully built img2texture
+[2024-05-21 21:03]  Installing collected packages: img2texture
+[2024-05-21 21:03]  Successfully installed img2texture-1.0.6
+[2024-05-21 21:03] [!] WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+[2024-05-21 21:03] [!] 
+[2024-05-21 21:03] [!] [notice] A new release of pip is available: 23.3.1 -> 24.0
+[2024-05-21 21:03] [!] [notice] To update, run: python -m pip install --upgrade pip
+[2024-05-21 21:03] 
+## ComfyUI-Manager: EXECUTE => ['/usr/bin/python', '-m', 'pip', 'install', 'git+https://github.com/WASasquatch/cstr']
+[2024-05-21 21:03]  Collecting git+https://github.com/WASasquatch/cstr
+[2024-05-21 21:03]    Cloning https://github.com/WASasquatch/cstr to /tmp/pip-req-build-h74a5t4s
+[2024-05-21 21:03] [!]   Running command git clone --filter=blob:none --quiet https://github.com/WASasquatch/cstr /tmp/pip-req-build-h74a5t4s
+[2024-05-21 21:03]    Resolved https://github.com/WASasquatch/cstr to commit 0520c29a18a7a869a6e5983861d6f7a4c86f8e9b
+[2024-05-21 21:03]    Preparing metadata (setup.py): started
+[2024-05-21 21:03]    Preparing metadata (setup.py): finished with status 'done'
+[2024-05-21 21:03]  Building wheels for collected packages: cstr
+[2024-05-21 21:03]    Building wheel for cstr (setup.py): started
+[2024-05-21 21:03]    Building wheel for cstr (setup.py): finished with status 'done'
+[2024-05-21 21:03]    Created wheel for cstr: filename=cstr-0.1.0-py3-none-any.whl size=2832 sha256=5e7066803cf3213872aa6e9e27b1db14923489e9148abaf150593b3b0f6e462a
+[2024-05-21 21:03]    Stored in directory: /tmp/pip-ephem-wheel-cache-o7ak311f/wheels/89/3f/37/64121630832f72f13d3af8bb065e97483aa6e038bb27dd941a
+[2024-05-21 21:03]  Successfully built cstr
+[2024-05-21 21:03]  Installing collected packages: cstr
+[2024-05-21 21:03]  Successfully installed cstr-0.1.0
+[2024-05-21 21:03] [!] WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+[2024-05-21 21:03] [!] 
+[2024-05-21 21:03] [!] [notice] A new release of pip is available: 23.3.1 -> 24.0
+[2024-05-21 21:03] [!] [notice] To update, run: python -m pip install --upgrade pip
+[2024-05-21 21:03] 
+## ComfyUI-Manager: EXECUTE => ['/usr/bin/python', '-m', 'pip', 'install', 'gitpython']
+[2024-05-21 21:03]    [!] WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+[2024-05-21 21:03] [!] 
+[2024-05-21 21:03] [!] [notice] A new release of pip is available: 23.3.1 -> 24.0
+[2024-05-21 21:03] [!] [notice] To update, run: python -m pip install --upgrade pip
+[2024-05-21 21:03] 
+## ComfyUI-Manager: EXECUTE => ['/usr/bin/python', '-m', 'pip', 'install', 'imageio']
+[2024-05-21 21:03]  Collecting imageio
+[2024-05-21 21:03]    Downloading imageio-2.34.1-py3-none-any.whl.metadata (4.9 kB)
+[2024-05-21 21:03]    Downloading imageio-2.34.1-py3-none-any.whl (313 kB)
+[2024-05-21 21:03]     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 313.5/313.5 kB 6.2 MB/s eta 0:00:00
+[2024-05-21 21:03]  Installing collected packages: imageio
+[2024-05-21 21:03]  Successfully installed imageio-2.34.1
+[2024-05-21 21:03] [!] WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+[2024-05-21 21:03] [!] 
+[2024-05-21 21:03] [!] [notice] A new release of pip is available: 23.3.1 -> 24.0
+[2024-05-21 21:03] [!] [notice] To update, run: python -m pip install --upgrade pip
+[2024-05-21 21:03] 
+## ComfyUI-Manager: EXECUTE => ['/usr/bin/python', '-m', 'pip', 'install', 'joblib']
+[2024-05-21 21:03]  Collecting joblib
+[2024-05-21 21:03]    Downloading joblib-1.4.2-py3-none-any.whl.metadata (5.4 kB)
+[2024-05-21 21:03]  Downloading joblib-1.4.2-py3-none-any.whl (301 kB)
+[2024-05-21 21:03]     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 301.8/301.8 kB 3.1 MB/s eta 0:00:00
+[2024-05-21 21:03]  Installing collected packages: joblib
+[2024-05-21 21:03]  Successfully installed joblib-1.4.2
+[2024-05-21 21:03] [!] WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+[2024-05-21 21:03] [!] 
+[2024-05-21 21:03] [!] [notice] A new release of pip is available: 23.3.1 -> 24.0
+[2024-05-21 21:03] [!] [notice] To update, run: python -m pip install --upgrade pip
+[2024-05-21 21:03] 
+## ComfyUI-Manager: EXECUTE => ['/usr/bin/python', '-m', 'pip', 'install', 'matplotlib']
+[2024-05-21 21:03]  Collecting matplotlib
+[2024-05-21 21:03]    Downloading matplotlib-3.9.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (11 kB)
+[2024-05-21 21:03]  Collecting contourpy>=1.0.1 (from matplotlib)
+[2024-05-21 21:03]    Downloading contourpy-1.2.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.8 kB)
+[2024-05-21 21:03]  Collecting cycler>=0.10 (from matplotlib)
+[2024-05-21 21:03]    Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+[2024-05-21 21:03]  Collecting fonttools>=4.22.0 (from matplotlib)
+[2024-05-21 21:03]    Downloading fonttools-4.51.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (159 kB)
+[2024-05-21 21:03]       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 159.5/159.5 kB 8.2 MB/s eta 0:00:00
+[2024-05-21 21:03]  Collecting kiwisolver>=1.3.1 (from matplotlib)
+[2024-05-21 21:03]    Downloading kiwisolver-1.4.5-cp310-cp310-manylinux_2_12_x86_64.manylinux2010_x86_64.whl.metadata (6.4 kB)
+[2024-05-21 21:03]        Downloading matplotlib-3.9.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (8.3 MB)
+[2024-05-21 21:03]     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 40.5 MB/s eta 0:00:00
+[2024-05-21 21:03]  Downloading contourpy-1.2.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (305 kB)
+[2024-05-21 21:03]     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 305.2/305.2 kB 57.1 MB/s eta 0:00:00
+[2024-05-21 21:03]  Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+[2024-05-21 21:03]  Downloading fonttools-4.51.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (4.6 MB)
+[2024-05-21 21:03]     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.6/4.6 MB 81.1 MB/s eta 0:00:00
+[2024-05-21 21:03]  Downloading kiwisolver-1.4.5-cp310-cp310-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (1.6 MB)
+[2024-05-21 21:03]     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 88.5 MB/s eta 0:00:00
+[2024-05-21 21:03]  Installing collected packages: kiwisolver, fonttools, cycler, contourpy, matplotlib
+[2024-05-21 21:03]  Successfully installed contourpy-1.2.1 cycler-0.12.1 fonttools-4.51.0 kiwisolver-1.4.5 matplotlib-3.9.0
+[2024-05-21 21:03] [!] WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+[2024-05-21 21:03] [!] 
+[2024-05-21 21:03] [!] [notice] A new release of pip is available: 23.3.1 -> 24.0
+[2024-05-21 21:03] [!] [notice] To update, run: python -m pip install --upgrade pip
+[2024-05-21 21:03] 
+## ComfyUI-Manager: EXECUTE => ['/usr/bin/python', '-m', 'pip', 'install', 'numba']
+[2024-05-21 21:03]  Collecting numba
+[2024-05-21 21:03]    Downloading numba-0.59.1-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.7 kB)
+[2024-05-21 21:03]  Collecting llvmlite<0.43,>=0.42.0dev0 (from numba)
+[2024-05-21 21:03]    Downloading llvmlite-0.42.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.8 kB)
+[2024-05-21 21:03]   Downloading numba-0.59.1-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (3.7 MB)
+[2024-05-21 21:03]     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.7/3.7 MB 19.2 MB/s eta 0:00:00
+[2024-05-21 21:03]  Downloading llvmlite-0.42.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (43.8 MB)
+[2024-05-21 21:03]     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 43.8/43.8 MB 80.4 MB/s eta 0:00:00
+[2024-05-21 21:03]  Installing collected packages: llvmlite, numba
+[2024-05-21 21:03]  Successfully installed llvmlite-0.42.0 numba-0.59.1
+[2024-05-21 21:03] [!] WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+[2024-05-21 21:03] [!] 
+[2024-05-21 21:03] [!] [notice] A new release of pip is available: 23.3.1 -> 24.0
+[2024-05-21 21:03] [!] [notice] To update, run: python -m pip install --upgrade pip
+[2024-05-21 21:03] 
+## ComfyUI-Manager: EXECUTE => ['/usr/bin/python', '-m', 'pip', 'install', 'numpy']
+[2024-05-21 21:03]  [!] WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+[2024-05-21 21:03] [!] 
+[2024-05-21 21:03] [!] [notice] A new release of pip is available: 23.3.1 -> 24.0
+[2024-05-21 21:03] [!] [notice] To update, run: python -m pip install --upgrade pip
+[2024-05-21 21:03] 
+## ComfyUI-Manager: EXECUTE => ['/usr/bin/python', '-m', 'pip', 'install', 'opencv-python-headless[ffmpeg]<=4.7.0.72']
+[2024-05-21 21:03]  Collecting opencv-python-headless<=4.7.0.72 (from opencv-python-headless[ffmpeg]<=4.7.0.72)
+[2024-05-21 21:03]    Downloading opencv_python_headless-4.7.0.72-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (18 kB)
+[2024-05-21 21:03]  [!] WARNING: opencv-python-headless 4.7.0.72 does not provide the extra 'ffmpeg'
+[2024-05-21 21:03]  Downloading opencv_python_headless-4.7.0.72-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (49.2 MB)
+[2024-05-21 21:03]     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 49.2/49.2 MB 9.5 MB/s eta 0:00:00
+[2024-05-21 21:03]  Installing collected packages: opencv-python-headless
+[2024-05-21 21:03]  Successfully installed opencv-python-headless-4.7.0.72
+[2024-05-21 21:03] [!] WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+[2024-05-21 21:03] [!] 
+[2024-05-21 21:03] [!] [notice] A new release of pip is available: 23.3.1 -> 24.0
+[2024-05-21 21:03] [!] [notice] To update, run: python -m pip install --upgrade pip
+[2024-05-21 21:03] 
+## ComfyUI-Manager: EXECUTE => ['/usr/bin/python', '-m', 'pip', 'install', 'pilgram']
+[2024-05-21 21:03]  Collecting pilgram
+[2024-05-21 21:03]    Downloading pilgram-1.2.1-py3-none-any.whl.metadata (4.0 kB)
+[2024-05-21 21:03]   Downloading pilgram-1.2.1-py3-none-any.whl (817 kB)
+[2024-05-21 21:03]     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 817.4/817.4 kB 9.1 MB/s eta 0:00:00
+[2024-05-21 21:03]  Installing collected packages: pilgram
+[2024-05-21 21:03]  Successfully installed pilgram-1.2.1
+[2024-05-21 21:03] [!] WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+[2024-05-21 21:03] [!] 
+[2024-05-21 21:03] [!] [notice] A new release of pip is available: 23.3.1 -> 24.0
+[2024-05-21 21:03] [!] [notice] To update, run: python -m pip install --upgrade pip
+[2024-05-21 21:03] 
+## ComfyUI-Manager: EXECUTE => ['/usr/bin/python', '-m', 'pip', 'install', 'git+https://github.com/WASasquatch/ffmpy.git']
+[2024-05-21 21:03]  Collecting git+https://github.com/WASasquatch/ffmpy.git
+[2024-05-21 21:03]    Cloning https://github.com/WASasquatch/ffmpy.git to /tmp/pip-req-build-6lrzl8da
+[2024-05-21 21:03] [!]   Running command git clone --filter=blob:none --quiet https://github.com/WASasquatch/ffmpy.git /tmp/pip-req-build-6lrzl8da
+[2024-05-21 21:03]    Resolved https://github.com/WASasquatch/ffmpy.git to commit f000737698b387ffaeab7cd871b0e9185811230d
+[2024-05-21 21:03]    Preparing metadata (setup.py): started
+[2024-05-21 21:03]    Preparing metadata (setup.py): finished with status 'done'
+[2024-05-21 21:03]  Building wheels for collected packages: ffmpy
+[2024-05-21 21:03]    Building wheel for ffmpy (setup.py): started
+[2024-05-21 21:03]    Building wheel for ffmpy (setup.py): finished with status 'done'
+[2024-05-21 21:03]    Created wheel for ffmpy: filename=ffmpy-0.3.0-py3-none-any.whl size=5497 sha256=fd84f53c66503448a7cdfbaca65e34ddbc7c4d3cc22eaa0b491507aaf4833ad0
+[2024-05-21 21:03]    Stored in directory: /tmp/pip-ephem-wheel-cache-ovllty8v/wheels/58/b8/b4/c142357beed3083ac6f76bff1206bb5923ac472c4a740e6921
+[2024-05-21 21:03]  Successfully built ffmpy
+[2024-05-21 21:03]  Installing collected packages: ffmpy
+[2024-05-21 21:03]  Successfully installed ffmpy-0.3.0
+[2024-05-21 21:03] [!] WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+[2024-05-21 21:03] [!] 
+[2024-05-21 21:03] [!] [notice] A new release of pip is available: 23.3.1 -> 24.0
+[2024-05-21 21:03] [!] [notice] To update, run: python -m pip install --upgrade pip
+[2024-05-21 21:03] 
+## ComfyUI-Manager: EXECUTE => ['/usr/bin/python', '-m', 'pip', 'install', 'rembg']
+[2024-05-21 21:03]  Collecting rembg
+[2024-05-21 21:03]    Downloading rembg-2.0.56-py3-none-any.whl.metadata (15 kB)
+[2024-05-21 21:03]    Collecting onnxruntime (from rembg)
+[2024-05-21 21:03]    Downloading onnxruntime-1.18.0-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (4.3 kB)
+[2024-05-21 21:03]    Collecting pooch (from rembg)
+[2024-05-21 21:03]    Downloading pooch-1.8.1-py3-none-any.whl.metadata (9.5 kB)
+[2024-05-21 21:03]  Collecting pymatting (from rembg)
+[2024-05-21 21:03]    Downloading PyMatting-1.1.12-py3-none-any.whl.metadata (7.4 kB)
+[2024-05-21 21:03]  Collecting scikit-image (from rembg)
+[2024-05-21 21:03]    Downloading scikit_image-0.23.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (14 kB)
+[2024-05-21 21:03]        Collecting coloredlogs (from onnxruntime->rembg)
+[2024-05-21 21:03]    Downloading coloredlogs-15.0.1-py2.py3-none-any.whl.metadata (12 kB)
+[2024-05-21 21:03]  Collecting flatbuffers (from onnxruntime->rembg)
+[2024-05-21 21:03]    Downloading flatbuffers-24.3.25-py2.py3-none-any.whl.metadata (850 bytes)
+[2024-05-21 21:03]   Collecting protobuf (from onnxruntime->rembg)
+[2024-05-21 21:03]    Downloading protobuf-5.26.1-cp37-abi3-manylinux2014_x86_64.whl.metadata (592 bytes)
+[2024-05-21 21:03]        Collecting tifffile>=2022.8.12 (from scikit-image->rembg)
+[2024-05-21 21:03]    Downloading tifffile-2024.5.10-py3-none-any.whl.metadata (32 kB)
+[2024-05-21 21:03]  Collecting lazy-loader>=0.4 (from scikit-image->rembg)
+[2024-05-21 21:03]    Downloading lazy_loader-0.4-py3-none-any.whl.metadata (7.6 kB)
+[2024-05-21 21:03]       Collecting humanfriendly>=9.1 (from coloredlogs->onnxruntime->rembg)
+[2024-05-21 21:03]    Downloading humanfriendly-10.0-py2.py3-none-any.whl.metadata (9.2 kB)
+[2024-05-21 21:03]   Downloading rembg-2.0.56-py3-none-any.whl (32 kB)
+[2024-05-21 21:03]  Downloading onnxruntime-1.18.0-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (6.8 MB)
+[2024-05-21 21:03]     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.8/6.8 MB 84.5 MB/s eta 0:00:00
+[2024-05-21 21:03]  Downloading pooch-1.8.1-py3-none-any.whl (62 kB)
+[2024-05-21 21:03]     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 63.0/63.0 kB 16.7 MB/s eta 0:00:00
+[2024-05-21 21:03]  Downloading PyMatting-1.1.12-py3-none-any.whl (52 kB)
+[2024-05-21 21:03]     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 53.0/53.0 kB 12.9 MB/s eta 0:00:00
+[2024-05-21 21:03]  Downloading scikit_image-0.23.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (14.7 MB)
+[2024-05-21 21:03]     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 14.7/14.7 MB 50.0 MB/s eta 0:00:00
+[2024-05-21 21:03]  Downloading lazy_loader-0.4-py3-none-any.whl (12 kB)
+[2024-05-21 21:03]  Downloading tifffile-2024.5.10-py3-none-any.whl (225 kB)
+[2024-05-21 21:03]     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 225.7/225.7 kB 47.4 MB/s eta 0:00:00
+[2024-05-21 21:03]  Downloading coloredlogs-15.0.1-py2.py3-none-any.whl (46 kB)
+[2024-05-21 21:03]     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 46.0/46.0 kB 9.1 MB/s eta 0:00:00
+[2024-05-21 21:03]  Downloading flatbuffers-24.3.25-py2.py3-none-any.whl (26 kB)
+[2024-05-21 21:03]  Downloading protobuf-5.26.1-cp37-abi3-manylinux2014_x86_64.whl (302 kB)
+[2024-05-21 21:03]     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 302.8/302.8 kB 59.2 MB/s eta 0:00:00
+[2024-05-21 21:03]  Downloading humanfriendly-10.0-py2.py3-none-any.whl (86 kB)
+[2024-05-21 21:03]     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 86.8/86.8 kB 18.1 MB/s eta 0:00:00
+[2024-05-21 21:03]  Installing collected packages: flatbuffers, tifffile, protobuf, lazy-loader, humanfriendly, scikit-image, pymatting, pooch, coloredlogs, onnxruntime, rembg
+[2024-05-21 21:03]  Successfully installed coloredlogs-15.0.1 flatbuffers-24.3.25 humanfriendly-10.0 lazy-loader-0.4 onnxruntime-1.18.0 pooch-1.8.1 protobuf-5.26.1 pymatting-1.1.12 rembg-2.0.56 scikit-image-0.23.2 tifffile-2024.5.10
+[2024-05-21 21:03] [!] WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+[2024-05-21 21:03] [!] 
+[2024-05-21 21:03] [!] [notice] A new release of pip is available: 23.3.1 -> 24.0
+[2024-05-21 21:03] [!] [notice] To update, run: python -m pip install --upgrade pip
+[2024-05-21 21:03] 
+## ComfyUI-Manager: EXECUTE => ['/usr/bin/python', '-m', 'pip', 'install', 'scikit-image>=0.20.0']
+[2024-05-21 21:03]          [!] WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+[2024-05-21 21:03] [!] 
+[2024-05-21 21:03] [!] [notice] A new release of pip is available: 23.3.1 -> 24.0
+[2024-05-21 21:03] [!] [notice] To update, run: python -m pip install --upgrade pip
+[2024-05-21 21:03] 
+## ComfyUI-Manager: EXECUTE => ['/usr/bin/python', '-m', 'pip', 'install', 'scikit-learn']
+[2024-05-21 21:03]  Collecting scikit-learn
+[2024-05-21 21:03]    Downloading scikit_learn-1.5.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (11 kB)
+[2024-05-21 21:04]     Collecting threadpoolctl>=3.1.0 (from scikit-learn)
+[2024-05-21 21:04]    Downloading threadpoolctl-3.5.0-py3-none-any.whl.metadata (13 kB)
+[2024-05-21 21:04]  Downloading scikit_learn-1.5.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (13.3 MB)
+[2024-05-21 21:04]     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.3/13.3 MB 71.1 MB/s eta 0:00:00
+[2024-05-21 21:04]  Downloading threadpoolctl-3.5.0-py3-none-any.whl (18 kB)
+[2024-05-21 21:04]  Installing collected packages: threadpoolctl, scikit-learn
+[2024-05-21 21:04]  Successfully installed scikit-learn-1.5.0 threadpoolctl-3.5.0
+[2024-05-21 21:04] [!] WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+[2024-05-21 21:04] [!] 
+[2024-05-21 21:04] [!] [notice] A new release of pip is available: 23.3.1 -> 24.0
+[2024-05-21 21:04] [!] [notice] To update, run: python -m pip install --upgrade pip
+[2024-05-21 21:04] 
+## ComfyUI-Manager: EXECUTE => ['/usr/bin/python', '-m', 'pip', 'install', 'scipy']
+[2024-05-21 21:04]   [!] WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+[2024-05-21 21:04] [!] 
+[2024-05-21 21:04] [!] [notice] A new release of pip is available: 23.3.1 -> 24.0
+[2024-05-21 21:04] [!] [notice] To update, run: python -m pip install --upgrade pip
+[2024-05-21 21:04] 
+## ComfyUI-Manager: EXECUTE => ['/usr/bin/python', '-m', 'pip', 'install', 'timm>=0.4.12']
+[2024-05-21 21:04]  Collecting timm>=0.4.12
+[2024-05-21 21:04]    Downloading timm-1.0.3-py3-none-any.whl.metadata (43 kB)
+[2024-05-21 21:04]       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 43.6/43.6 kB 1.8 MB/s eta 0:00:00
+[2024-05-21 21:04]                         Downloading timm-1.0.3-py3-none-any.whl (2.3 MB)
+[2024-05-21 21:04]     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.3/2.3 MB 12.0 MB/s eta 0:00:00
+[2024-05-21 21:04]  Installing collected packages: timm
+[2024-05-21 21:04]  Successfully installed timm-1.0.3
+[2024-05-21 21:04] [!] WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+[2024-05-21 21:04] [!] 
+[2024-05-21 21:04] [!] [notice] A new release of pip is available: 23.3.1 -> 24.0
+[2024-05-21 21:04] [!] [notice] To update, run: python -m pip install --upgrade pip
+[2024-05-21 21:04] 
+## ComfyUI-Manager: EXECUTE => ['/usr/bin/python', '-m', 'pip', 'install', 'tqdm']
+[2024-05-21 21:04]  [!] WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+[2024-05-21 21:04] [!] 
+[2024-05-21 21:04] [!] [notice] A new release of pip is available: 23.3.1 -> 24.0
+[2024-05-21 21:04] [!] [notice] To update, run: python -m pip install --upgrade pip
+[2024-05-21 21:04] [ComfyUI-Manager] skip black listed pip installation: 'transformers'
+[2024-05-21 21:04] Installation was successful.
+[2024-05-21 21:04] 
+## ComfyUI-Manager: EXECUTE => ['/usr/bin/python', '-m', 'pip', 'install', 'numba']
+[2024-05-21 21:04]    [!] WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+[2024-05-21 21:04] [!] 
+[2024-05-21 21:04] [!] [notice] A new release of pip is available: 23.3.1 -> 24.0
+[2024-05-21 21:04] [!] [notice] To update, run: python -m pip install --upgrade pip
+[2024-05-21 21:04] After restarting ComfyUI, please refresh the browser.
+[2024-05-21 21:04] FETCH DATA from: /root/ComfyUIScript/custom_nodes/ComfyUI_Manager/custom-node-list.json [DONE]
+[2024-05-21 21:04] FETCH DATA from: https://github.com/ltdrdata/ComfyUI-Manager/raw/main/custom-node-list.json/custom-node-list.json[ComfyUI-Manager] Due to a network error, switching to local mode.
+=> custom-node-list.json
+=> Expecting value: line 7 column 1 (char 6)
+[2024-05-21 21:04] FETCH DATA from: /root/ComfyUIScript/custom_nodes/ComfyUI_Manager/custom-node-list.json [DONE]
+[2024-05-21 21:04] Install custom node 'Masquerade Nodes'
+[2024-05-21 21:04] Install: ['https://github.com/BadCafeCode/masquerade-nodes-comfyui']
+[2024-05-21 21:04] Download: git clone 'https://github.com/BadCafeCode/masquerade-nodes-comfyui'
+0it [00:00, ?it/s]100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 19.0/19.0 [00:00<00:00, 25.61it/s]100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 19.0/19.0 [00:00<00:00, 25.60it/s]100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 10.0/10.0 [00:00<00:00, 13.42it/s]100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 10.0/10.0 [00:00<00:00, 13.42it/s]100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 54.0/54.0 [00:00<00:00, 62.92it/s]100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 54.0/54.0 [00:00<00:00, 62.90it/s]100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 28.0/28.0 [00:00<00:00, 32.43it/s]100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 28.0/28.0 [00:00<00:00, 32.42it/s]100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 28.0/28.0 [00:00<00:00, 30.51it/s]
+[2024-05-21 21:04] Installation was successful.
+[2024-05-21 21:04] After restarting ComfyUI, please refresh the browser.
+[2024-05-21 21:04] FETCH DATA from: /root/ComfyUIScript/custom_nodes/ComfyUI_Manager/custom-node-list.json [DONE]
+[2024-05-21 21:04] FETCH DATA from: https://github.com/ltdrdata/ComfyUI-Manager/raw/main/custom-node-list.json/custom-node-list.json[ComfyUI-Manager] Due to a network error, switching to local mode.
+=> custom-node-list.json
+=> Expecting value: line 7 column 1 (char 6)
+[2024-05-21 21:04] FETCH DATA from: /root/ComfyUIScript/custom_nodes/ComfyUI_Manager/custom-node-list.json [DONE]
+[2024-05-21 21:04] Install custom node 'JPS Custom Nodes for ComfyUI'
+[2024-05-21 21:04] Install: ['https://github.com/JPS-GER/ComfyUI_JPS-Nodes']
+[2024-05-21 21:04] Download: git clone 'https://github.com/JPS-GER/ComfyUI_JPS-Nodes'
+[2024-05-21 21:04] 0it [00:00, ?it/s]100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16.0/16.0 [00:00<00:00, 26.88it/s]100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16.0/16.0 [00:00<00:00, 26.87it/s]100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16.0/16.0 [00:00<00:00, 26.70it/s]100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 16.0/16.0 [00:00<00:00, 26.69it/s]100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 300.0/300.0 [00:00<00:00, 427.52it/s]100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 300.0/300.0 [00:00<00:00, 427.42it/s]100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 125.0/125.0 [00:00<00:00, 173.25it/s]100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 125.0/125.0 [00:00<00:00, 173.21it/s]100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 125.0/125.0 [00:00<00:00, 164.85it/s]
+[2024-05-21 21:04] Installation was successful.
+[2024-05-21 21:04] After restarting ComfyUI, please refresh the browser.
+[2024-05-21 21:04] FETCH DATA from: /root/ComfyUIScript/custom_nodes/ComfyUI_Manager/custom-node-list.json [DONE]
+[2024-05-21 21:04] FETCH DATA from: https://github.com/ltdrdata/ComfyUI-Manager/raw/main/custom-node-list.json/custom-node-list.json[ComfyUI-Manager] Due to a network error, switching to local mode.
+=> custom-node-list.json
+=> Expecting value: line 7 column 1 (char 6)
+[2024-05-21 21:04] FETCH DATA from: /root/ComfyUIScript/custom_nodes/ComfyUI_Manager/custom-node-list.json [DONE]
+[2024-05-21 21:04] Install custom node 'ComfyUI Inpaint Nodes'
+[2024-05-21 21:04] Install: ['https://github.com/Acly/comfyui-inpaint-nodes']
+[2024-05-21 21:04] Download: git clone 'https://github.com/Acly/comfyui-inpaint-nodes'
+[2024-05-21 21:04] 0it [00:00, ?it/s]100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 151.0/151.0 [00:00<00:00, 273.94it/s]100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 151.0/151.0 [00:00<00:00, 273.85it/s]100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 107.0/107.0 [00:00<00:00, 184.75it/s]100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 107.0/107.0 [00:00<00:00, 184.71it/s]100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 151.0/151.0 [00:00<00:00, 211.57it/s]100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 151.0/151.0 [00:00<00:00, 211.50it/s]100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 86.0/86.0 [00:00<00:00, 118.72it/s]100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 86.0/86.0 [00:00<00:00, 118.70it/s]100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 86.0/86.0 [00:00<00:00, 109.98it/s]
+[2024-05-21 21:04] Installation was successful.
+[2024-05-21 21:04] After restarting ComfyUI, please refresh the browser.
+[2024-05-21 21:04] FETCH DATA from: /root/ComfyUIScript/custom_nodes/ComfyUI_Manager/.cache/1514988643_custom-node-list.json [DONE]
+[2024-05-21 21:04] FETCH DATA from: /root/ComfyUIScript/custom_nodes/ComfyUI_Manager/.cache/746607195_github-stats.json [DONE]
+[2024-05-21 21:04] FETCH DATA from: /root/ComfyUIScript/custom_nodes/ComfyUI_Manager/.cache/1742899825_extension-node-map.json [DONE]
+[2024-05-21 21:04] FETCH DATA from: /root/ComfyUIScript/custom_nodes/ComfyUI_Manager/.cache/1742899825_extension-node-map.json [DONE]
+[2024-05-21 21:05] 
 Stopped server

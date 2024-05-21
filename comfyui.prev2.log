@@ -1,317 +1,212 @@
 ## ComfyUI-Manager: installing dependencies done.
-[2024-05-21 01:40] ** ComfyUI startup time: 2024-05-21 01:40:30.613963
-[2024-05-21 01:40] ** Platform: Linux
-[2024-05-21 01:40] ** Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
-[2024-05-21 01:40] ** Python executable: /usr/bin/python
-[2024-05-21 01:40] ** Log path: /home/ubuntu/ComfyUIScript/comfyui.log
-[2024-05-21 01:40] 
+[2024-05-21 02:12] ** ComfyUI startup time: 2024-05-21 02:12:24.235750
+[2024-05-21 02:12] ** Platform: Linux
+[2024-05-21 02:12] ** Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+[2024-05-21 02:12] ** Python executable: /usr/bin/python
+[2024-05-21 02:12] ** Log path: /home/ubuntu/ComfyUIScript/comfyui.log
+[2024-05-21 02:12] 
+#######################################################################
+[2024-05-21 02:12] [ComfyUI-Manager] Starting dependency installation/(de)activation for the extension
+[2024-05-21 02:12] 
+[2024-05-21 02:12] Install: pip packages for '/home/ubuntu/ComfyUIScript/custom_nodes/was-node-suite-comfyui'
+[2024-05-21 02:12]  Defaulting to user installation because normal site-packages is not writeable
+[2024-05-21 02:12]  Collecting git+https://github.com/WASasquatch/img2texture.git
+[2024-05-21 02:12]    Cloning https://github.com/WASasquatch/img2texture.git to /tmp/pip-req-build-p_gz7d4w
+[2024-05-21 02:12] [!]   Running command git clone --filter=blob:none --quiet https://github.com/WASasquatch/img2texture.git /tmp/pip-req-build-p_gz7d4w
+[2024-05-21 02:12]    Resolved https://github.com/WASasquatch/img2texture.git to commit a546609a915caf1dcb84a15bf44b5b639ad924e6
+[2024-05-21 02:12]    Preparing metadata (setup.py): started
+[2024-05-21 02:12]    Preparing metadata (setup.py): finished with status 'done'
+[2024-05-21 02:12]  [!] DEPRECATION: flatbuffers 1.12.1-git20200711.33e2d80-dfsg1-0.6 has a non-standard version number. pip 24.0 will enforce this behaviour change. A possible replacement is to upgrade to a newer version of flatbuffers or contact the author to suggest that they release a version with a conforming version number. Discussion can be found at https://github.com/pypa/pip/issues/12063
+[2024-05-21 02:12] [!] 
+[2024-05-21 02:12] [!] [notice] A new release of pip is available: 23.3.1 -> 24.0
+[2024-05-21 02:12] [!] [notice] To update, run: python -m pip install --upgrade pip
+[2024-05-21 02:12]  Defaulting to user installation because normal site-packages is not writeable
+[2024-05-21 02:12]  Collecting git+https://github.com/WASasquatch/cstr
+[2024-05-21 02:12]    Cloning https://github.com/WASasquatch/cstr to /tmp/pip-req-build-j24yvfhq
+[2024-05-21 02:12] [!]   Running command git clone --filter=blob:none --quiet https://github.com/WASasquatch/cstr /tmp/pip-req-build-j24yvfhq
+[2024-05-21 02:12]    Resolved https://github.com/WASasquatch/cstr to commit 0520c29a18a7a869a6e5983861d6f7a4c86f8e9b
+[2024-05-21 02:12]    Preparing metadata (setup.py): started
+[2024-05-21 02:12]    Preparing metadata (setup.py): finished with status 'done'
+[2024-05-21 02:12] [!] DEPRECATION: flatbuffers 1.12.1-git20200711.33e2d80-dfsg1-0.6 has a non-standard version number. pip 24.0 will enforce this behaviour change. A possible replacement is to upgrade to a newer version of flatbuffers or contact the author to suggest that they release a version with a conforming version number. Discussion can be found at https://github.com/pypa/pip/issues/12063
+[2024-05-21 02:12] [!] 
+[2024-05-21 02:12] [!] [notice] A new release of pip is available: 23.3.1 -> 24.0
+[2024-05-21 02:12] [!] [notice] To update, run: python -m pip install --upgrade pip
+[2024-05-21 02:12]  Defaulting to user installation because normal site-packages is not writeable
+[2024-05-21 02:12]    [!] DEPRECATION: flatbuffers 1.12.1-git20200711.33e2d80-dfsg1-0.6 has a non-standard version number. pip 24.0 will enforce this behaviour change. A possible replacement is to upgrade to a newer version of flatbuffers or contact the author to suggest that they release a version with a conforming version number. Discussion can be found at https://github.com/pypa/pip/issues/12063
+[2024-05-21 02:12] [!] 
+[2024-05-21 02:12] [!] [notice] A new release of pip is available: 23.3.1 -> 24.0
+[2024-05-21 02:12] [!] [notice] To update, run: python -m pip install --upgrade pip
+[2024-05-21 02:12]  Defaulting to user installation because normal site-packages is not writeable
+[2024-05-21 02:12]   [!] WARNING: opencv-python-headless 4.7.0.72 does not provide the extra 'ffmpeg'
+[2024-05-21 02:12] [!] DEPRECATION: flatbuffers 1.12.1-git20200711.33e2d80-dfsg1-0.6 has a non-standard version number. pip 24.0 will enforce this behaviour change. A possible replacement is to upgrade to a newer version of flatbuffers or contact the author to suggest that they release a version with a conforming version number. Discussion can be found at https://github.com/pypa/pip/issues/12063
+[2024-05-21 02:12] [!] 
+[2024-05-21 02:12] [!] [notice] A new release of pip is available: 23.3.1 -> 24.0
+[2024-05-21 02:12] [!] [notice] To update, run: python -m pip install --upgrade pip
+[2024-05-21 02:12]  Defaulting to user installation because normal site-packages is not writeable
+[2024-05-21 02:12]  Collecting git+https://github.com/WASasquatch/ffmpy.git
+[2024-05-21 02:12]    Cloning https://github.com/WASasquatch/ffmpy.git to /tmp/pip-req-build-yckh9usd
+[2024-05-21 02:12] [!]   Running command git clone --filter=blob:none --quiet https://github.com/WASasquatch/ffmpy.git /tmp/pip-req-build-yckh9usd
+[2024-05-21 02:12]    Resolved https://github.com/WASasquatch/ffmpy.git to commit f000737698b387ffaeab7cd871b0e9185811230d
+[2024-05-21 02:12]    Preparing metadata (setup.py): started
+[2024-05-21 02:12]    Preparing metadata (setup.py): finished with status 'done'
+[2024-05-21 02:12] [!] DEPRECATION: flatbuffers 1.12.1-git20200711.33e2d80-dfsg1-0.6 has a non-standard version number. pip 24.0 will enforce this behaviour change. A possible replacement is to upgrade to a newer version of flatbuffers or contact the author to suggest that they release a version with a conforming version number. Discussion can be found at https://github.com/pypa/pip/issues/12063
+[2024-05-21 02:12] [!] 
+[2024-05-21 02:12] [!] [notice] A new release of pip is available: 23.3.1 -> 24.0
+[2024-05-21 02:12] [!] [notice] To update, run: python -m pip install --upgrade pip
+[2024-05-21 02:12] 
+[ComfyUI-Manager] Startup script completed.
+[2024-05-21 02:12] #######################################################################
+[2024-05-21 02:12] 
+[2024-05-21 02:12] 
 Prestartup times for custom nodes:
-[2024-05-21 01:40]    0.1 seconds: /home/ubuntu/ComfyUIScript/custom_nodes/ComfyUI_Manager
-[2024-05-21 01:40] 
+[2024-05-21 02:12]   11.6 seconds: /home/ubuntu/ComfyUIScript/custom_nodes/ComfyUI_Manager
+[2024-05-21 02:12] 
 Total VRAM 22516 MB, total RAM 227489 MB
-[2024-05-21 01:40] pytorch version: 2.0.1
-[2024-05-21 01:40] Set vram state to: NORMAL_VRAM
-[2024-05-21 01:40] Device: cuda:0 NVIDIA A10 : cudaMallocAsync
-[2024-05-21 01:40] VAE dtype: torch.bfloat16
-[2024-05-21 01:40] Using pytorch cross attention
-[2024-05-21 01:40] ### Loading: ComfyUI-Manager (V2.34.1)
-[2024-05-21 01:40] ### ComfyUI Revision: 2198 [1900e511] | Released on '2024-05-20'
-[2024-05-21 01:40] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/model-list.json
-[2024-05-21 01:40] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/alter-list.json
-[2024-05-21 01:40] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/custom-node-list.json
-[2024-05-21 01:40] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/github-stats.json
-[2024-05-21 01:40] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/extension-node-map.json
-[2024-05-21 01:40] /home/ubuntu/.local/lib/python3.10/site-packages/numba/np/ufunc/parallel.py:371: NumbaWarning: [1mThe TBB threading layer requires TBB version 2021 update 6 or later i.e., TBB_INTERFACE_VERSION >= 12060. Found TBB_INTERFACE_VERSION = 12050. The TBB threading layer is disabled.[0m
+[2024-05-21 02:12] pytorch version: 2.0.1
+[2024-05-21 02:12] Set vram state to: NORMAL_VRAM
+[2024-05-21 02:12] Device: cuda:0 NVIDIA A10 : cudaMallocAsync
+[2024-05-21 02:12] VAE dtype: torch.bfloat16
+[2024-05-21 02:12] Using pytorch cross attention
+[2024-05-21 02:12] [34mWAS Node Suite: [0mOpenCV Python installed.[0m
+[2024-05-21 02:12] [34mWAS Node Suite: [0mFinished.[0m [32mLoaded[0m [0m212[0m [32mnodes successfully.[0m
+[2024-05-21 02:12] 
+	[3m[93m"Be the change that you wish to see in the world."[0m[3m - Mahatma Gandhi[0m
+[2024-05-21 02:12] 
+[2024-05-21 02:12] ### Loading: ComfyUI-Manager (V2.34.1)
+[2024-05-21 02:12] ### ComfyUI Revision: 2198 [1900e511] | Released on '2024-05-20'
+[2024-05-21 02:12] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/alter-list.json
+[2024-05-21 02:12] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/model-list.json
+[2024-05-21 02:12] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/custom-node-list.json
+[2024-05-21 02:12] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/github-stats.json
+[2024-05-21 02:12] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/extension-node-map.json
+[2024-05-21 02:12] /home/ubuntu/.local/lib/python3.10/site-packages/numba/np/ufunc/parallel.py:371: NumbaWarning: [1mThe TBB threading layer requires TBB version 2021 update 6 or later i.e., TBB_INTERFACE_VERSION >= 12060. Found TBB_INTERFACE_VERSION = 12050. The TBB threading layer is disabled.[0m
   warnings.warn(problem)
-[2024-05-21 01:41] Note: NumExpr detected 30 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
-[2024-05-21 01:41] NumExpr defaulting to 8 threads.
-[2024-05-21 01:41] [36;20m[comfy_mtb] | INFO -> loaded [96m75[0m nodes successfuly[0m
-[2024-05-21 01:41] [36;20m[comfy_mtb] | INFO -> Some nodes (3) could not be loaded. This can be ignored, but go to http://127.0.0.1:8188/mtb if you want more information.[0m
-[2024-05-21 01:41] 
+[2024-05-21 02:12] Note: NumExpr detected 30 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+[2024-05-21 02:12] NumExpr defaulting to 8 threads.
+[2024-05-21 02:12] [36;20m[comfy_mtb] | INFO -> loaded [96m75[0m nodes successfuly[0m
+[2024-05-21 02:12] [36;20m[comfy_mtb] | INFO -> Some nodes (3) could not be loaded. This can be ignored, but go to http://127.0.0.1:8188/mtb if you want more information.[0m
+[2024-05-21 02:12] 
 Import times for custom nodes:
-[2024-05-21 01:41]    0.0 seconds: /home/ubuntu/ComfyUIScript/custom_nodes/websocket_image_save.py
-[2024-05-21 01:41]    0.0 seconds: /home/ubuntu/ComfyUIScript/custom_nodes/masquerade-nodes-comfyui
-[2024-05-21 01:41]    0.0 seconds: /home/ubuntu/ComfyUIScript/custom_nodes/ComfyUI_JPS-Nodes
-[2024-05-21 01:41]    0.0 seconds: /home/ubuntu/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes
-[2024-05-21 01:41]    0.0 seconds: /home/ubuntu/ComfyUIScript/custom_nodes/ComfyUI_Manager
-[2024-05-21 01:41]   29.4 seconds: /home/ubuntu/ComfyUIScript/custom_nodes/comfy_mtb
-[2024-05-21 01:41] 
-[2024-05-21 01:41] Starting server
+[2024-05-21 02:12]    0.0 seconds: /home/ubuntu/ComfyUIScript/custom_nodes/websocket_image_save.py
+[2024-05-21 02:12]    0.0 seconds: /home/ubuntu/ComfyUIScript/custom_nodes/masquerade-nodes-comfyui
+[2024-05-21 02:12]    0.0 seconds: /home/ubuntu/ComfyUIScript/custom_nodes/ComfyUI_JPS-Nodes
+[2024-05-21 02:12]    0.0 seconds: /home/ubuntu/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes
+[2024-05-21 02:12]    0.0 seconds: /home/ubuntu/ComfyUIScript/custom_nodes/ComfyUI_Manager
+[2024-05-21 02:12]    1.6 seconds: /home/ubuntu/ComfyUIScript/custom_nodes/was-node-suite-comfyui
+[2024-05-21 02:12]    2.1 seconds: /home/ubuntu/ComfyUIScript/custom_nodes/comfy_mtb
+[2024-05-21 02:12] 
+[2024-05-21 02:12] Starting server
 
-[2024-05-21 01:41] To see the GUI go to: http://127.0.0.1:8188
-[2024-05-21 01:41] FETCH DATA from: /home/ubuntu/ComfyUIScript/custom_nodes/ComfyUI_Manager/extension-node-map.json [DONE]
-[2024-05-21 01:44] FETCH DATA from: /home/ubuntu/ComfyUIScript/custom_nodes/ComfyUI_Manager/.cache/1514988643_custom-node-list.json [DONE]
-[2024-05-21 01:44] FETCH DATA from: /home/ubuntu/ComfyUIScript/custom_nodes/ComfyUI_Manager/.cache/746607195_github-stats.json [DONE]
-[2024-05-21 01:44] FETCH DATA from: /home/ubuntu/ComfyUIScript/custom_nodes/ComfyUI_Manager/.cache/1742899825_extension-node-map.json [DONE]
-[2024-05-21 01:44] FETCH DATA from: /home/ubuntu/ComfyUIScript/custom_nodes/ComfyUI_Manager/custom-node-list.json [DONE]
-[2024-05-21 01:44] FETCH DATA from: https://github.com/ltdrdata/ComfyUI-Manager/raw/main/custom-node-list.json/custom-node-list.json[ComfyUI-Manager] Due to a network error, switching to local mode.
-=> custom-node-list.json
-=> Expecting value: line 7 column 1 (char 6)
-[2024-05-21 01:44] FETCH DATA from: /home/ubuntu/ComfyUIScript/custom_nodes/ComfyUI_Manager/custom-node-list.json [DONE]
-[2024-05-21 01:44] Install custom node 'WAS Node Suite'
-[2024-05-21 01:44] Install: ['https://github.com/WASasquatch/was-node-suite-comfyui']
-[2024-05-21 01:44] Download: git clone 'https://github.com/WASasquatch/was-node-suite-comfyui'
-[2024-05-21 01:44] 0it [00:00, ?it/s]100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████| 693.0/693.0 [00:00<00:00, 1394.12it/s]100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████| 693.0/693.0 [00:00<00:00, 1393.57it/s]100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████| 251.0/251.0 [00:00<00:00, 264.12it/s]100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████| 251.0/251.0 [00:00<00:00, 264.09it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2117.0/2117.0 [00:02<00:00, 1054.91it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2117.0/2117.0 [00:02<00:00, 1054.85it/s]100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1296.0/1296.0 [00:02<00:00, 618.83it/s]100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1296.0/1296.0 [00:02<00:00, 618.80it/s]100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1296.0/1296.0 [00:02<00:00, 575.45it/s]
-[2024-05-21 01:44] Install: pip packages
-[2024-05-21 01:44] 
-## ComfyUI-Manager: EXECUTE => ['/usr/bin/python', '-m', 'pip', 'install', 'cmake']
-[2024-05-21 01:44]  Defaulting to user installation because normal site-packages is not writeable
-[2024-05-21 01:44]  Collecting cmake
-[2024-05-21 01:44]    Downloading cmake-3.29.3-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.1 kB)
-[2024-05-21 01:44]  Downloading cmake-3.29.3-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (26.7 MB)
-[2024-05-21 01:44]     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 26.7/26.7 MB 87.5 MB/s eta 0:00:00
-[2024-05-21 01:44] [2024-05-21 01:44] [!] DEPRECATION: flatbuffers 1.12.1-git20200711.33e2d80-dfsg1-0.6 has a non-standard version number. pip 24.0 will enforce this behaviour change. A possible replacement is to upgrade to a newer version of flatbuffers or contact the author to suggest that they release a version with a conforming version number. Discussion can be found at https://github.com/pypa/pip/issues/12063
-[2024-05-21 01:44]  Installing collected packages: cmake
-[2024-05-21 01:44]  Successfully installed cmake-3.29.3
-[2024-05-21 01:44] [!] 
-[2024-05-21 01:44] [!] [notice] A new release of pip is available: 23.3.1 -> 24.0
-[2024-05-21 01:44] [!] [notice] To update, run: python -m pip install --upgrade pip
-[2024-05-21 01:44] 
-## ComfyUI-Manager: EXECUTE => ['/usr/bin/python', '-m', 'pip', 'install', 'fairscale>=0.4.4']
-[2024-05-21 01:44]  Defaulting to user installation because normal site-packages is not writeable
-[2024-05-21 01:44]  Collecting fairscale>=0.4.4
-[2024-05-21 01:44]    Downloading fairscale-0.4.13.tar.gz (266 kB)
-[2024-05-21 01:44]       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 266.3/266.3 kB 5.9 MB/s eta 0:00:00
-[2024-05-21 01:44]    Installing build dependencies: started
-[2024-05-21 01:44]    Installing build dependencies: finished with status 'done'
-[2024-05-21 01:44]    Getting requirements to build wheel: started
-[2024-05-21 01:44]    Getting requirements to build wheel: finished with status 'done'
-[2024-05-21 01:44]    Installing backend dependencies: started
-[2024-05-21 01:44]    Installing backend dependencies: finished with status 'done'
-[2024-05-21 01:44]    Preparing metadata (pyproject.toml): started
-[2024-05-21 01:44]    Preparing metadata (pyproject.toml): finished with status 'done'
-[2024-05-21 01:44]    Building wheels for collected packages: fairscale
-[2024-05-21 01:44]    Building wheel for fairscale (pyproject.toml): started
-[2024-05-21 01:44]    Building wheel for fairscale (pyproject.toml): finished with status 'done'
-[2024-05-21 01:44]    Created wheel for fairscale: filename=fairscale-0.4.13-py3-none-any.whl size=332108 sha256=333e6c7c8a4852f161eeb92f995e7fe28e39c352d3bee900f6ade2f10fb77376
-[2024-05-21 01:44]    Stored in directory: /home/ubuntu/.cache/pip/wheels/78/a4/c0/fb0a7ef03cff161611c3fa40c6cf898f76e58ec421b88e8cb3
-[2024-05-21 01:44]  Successfully built fairscale
-[2024-05-21 01:44] [!] DEPRECATION: flatbuffers 1.12.1-git20200711.33e2d80-dfsg1-0.6 has a non-standard version number. pip 24.0 will enforce this behaviour change. A possible replacement is to upgrade to a newer version of flatbuffers or contact the author to suggest that they release a version with a conforming version number. Discussion can be found at https://github.com/pypa/pip/issues/12063
-[2024-05-21 01:44]  Installing collected packages: fairscale
-[2024-05-21 01:44]  Successfully installed fairscale-0.4.13
-[2024-05-21 01:44] [!] 
-[2024-05-21 01:44] [!] [notice] A new release of pip is available: 23.3.1 -> 24.0
-[2024-05-21 01:44] [!] [notice] To update, run: python -m pip install --upgrade pip
-[2024-05-21 01:44] 
-## ComfyUI-Manager: EXECUTE => ['/usr/bin/python', '-m', 'pip', 'install', 'git+https://github.com/WASasquatch/img2texture.git']
-[2024-05-21 01:44]  Defaulting to user installation because normal site-packages is not writeable
-[2024-05-21 01:44]  Collecting git+https://github.com/WASasquatch/img2texture.git
-[2024-05-21 01:44]    Cloning https://github.com/WASasquatch/img2texture.git to /tmp/pip-req-build-8nbaihtr
-[2024-05-21 01:44] [!]   Running command git clone --filter=blob:none --quiet https://github.com/WASasquatch/img2texture.git /tmp/pip-req-build-8nbaihtr
-[2024-05-21 01:44]    Resolved https://github.com/WASasquatch/img2texture.git to commit a546609a915caf1dcb84a15bf44b5b639ad924e6
-[2024-05-21 01:44]    Preparing metadata (setup.py): started
-[2024-05-21 01:44]    Preparing metadata (setup.py): finished with status 'done'
-[2024-05-21 01:44]  Collecting pillow<10,>=9.2 (from img2texture==1.0.6)
-[2024-05-21 01:44]    Downloading Pillow-9.5.0-cp310-cp310-manylinux_2_28_x86_64.whl.metadata (9.5 kB)
-[2024-05-21 01:44]  Downloading Pillow-9.5.0-cp310-cp310-manylinux_2_28_x86_64.whl (3.4 MB)
-[2024-05-21 01:44]     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.4/3.4 MB 49.5 MB/s eta 0:00:00
-[2024-05-21 01:44]  Building wheels for collected packages: img2texture
-[2024-05-21 01:44]    Building wheel for img2texture (setup.py): started
-[2024-05-21 01:44]    Building wheel for img2texture (setup.py): finished with status 'done'
-[2024-05-21 01:44]    Created wheel for img2texture: filename=img2texture-1.0.6-py3-none-any.whl size=8386 sha256=bff3bd4173e0682626980658ada5b611f1e24164edfbfcb851c0f9c882424803
-[2024-05-21 01:44]    Stored in directory: /tmp/pip-ephem-wheel-cache-p5icl18s/wheels/ef/01/9f/2a02c1af22973c81e59b3e7c5a63a57bc73050b9176aa479d2
-[2024-05-21 01:44]  Successfully built img2texture
-[2024-05-21 01:44] [!] DEPRECATION: flatbuffers 1.12.1-git20200711.33e2d80-dfsg1-0.6 has a non-standard version number. pip 24.0 will enforce this behaviour change. A possible replacement is to upgrade to a newer version of flatbuffers or contact the author to suggest that they release a version with a conforming version number. Discussion can be found at https://github.com/pypa/pip/issues/12063
-[2024-05-21 01:44]  Installing collected packages: pillow, img2texture
-[2024-05-21 01:44]    Attempting uninstall: pillow
-[2024-05-21 01:44]      Found existing installation: pillow 10.3.0
-[2024-05-21 01:44]      Uninstalling pillow-10.3.0:
-[2024-05-21 01:44]        Successfully uninstalled pillow-10.3.0
-[2024-05-21 01:44] [!] ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
-[2024-05-21 01:44] [!] ydata-profiling 4.6.3 requires scipy<1.12,>=1.4.1, but you have scipy 1.13.0 which is incompatible.
- [2024-05-21 01:44] Successfully installed img2texture-1.0.6 pillow-9.5.0
-[2024-05-21 01:44] [!] 
-[2024-05-21 01:44] [!] [notice] A new release of pip is available: 23.3.1 -> 24.0
-[2024-05-21 01:44] [!] [notice] To update, run: python -m pip install --upgrade pip
-[2024-05-21 01:44] 
-## ComfyUI-Manager: EXECUTE => ['/usr/bin/python', '-m', 'pip', 'install', 'git+https://github.com/WASasquatch/cstr']
-[2024-05-21 01:44]  Defaulting to user installation because normal site-packages is not writeable
-[2024-05-21 01:44]  Collecting git+https://github.com/WASasquatch/cstr
-[2024-05-21 01:44]    Cloning https://github.com/WASasquatch/cstr to /tmp/pip-req-build-6_2ip1r8
-[2024-05-21 01:44] [!]   Running command git clone --filter=blob:none --quiet https://github.com/WASasquatch/cstr /tmp/pip-req-build-6_2ip1r8
-[2024-05-21 01:44]    Resolved https://github.com/WASasquatch/cstr to commit 0520c29a18a7a869a6e5983861d6f7a4c86f8e9b
-[2024-05-21 01:44]    Preparing metadata (setup.py): started
-[2024-05-21 01:44]    Preparing metadata (setup.py): finished with status 'done'
-[2024-05-21 01:44]  Building wheels for collected packages: cstr
-[2024-05-21 01:44]    Building wheel for cstr (setup.py): started
-[2024-05-21 01:44]    Building wheel for cstr (setup.py): finished with status 'done'
-[2024-05-21 01:44]    Created wheel for cstr: filename=cstr-0.1.0-py3-none-any.whl size=2849 sha256=1bc3a7a342dbe9a2af5a0eedb4ebd4aad2d840530d3b8edfa1e5bb8c71364672
-[2024-05-21 01:44]    Stored in directory: /tmp/pip-ephem-wheel-cache-ry1bf51h/wheels/89/3f/37/64121630832f72f13d3af8bb065e97483aa6e038bb27dd941a
-[2024-05-21 01:44]  Successfully built cstr
-[2024-05-21 01:44] [!] DEPRECATION: flatbuffers 1.12.1-git20200711.33e2d80-dfsg1-0.6 has a non-standard version number. pip 24.0 will enforce this behaviour change. A possible replacement is to upgrade to a newer version of flatbuffers or contact the author to suggest that they release a version with a conforming version number. Discussion can be found at https://github.com/pypa/pip/issues/12063
-[2024-05-21 01:44]  Installing collected packages: cstr
-[2024-05-21 01:44]  Successfully installed cstr-0.1.0
-[2024-05-21 01:44] [!] 
-[2024-05-21 01:44] [!] [notice] A new release of pip is available: 23.3.1 -> 24.0
-[2024-05-21 01:44] [!] [notice] To update, run: python -m pip install --upgrade pip
-[2024-05-21 01:44] 
-## ComfyUI-Manager: EXECUTE => ['/usr/bin/python', '-m', 'pip', 'install', 'gitpython']
-[2024-05-21 01:44]  Defaulting to user installation because normal site-packages is not writeable
-[2024-05-21 01:44]    [!] DEPRECATION: flatbuffers 1.12.1-git20200711.33e2d80-dfsg1-0.6 has a non-standard version number. pip 24.0 will enforce this behaviour change. A possible replacement is to upgrade to a newer version of flatbuffers or contact the author to suggest that they release a version with a conforming version number. Discussion can be found at https://github.com/pypa/pip/issues/12063
-[2024-05-21 01:44] [!] 
-[2024-05-21 01:44] [!] [notice] A new release of pip is available: 23.3.1 -> 24.0
-[2024-05-21 01:44] [!] [notice] To update, run: python -m pip install --upgrade pip
-[2024-05-21 01:44] 
-## ComfyUI-Manager: EXECUTE => ['/usr/bin/python', '-m', 'pip', 'install', 'imageio']
-[2024-05-21 01:44]  Defaulting to user installation because normal site-packages is not writeable
-[2024-05-21 01:44]    [!] DEPRECATION: flatbuffers 1.12.1-git20200711.33e2d80-dfsg1-0.6 has a non-standard version number. pip 24.0 will enforce this behaviour change. A possible replacement is to upgrade to a newer version of flatbuffers or contact the author to suggest that they release a version with a conforming version number. Discussion can be found at https://github.com/pypa/pip/issues/12063
-[2024-05-21 01:44] [!] 
-[2024-05-21 01:44] [!] [notice] A new release of pip is available: 23.3.1 -> 24.0
-[2024-05-21 01:44] [!] [notice] To update, run: python -m pip install --upgrade pip
-[2024-05-21 01:44] 
-## ComfyUI-Manager: EXECUTE => ['/usr/bin/python', '-m', 'pip', 'install', 'joblib']
-[2024-05-21 01:44]  Defaulting to user installation because normal site-packages is not writeable
-[2024-05-21 01:44]  [!] DEPRECATION: flatbuffers 1.12.1-git20200711.33e2d80-dfsg1-0.6 has a non-standard version number. pip 24.0 will enforce this behaviour change. A possible replacement is to upgrade to a newer version of flatbuffers or contact the author to suggest that they release a version with a conforming version number. Discussion can be found at https://github.com/pypa/pip/issues/12063
-[2024-05-21 01:44] [!] 
-[2024-05-21 01:44] [!] [notice] A new release of pip is available: 23.3.1 -> 24.0
-[2024-05-21 01:44] [!] [notice] To update, run: python -m pip install --upgrade pip
-[2024-05-21 01:44] 
-## ComfyUI-Manager: EXECUTE => ['/usr/bin/python', '-m', 'pip', 'install', 'matplotlib']
-[2024-05-21 01:44]  Defaulting to user installation because normal site-packages is not writeable
-[2024-05-21 01:44]  [!] DEPRECATION: flatbuffers 1.12.1-git20200711.33e2d80-dfsg1-0.6 has a non-standard version number. pip 24.0 will enforce this behaviour change. A possible replacement is to upgrade to a newer version of flatbuffers or contact the author to suggest that they release a version with a conforming version number. Discussion can be found at https://github.com/pypa/pip/issues/12063
-[2024-05-21 01:45] [!] 
-[2024-05-21 01:45] [!] [notice] A new release of pip is available: 23.3.1 -> 24.0
-[2024-05-21 01:45] [!] [notice] To update, run: python -m pip install --upgrade pip
-[2024-05-21 01:45] 
-## ComfyUI-Manager: EXECUTE => ['/usr/bin/python', '-m', 'pip', 'install', 'numba']
-[2024-05-21 01:45]  Defaulting to user installation because normal site-packages is not writeable
-[2024-05-21 01:45]    [!] DEPRECATION: flatbuffers 1.12.1-git20200711.33e2d80-dfsg1-0.6 has a non-standard version number. pip 24.0 will enforce this behaviour change. A possible replacement is to upgrade to a newer version of flatbuffers or contact the author to suggest that they release a version with a conforming version number. Discussion can be found at https://github.com/pypa/pip/issues/12063
-[2024-05-21 01:45] [!] 
-[2024-05-21 01:45] [!] [notice] A new release of pip is available: 23.3.1 -> 24.0
-[2024-05-21 01:45] [!] [notice] To update, run: python -m pip install --upgrade pip
-[2024-05-21 01:45] 
-## ComfyUI-Manager: EXECUTE => ['/usr/bin/python', '-m', 'pip', 'install', 'numpy']
-[2024-05-21 01:45]  Defaulting to user installation because normal site-packages is not writeable
-[2024-05-21 01:45]  [!] DEPRECATION: flatbuffers 1.12.1-git20200711.33e2d80-dfsg1-0.6 has a non-standard version number. pip 24.0 will enforce this behaviour change. A possible replacement is to upgrade to a newer version of flatbuffers or contact the author to suggest that they release a version with a conforming version number. Discussion can be found at https://github.com/pypa/pip/issues/12063
-[2024-05-21 01:45] [!] 
-[2024-05-21 01:45] [!] [notice] A new release of pip is available: 23.3.1 -> 24.0
-[2024-05-21 01:45] [!] [notice] To update, run: python -m pip install --upgrade pip
-[2024-05-21 01:45] 
-## ComfyUI-Manager: EXECUTE => ['/usr/bin/python', '-m', 'pip', 'install', 'opencv-python-headless[ffmpeg]<=4.7.0.72']
-[2024-05-21 01:45]  Defaulting to user installation because normal site-packages is not writeable
-[2024-05-21 01:45]  Collecting opencv-python-headless<=4.7.0.72 (from opencv-python-headless[ffmpeg]<=4.7.0.72)
-[2024-05-21 01:45]    Downloading opencv_python_headless-4.7.0.72-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (18 kB)
-[2024-05-21 01:45]  [!] WARNING: opencv-python-headless 4.7.0.72 does not provide the extra 'ffmpeg'
-[2024-05-21 01:45]  Downloading opencv_python_headless-4.7.0.72-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (49.2 MB)
-[2024-05-21 01:45]     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 49.2/49.2 MB 100.6 MB/s eta 0:00:00
-[2024-05-21 01:45] [!] DEPRECATION: flatbuffers 1.12.1-git20200711.33e2d80-dfsg1-0.6 has a non-standard version number. pip 24.0 will enforce this behaviour change. A possible replacement is to upgrade to a newer version of flatbuffers or contact the author to suggest that they release a version with a conforming version number. Discussion can be found at https://github.com/pypa/pip/issues/12063
-[2024-05-21 01:45]  Installing collected packages: opencv-python-headless
-[2024-05-21 01:45]    Attempting uninstall: opencv-python-headless
-[2024-05-21 01:45]      Found existing installation: opencv-python-headless 4.9.0.80
-[2024-05-21 01:45]      Uninstalling opencv-python-headless-4.9.0.80:
-[2024-05-21 01:45]        Successfully uninstalled opencv-python-headless-4.9.0.80
-[2024-05-21 01:45]  Successfully installed opencv-python-headless-4.7.0.72
-[2024-05-21 01:45] [!] 
-[2024-05-21 01:45] [!] [notice] A new release of pip is available: 23.3.1 -> 24.0
-[2024-05-21 01:45] [!] [notice] To update, run: python -m pip install --upgrade pip
-[2024-05-21 01:45] 
-## ComfyUI-Manager: EXECUTE => ['/usr/bin/python', '-m', 'pip', 'install', 'pilgram']
-[2024-05-21 01:45]  Defaulting to user installation because normal site-packages is not writeable
-[2024-05-21 01:45]  Collecting pilgram
-[2024-05-21 01:45]    Downloading pilgram-1.2.1-py3-none-any.whl.metadata (4.0 kB)
-[2024-05-21 01:45]   Downloading pilgram-1.2.1-py3-none-any.whl (817 kB)
-[2024-05-21 01:45]     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 817.4/817.4 kB 19.4 MB/s eta 0:00:00
-[2024-05-21 01:45] [!] DEPRECATION: flatbuffers 1.12.1-git20200711.33e2d80-dfsg1-0.6 has a non-standard version number. pip 24.0 will enforce this behaviour change. A possible replacement is to upgrade to a newer version of flatbuffers or contact the author to suggest that they release a version with a conforming version number. Discussion can be found at https://github.com/pypa/pip/issues/12063
-[2024-05-21 01:45]  Installing collected packages: pilgram
-[2024-05-21 01:45]  Successfully installed pilgram-1.2.1
-[2024-05-21 01:45] [!] 
-[2024-05-21 01:45] [!] [notice] A new release of pip is available: 23.3.1 -> 24.0
-[2024-05-21 01:45] [!] [notice] To update, run: python -m pip install --upgrade pip
-[2024-05-21 01:45] 
-## ComfyUI-Manager: EXECUTE => ['/usr/bin/python', '-m', 'pip', 'install', 'git+https://github.com/WASasquatch/ffmpy.git']
-[2024-05-21 01:45]  Defaulting to user installation because normal site-packages is not writeable
-[2024-05-21 01:45]  Collecting git+https://github.com/WASasquatch/ffmpy.git
-[2024-05-21 01:45]    Cloning https://github.com/WASasquatch/ffmpy.git to /tmp/pip-req-build-mnzrpdbb
-[2024-05-21 01:45] [!]   Running command git clone --filter=blob:none --quiet https://github.com/WASasquatch/ffmpy.git /tmp/pip-req-build-mnzrpdbb
-[2024-05-21 01:45]    Resolved https://github.com/WASasquatch/ffmpy.git to commit f000737698b387ffaeab7cd871b0e9185811230d
-[2024-05-21 01:45]    Preparing metadata (setup.py): started
-[2024-05-21 01:45]    Preparing metadata (setup.py): finished with status 'done'
-[2024-05-21 01:45]  Building wheels for collected packages: ffmpy
-[2024-05-21 01:45]    Building wheel for ffmpy (setup.py): started
-[2024-05-21 01:45]    Building wheel for ffmpy (setup.py): finished with status 'done'
-[2024-05-21 01:45]    Created wheel for ffmpy: filename=ffmpy-0.3.0-py3-none-any.whl size=5516 sha256=4fb1e3593be03a08245cccf9e0b1e7a2de9e9f30568298050794cf9bf7aad6a9
-[2024-05-21 01:45]    Stored in directory: /tmp/pip-ephem-wheel-cache-vitvwdm_/wheels/58/b8/b4/c142357beed3083ac6f76bff1206bb5923ac472c4a740e6921
-[2024-05-21 01:45]  Successfully built ffmpy
-[2024-05-21 01:45] [!] DEPRECATION: flatbuffers 1.12.1-git20200711.33e2d80-dfsg1-0.6 has a non-standard version number. pip 24.0 will enforce this behaviour change. A possible replacement is to upgrade to a newer version of flatbuffers or contact the author to suggest that they release a version with a conforming version number. Discussion can be found at https://github.com/pypa/pip/issues/12063
-[2024-05-21 01:45]  Installing collected packages: ffmpy
-[2024-05-21 01:45]  Successfully installed ffmpy-0.3.0
-[2024-05-21 01:45] [!] 
-[2024-05-21 01:45] [!] [notice] A new release of pip is available: 23.3.1 -> 24.0
-[2024-05-21 01:45] [!] [notice] To update, run: python -m pip install --upgrade pip
-[2024-05-21 01:45] 
-## ComfyUI-Manager: EXECUTE => ['/usr/bin/python', '-m', 'pip', 'install', 'rembg']
-[2024-05-21 01:45]  Defaulting to user installation because normal site-packages is not writeable
-[2024-05-21 01:45]                                  [!] DEPRECATION: flatbuffers 1.12.1-git20200711.33e2d80-dfsg1-0.6 has a non-standard version number. pip 24.0 will enforce this behaviour change. A possible replacement is to upgrade to a newer version of flatbuffers or contact the author to suggest that they release a version with a conforming version number. Discussion can be found at https://github.com/pypa/pip/issues/12063
-[2024-05-21 01:45] [!] 
-[2024-05-21 01:45] [!] [notice] A new release of pip is available: 23.3.1 -> 24.0
-[2024-05-21 01:45] [!] [notice] To update, run: python -m pip install --upgrade pip
-[2024-05-21 01:45] 
-## ComfyUI-Manager: EXECUTE => ['/usr/bin/python', '-m', 'pip', 'install', 'scikit-image>=0.20.0']
-[2024-05-21 01:45]  Defaulting to user installation because normal site-packages is not writeable
-[2024-05-21 01:45]          [!] DEPRECATION: flatbuffers 1.12.1-git20200711.33e2d80-dfsg1-0.6 has a non-standard version number. pip 24.0 will enforce this behaviour change. A possible replacement is to upgrade to a newer version of flatbuffers or contact the author to suggest that they release a version with a conforming version number. Discussion can be found at https://github.com/pypa/pip/issues/12063
-[2024-05-21 01:45] [!] 
-[2024-05-21 01:45] [!] [notice] A new release of pip is available: 23.3.1 -> 24.0
-[2024-05-21 01:45] [!] [notice] To update, run: python -m pip install --upgrade pip
-[2024-05-21 01:45] 
-## ComfyUI-Manager: EXECUTE => ['/usr/bin/python', '-m', 'pip', 'install', 'scikit-learn']
-[2024-05-21 01:45]  Defaulting to user installation because normal site-packages is not writeable
-[2024-05-21 01:45]  [!] DEPRECATION: flatbuffers 1.12.1-git20200711.33e2d80-dfsg1-0.6 has a non-standard version number. pip 24.0 will enforce this behaviour change. A possible replacement is to upgrade to a newer version of flatbuffers or contact the author to suggest that they release a version with a conforming version number. Discussion can be found at https://github.com/pypa/pip/issues/12063
-[2024-05-21 01:45] [!] 
-[2024-05-21 01:45] [!] [notice] A new release of pip is available: 23.3.1 -> 24.0
-[2024-05-21 01:45] [!] [notice] To update, run: python -m pip install --upgrade pip
-[2024-05-21 01:45] 
-## ComfyUI-Manager: EXECUTE => ['/usr/bin/python', '-m', 'pip', 'install', 'scipy']
-[2024-05-21 01:45]  Defaulting to user installation because normal site-packages is not writeable
-[2024-05-21 01:45]   [!] DEPRECATION: flatbuffers 1.12.1-git20200711.33e2d80-dfsg1-0.6 has a non-standard version number. pip 24.0 will enforce this behaviour change. A possible replacement is to upgrade to a newer version of flatbuffers or contact the author to suggest that they release a version with a conforming version number. Discussion can be found at https://github.com/pypa/pip/issues/12063
-[2024-05-21 01:45] [!] 
-[2024-05-21 01:45] [!] [notice] A new release of pip is available: 23.3.1 -> 24.0
-[2024-05-21 01:45] [!] [notice] To update, run: python -m pip install --upgrade pip
-[2024-05-21 01:45] 
-## ComfyUI-Manager: EXECUTE => ['/usr/bin/python', '-m', 'pip', 'install', 'timm>=0.4.12']
-[2024-05-21 01:45]  Defaulting to user installation because normal site-packages is not writeable
-[2024-05-21 01:45]  Collecting timm>=0.4.12
-[2024-05-21 01:45]    Downloading timm-1.0.3-py3-none-any.whl.metadata (43 kB)
-[2024-05-21 01:45]       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 43.6/43.6 kB 1.5 MB/s eta 0:00:00
-[2024-05-21 01:45]                 Downloading timm-1.0.3-py3-none-any.whl (2.3 MB)
-[2024-05-21 01:45]     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.3/2.3 MB 83.0 MB/s eta 0:00:00
-[2024-05-21 01:45] [!] DEPRECATION: flatbuffers 1.12.1-git20200711.33e2d80-dfsg1-0.6 has a non-standard version number. pip 24.0 will enforce this behaviour change. A possible replacement is to upgrade to a newer version of flatbuffers or contact the author to suggest that they release a version with a conforming version number. Discussion can be found at https://github.com/pypa/pip/issues/12063
-[2024-05-21 01:45]  Installing collected packages: timm
-[2024-05-21 01:45]  Successfully installed timm-1.0.3
-[2024-05-21 01:45] [!] 
-[2024-05-21 01:45] [!] [notice] A new release of pip is available: 23.3.1 -> 24.0
-[2024-05-21 01:45] [!] [notice] To update, run: python -m pip install --upgrade pip
-[2024-05-21 01:45] 
-## ComfyUI-Manager: EXECUTE => ['/usr/bin/python', '-m', 'pip', 'install', 'tqdm']
-[2024-05-21 01:45]  Defaulting to user installation because normal site-packages is not writeable
-[2024-05-21 01:45]  [!] DEPRECATION: flatbuffers 1.12.1-git20200711.33e2d80-dfsg1-0.6 has a non-standard version number. pip 24.0 will enforce this behaviour change. A possible replacement is to upgrade to a newer version of flatbuffers or contact the author to suggest that they release a version with a conforming version number. Discussion can be found at https://github.com/pypa/pip/issues/12063
-[2024-05-21 01:45] [!] 
-[2024-05-21 01:45] [!] [notice] A new release of pip is available: 23.3.1 -> 24.0
-[2024-05-21 01:45] [!] [notice] To update, run: python -m pip install --upgrade pip
-[2024-05-21 01:45] [ComfyUI-Manager] skip black listed pip installation: 'transformers'
-[2024-05-21 01:45] Installation was successful.
-[2024-05-21 01:45] 
-## ComfyUI-Manager: EXECUTE => ['/usr/bin/python', '-m', 'pip', 'install', 'numba']
-[2024-05-21 01:45]  Defaulting to user installation because normal site-packages is not writeable
-[2024-05-21 01:45]    [!] DEPRECATION: flatbuffers 1.12.1-git20200711.33e2d80-dfsg1-0.6 has a non-standard version number. pip 24.0 will enforce this behaviour change. A possible replacement is to upgrade to a newer version of flatbuffers or contact the author to suggest that they release a version with a conforming version number. Discussion can be found at https://github.com/pypa/pip/issues/12063
-[2024-05-21 01:45] [!] 
-[2024-05-21 01:45] [!] [notice] A new release of pip is available: 23.3.1 -> 24.0
-[2024-05-21 01:45] [!] [notice] To update, run: python -m pip install --upgrade pip
-[2024-05-21 01:45] After restarting ComfyUI, please refresh the browser.
-[2024-05-21 01:45] FETCH DATA from: /home/ubuntu/ComfyUIScript/custom_nodes/ComfyUI_Manager/.cache/1514988643_custom-node-list.json [DONE]
-[2024-05-21 01:45] FETCH DATA from: /home/ubuntu/ComfyUIScript/custom_nodes/ComfyUI_Manager/.cache/746607195_github-stats.json [DONE]
-[2024-05-21 01:45] FETCH DATA from: /home/ubuntu/ComfyUIScript/custom_nodes/ComfyUI_Manager/.cache/1742899825_extension-node-map.json [DONE]
-got prompt
-[2024-05-21 01:45] model_type EPS
-[2024-05-21 01:45] Using pytorch attention in VAE
-[2024-05-21 01:45] Using pytorch attention in VAE
-[2024-05-21 01:45] Requested to load SDXLClipModel
-[2024-05-21 01:45] Loading 1 new model
-[2024-05-21 01:45] Requested to load AutoencoderKL
-[2024-05-21 01:45] Loading 1 new model
-[2024-05-21 01:45] Requested to load SDXL
-[2024-05-21 01:45] Loading 1 new model
-[2024-05-21 01:45] 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:06<00:00,  3.27it/s]100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:06<00:00,  3.26it/s]
-[2024-05-21 01:45] Prompt executed in 10.16 seconds
-[2024-05-21 01:46] FETCH DATA from: /home/ubuntu/ComfyUIScript/custom_nodes/ComfyUI_Manager/.cache/1514988643_custom-node-list.json [DONE]
-[2024-05-21 01:46] FETCH DATA from: /home/ubuntu/ComfyUIScript/custom_nodes/ComfyUI_Manager/.cache/746607195_github-stats.json [DONE]
-[2024-05-21 01:46] FETCH DATA from: /home/ubuntu/ComfyUIScript/custom_nodes/ComfyUI_Manager/.cache/1742899825_extension-node-map.json [DONE]
+[2024-05-21 02:12] To see the GUI go to: http://127.0.0.1:8188
+[2024-05-21 02:12] FETCH DATA from: /home/ubuntu/ComfyUIScript/custom_nodes/ComfyUI_Manager/extension-node-map.json [DONE]
+[2024-05-21 02:12] got prompt
+[2024-05-21 02:12] model_type EPS
+[2024-05-21 02:12] Using pytorch attention in VAE
+[2024-05-21 02:12] Using pytorch attention in VAE
+[2024-05-21 02:12] Requested to load SDXLClipModel
+[2024-05-21 02:12] Loading 1 new model
+[2024-05-21 02:12] Requested to load AutoencoderKL
+[2024-05-21 02:12] Loading 1 new model
+[2024-05-21 02:12] Requested to load SDXL
+[2024-05-21 02:12] Loading 1 new model
+[2024-05-21 02:12] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:06<00:00,  3.27it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:06<00:00,  3.30it/s]
+[2024-05-21 02:12] Requested to load AutoencoderKL
+[2024-05-21 02:12] Loading 1 new model
+[2024-05-21 02:13] Prompt executed in 11.77 seconds
+[2024-05-21 02:15] got prompt
+[2024-05-21 02:15] Requested to load SDXL
+[2024-05-21 02:15] Loading 1 new model
+[2024-05-21 02:15] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.27it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.37it/s]
+[2024-05-21 02:15] Requested to load AutoencoderKL
+[2024-05-21 02:15] Loading 1 new model
+[2024-05-21 02:15] Prompt executed in 8.37 seconds
+[2024-05-21 02:15] got prompt
+[2024-05-21 02:15] Requested to load SDXL
+[2024-05-21 02:15] Loading 1 new model
+[2024-05-21 02:16] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.30it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.39it/s]
+[2024-05-21 02:16] Requested to load AutoencoderKL
+[2024-05-21 02:16] Loading 1 new model
+[2024-05-21 02:16] Prompt executed in 7.77 seconds
+[2024-05-21 02:16] got prompt
+[2024-05-21 02:16] Requested to load SDXL
+[2024-05-21 02:16] Loading 1 new model
+[2024-05-21 02:16] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.30it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.40it/s]
+[2024-05-21 02:16] Requested to load AutoencoderKL
+[2024-05-21 02:16] Loading 1 new model
+[2024-05-21 02:16] Prompt executed in 7.79 seconds
+[2024-05-21 02:16] got prompt
+[2024-05-21 02:16] Failed to validate prompt for output 297:
+[2024-05-21 02:16] * Images to RGB 329:
+[2024-05-21 02:16]   - Required input is missing: images
+[2024-05-21 02:16] Output will be ignored
+[2024-05-21 02:16] !!! Exception during processing!!! too many indices for tensor of dimension 3
+[2024-05-21 02:16] Traceback (most recent call last):
+  File "/home/ubuntu/ComfyUIScript/execution.py", line 151, in recursive_execute
+    output_data, output_ui = get_output_data(obj, input_data_all)
+  File "/home/ubuntu/ComfyUIScript/execution.py", line 81, in get_output_data
+    return_values = map_node_over_list(obj, input_data_all, obj.FUNCTION, allow_interrupt=True)
+  File "/home/ubuntu/ComfyUIScript/execution.py", line 74, in map_node_over_list
+    results.append(getattr(obj, func)(**slice_dict(input_data_all, i)))
+  File "/home/ubuntu/ComfyUIScript/comfy_extras/nodes_mask.py", line 129, in image_to_mask
+    mask = image[:, :, :, channels.index(channel)]
+IndexError: too many indices for tensor of dimension 3
+
+[2024-05-21 02:16] Prompt executed in 0.02 seconds
+[2024-05-21 02:16] got prompt
+[2024-05-21 02:16] !!! Exception during processing!!! too many indices for tensor of dimension 3
+[2024-05-21 02:16] Traceback (most recent call last):
+  File "/home/ubuntu/ComfyUIScript/execution.py", line 151, in recursive_execute
+    output_data, output_ui = get_output_data(obj, input_data_all)
+  File "/home/ubuntu/ComfyUIScript/execution.py", line 81, in get_output_data
+    return_values = map_node_over_list(obj, input_data_all, obj.FUNCTION, allow_interrupt=True)
+  File "/home/ubuntu/ComfyUIScript/execution.py", line 74, in map_node_over_list
+    results.append(getattr(obj, func)(**slice_dict(input_data_all, i)))
+  File "/home/ubuntu/ComfyUIScript/comfy_extras/nodes_mask.py", line 129, in image_to_mask
+    mask = image[:, :, :, channels.index(channel)]
+IndexError: too many indices for tensor of dimension 3
+
+[2024-05-21 02:16] Prompt executed in 0.02 seconds
+[2024-05-21 02:17] got prompt
+[2024-05-21 02:17] Requested to load SDXL
+[2024-05-21 02:17] Loading 1 new model
+[2024-05-21 02:17] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.31it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.38it/s]
+[2024-05-21 02:17] Requested to load AutoencoderKL
+[2024-05-21 02:17] Loading 1 new model
+[2024-05-21 02:17] Prompt executed in 7.83 seconds
+[2024-05-21 02:17] got prompt
+[2024-05-21 02:17] Requested to load SDXL
+[2024-05-21 02:17] Loading 1 new model
+[2024-05-21 02:18] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.30it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.40it/s]
+[2024-05-21 02:18] Requested to load AutoencoderKL
+[2024-05-21 02:18] Loading 1 new model
+[2024-05-21 02:18] Prompt executed in 7.74 seconds
+[2024-05-21 02:18] got prompt
+[2024-05-21 02:18] Requested to load SDXL
+[2024-05-21 02:18] Loading 1 new model
+[2024-05-21 02:18] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.29it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.40it/s]
+[2024-05-21 02:18] Requested to load AutoencoderKL
+[2024-05-21 02:18] Loading 1 new model
+[2024-05-21 02:18] Prompt executed in 7.77 seconds
+[2024-05-21 02:20] got prompt
+[2024-05-21 02:20] Requested to load SDXL
+[2024-05-21 02:20] Loading 1 new model
+[2024-05-21 02:20] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.31it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.38it/s]
+[2024-05-21 02:20] Requested to load AutoencoderKL
+[2024-05-21 02:20] Loading 1 new model
+[2024-05-21 02:20] Prompt executed in 8.29 seconds
+[2024-05-21 02:20] got prompt
+[2024-05-21 02:20] Requested to load SDXL
+[2024-05-21 02:20] Loading 1 new model
+[2024-05-21 02:20] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.30it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.40it/s]
+[2024-05-21 02:20] Requested to load AutoencoderKL
+[2024-05-21 02:20] Loading 1 new model
+[2024-05-21 02:20] Prompt executed in 7.66 seconds
+[2024-05-21 02:20] got prompt
+[2024-05-21 02:20] Requested to load SDXL
+[2024-05-21 02:20] Loading 1 new model
+[2024-05-21 02:20] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.29it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.39it/s]
+[2024-05-21 02:20] Requested to load AutoencoderKL
+[2024-05-21 02:20] Loading 1 new model
+[2024-05-21 02:21] Prompt executed in 7.98 seconds
+[2024-05-21 02:21] 
+Stopped server
