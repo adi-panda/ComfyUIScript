@@ -1,0 +1,201 @@
+## ComfyUI-Manager: installing dependencies done.
+[2024-05-21 01:46] ** ComfyUI startup time: 2024-05-21 01:46:17.994966
+[2024-05-21 01:46] ** Platform: Linux
+[2024-05-21 01:46] ** Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+[2024-05-21 01:46] ** Python executable: /usr/bin/python
+[2024-05-21 01:46] ** Log path: /home/ubuntu/ComfyUIScript/comfyui.log
+[2024-05-21 01:46] 
+Prestartup times for custom nodes:
+[2024-05-21 01:46]    0.1 seconds: /home/ubuntu/ComfyUIScript/custom_nodes/ComfyUI_Manager
+[2024-05-21 01:46] 
+Total VRAM 22516 MB, total RAM 227489 MB
+[2024-05-21 01:46] pytorch version: 2.0.1
+[2024-05-21 01:46] Set vram state to: NORMAL_VRAM
+[2024-05-21 01:46] Device: cuda:0 NVIDIA A10 : cudaMallocAsync
+[2024-05-21 01:46] VAE dtype: torch.bfloat16
+[2024-05-21 01:46] Using pytorch cross attention
+[2024-05-21 01:46] [34mWAS Node Suite: [0mCreated default conf file at `/home/ubuntu/ComfyUIScript/custom_nodes/was-node-suite-comfyui/was_suite_config.json`.[0m
+[2024-05-21 01:46] [34mWAS Node Suite: [0mOpenCV Python installed.[0m
+[2024-05-21 01:46] [34mWAS Node Suite: [0mFinished.[0m [32mLoaded[0m [0m212[0m [32mnodes successfully.[0m
+[2024-05-21 01:46] 
+	[3m[93m"Every artist was first an amateur."[0m[3m - Ralph Waldo Emerson[0m
+[2024-05-21 01:46] 
+[2024-05-21 01:46] ### Loading: ComfyUI-Manager (V2.34.1)
+[2024-05-21 01:46] ### ComfyUI Revision: 2198 [1900e511] | Released on '2024-05-20'
+[2024-05-21 01:46] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/alter-list.json
+[2024-05-21 01:46] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/github-stats.json
+[2024-05-21 01:46] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/model-list.json
+[2024-05-21 01:46] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/extension-node-map.json
+[2024-05-21 01:46] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/custom-node-list.json
+[2024-05-21 01:46] /home/ubuntu/.local/lib/python3.10/site-packages/numba/np/ufunc/parallel.py:371: NumbaWarning: [1mThe TBB threading layer requires TBB version 2021 update 6 or later i.e., TBB_INTERFACE_VERSION >= 12060. Found TBB_INTERFACE_VERSION = 12050. The TBB threading layer is disabled.[0m
+  warnings.warn(problem)
+[2024-05-21 01:46] Note: NumExpr detected 30 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+[2024-05-21 01:46] NumExpr defaulting to 8 threads.
+[2024-05-21 01:46] [36;20m[comfy_mtb] | INFO -> loaded [96m75[0m nodes successfuly[0m
+[2024-05-21 01:46] [36;20m[comfy_mtb] | INFO -> Some nodes (3) could not be loaded. This can be ignored, but go to http://127.0.0.1:8188/mtb if you want more information.[0m
+[2024-05-21 01:46] 
+Import times for custom nodes:
+[2024-05-21 01:46]    0.0 seconds: /home/ubuntu/ComfyUIScript/custom_nodes/websocket_image_save.py
+[2024-05-21 01:46]    0.0 seconds: /home/ubuntu/ComfyUIScript/custom_nodes/masquerade-nodes-comfyui
+[2024-05-21 01:46]    0.0 seconds: /home/ubuntu/ComfyUIScript/custom_nodes/ComfyUI_JPS-Nodes
+[2024-05-21 01:46]    0.0 seconds: /home/ubuntu/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes
+[2024-05-21 01:46]    0.0 seconds: /home/ubuntu/ComfyUIScript/custom_nodes/ComfyUI_Manager
+[2024-05-21 01:46]    1.7 seconds: /home/ubuntu/ComfyUIScript/custom_nodes/was-node-suite-comfyui
+[2024-05-21 01:46]    2.2 seconds: /home/ubuntu/ComfyUIScript/custom_nodes/comfy_mtb
+[2024-05-21 01:46] 
+[2024-05-21 01:46] Starting server
+
+[2024-05-21 01:46] To see the GUI go to: http://127.0.0.1:8188
+[2024-05-21 01:46] FETCH DATA from: /home/ubuntu/ComfyUIScript/custom_nodes/ComfyUI_Manager/extension-node-map.json [DONE]
+[2024-05-21 01:47] FETCH DATA from: /home/ubuntu/ComfyUIScript/custom_nodes/ComfyUI_Manager/.cache/1514988643_custom-node-list.json [DONE]
+[2024-05-21 01:47] FETCH DATA from: /home/ubuntu/ComfyUIScript/custom_nodes/ComfyUI_Manager/.cache/746607195_github-stats.json [DONE]
+[2024-05-21 01:47] FETCH DATA from: /home/ubuntu/ComfyUIScript/custom_nodes/ComfyUI_Manager/.cache/1742899825_extension-node-map.json [DONE]
+[2024-05-21 01:49] got prompt
+[2024-05-21 01:49] Failed to validate prompt for output 304:
+[2024-05-21 01:49] * Mask To Region 275:
+[2024-05-21 01:49]   - Required input is missing: mask
+[2024-05-21 01:49] Output will be ignored
+[2024-05-21 01:49] Failed to validate prompt for output 297:
+[2024-05-21 01:49] Output will be ignored
+[2024-05-21 01:49] Failed to validate prompt for output 295:
+[2024-05-21 01:49] Output will be ignored
+[2024-05-21 01:49] Failed to validate prompt for output 298:
+[2024-05-21 01:49] Output will be ignored
+[2024-05-21 01:49] Failed to validate prompt for output 316:
+[2024-05-21 01:49] Output will be ignored
+[2024-05-21 01:49] Failed to validate prompt for output 299:
+[2024-05-21 01:49] Output will be ignored
+[2024-05-21 01:49] Prompt executed in 0.40 seconds
+[2024-05-21 01:50] got prompt
+[2024-05-21 01:50] !!! Exception during processing!!! The expanded size of the tensor (1) must match the existing size (768) at non-singleton dimension 0.  Target sizes: [1, 768, 535].  Tensor sizes: [768, 768, 535]
+[2024-05-21 01:50] Traceback (most recent call last):
+  File "/home/ubuntu/ComfyUIScript/execution.py", line 151, in recursive_execute
+    output_data, output_ui = get_output_data(obj, input_data_all)
+  File "/home/ubuntu/ComfyUIScript/execution.py", line 81, in get_output_data
+    return_values = map_node_over_list(obj, input_data_all, obj.FUNCTION, allow_interrupt=True)
+  File "/home/ubuntu/ComfyUIScript/execution.py", line 74, in map_node_over_list
+    results.append(getattr(obj, func)(**slice_dict(input_data_all, i)))
+  File "/home/ubuntu/ComfyUIScript/custom_nodes/masquerade-nodes-comfyui/MaskNodes.py", line 754, in cut
+    alpha_mask[:,:,:,3] = mask
+RuntimeError: The expanded size of the tensor (1) must match the existing size (768) at non-singleton dimension 0.  Target sizes: [1, 768, 535].  Tensor sizes: [768, 768, 535]
+
+[2024-05-21 01:50] Prompt executed in 17.11 seconds
+[2024-05-21 01:50] FETCH DATA from: /home/ubuntu/ComfyUIScript/custom_nodes/ComfyUI_Manager/extension-node-map.json [DONE]
+[2024-05-21 01:50] got prompt
+[2024-05-21 01:50] !!! Exception during processing!!! The expanded size of the tensor (1) must match the existing size (768) at non-singleton dimension 0.  Target sizes: [1, 768, 535].  Tensor sizes: [768, 768, 535]
+[2024-05-21 01:50] Traceback (most recent call last):
+  File "/home/ubuntu/ComfyUIScript/execution.py", line 151, in recursive_execute
+    output_data, output_ui = get_output_data(obj, input_data_all)
+  File "/home/ubuntu/ComfyUIScript/execution.py", line 81, in get_output_data
+    return_values = map_node_over_list(obj, input_data_all, obj.FUNCTION, allow_interrupt=True)
+  File "/home/ubuntu/ComfyUIScript/execution.py", line 74, in map_node_over_list
+    results.append(getattr(obj, func)(**slice_dict(input_data_all, i)))
+  File "/home/ubuntu/ComfyUIScript/custom_nodes/masquerade-nodes-comfyui/MaskNodes.py", line 754, in cut
+    alpha_mask[:,:,:,3] = mask
+RuntimeError: The expanded size of the tensor (1) must match the existing size (768) at non-singleton dimension 0.  Target sizes: [1, 768, 535].  Tensor sizes: [768, 768, 535]
+
+[2024-05-21 01:50] Prompt executed in 0.25 seconds
+[2024-05-21 01:54] FETCH DATA from: /home/ubuntu/ComfyUIScript/custom_nodes/ComfyUI_Manager/.cache/1514988643_custom-node-list.json [DONE]
+[2024-05-21 01:54] FETCH DATA from: /home/ubuntu/ComfyUIScript/custom_nodes/ComfyUI_Manager/.cache/746607195_github-stats.json [DONE]
+[2024-05-21 01:54] FETCH DATA from: /home/ubuntu/ComfyUIScript/custom_nodes/ComfyUI_Manager/.cache/1742899825_extension-node-map.json [DONE]
+[2024-05-21 01:54] Update custom node 'WAS Node Suite'
+[2024-05-21 01:54] Update: ['https://github.com/WASasquatch/was-node-suite-comfyui']
+[2024-05-21 01:54] Update was successful.
+[2024-05-21 01:54] After restarting ComfyUI, please refresh the browser.
+[2024-05-21 01:54] FETCH DATA from: /home/ubuntu/ComfyUIScript/custom_nodes/ComfyUI_Manager/.cache/1514988643_custom-node-list.json [DONE]
+[2024-05-21 01:54] FETCH DATA from: /home/ubuntu/ComfyUIScript/custom_nodes/ComfyUI_Manager/.cache/746607195_github-stats.json [DONE]
+[2024-05-21 01:54] FETCH DATA from: /home/ubuntu/ComfyUIScript/custom_nodes/ComfyUI_Manager/.cache/1742899825_extension-node-map.json [DONE]
+[2024-05-21 01:55] got prompt
+[2024-05-21 01:55] model_type EPS
+[2024-05-21 01:55] Using pytorch attention in VAE
+[2024-05-21 01:55] Using pytorch attention in VAE
+[2024-05-21 01:55] Requested to load SDXLClipModel
+[2024-05-21 01:55] Loading 1 new model
+[2024-05-21 01:55] Requested to load AutoencoderKL
+[2024-05-21 01:55] Loading 1 new model
+[2024-05-21 01:55] Requested to load SDXL
+[2024-05-21 01:55] Loading 1 new model
+[2024-05-21 01:55] 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:06<00:00,  3.27it/s]100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:06<00:00,  3.30it/s]
+[2024-05-21 01:55] Prompt executed in 10.44 seconds
+[2024-05-21 01:58] got prompt
+[2024-05-21 01:58] got prompt
+[2024-05-21 01:58] 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.29it/s]100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.37it/s]
+[2024-05-21 01:58] Prompt executed in 6.81 seconds
+[2024-05-21 01:58] 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.30it/s]100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.40it/s]
+[2024-05-21 01:58] Prompt executed in 6.61 seconds
+[2024-05-21 01:58] got prompt
+[2024-05-21 01:58] 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.30it/s]100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.40it/s]
+[2024-05-21 01:58] Prompt executed in 6.66 seconds
+[2024-05-21 02:00] got prompt
+[2024-05-21 02:00] Failed to validate prompt for output 304:
+[2024-05-21 02:00] * Image To Mask 283:
+[2024-05-21 02:00]   - Required input is missing: image
+[2024-05-21 02:00] Output will be ignored
+[2024-05-21 02:00] Failed to validate prompt for output 295:
+[2024-05-21 02:00] Output will be ignored
+[2024-05-21 02:00] Prompt executed in 0.50 seconds
+[2024-05-21 02:00] got prompt
+[2024-05-21 02:00] Failed to validate prompt for output 304:
+[2024-05-21 02:00] * Image To Mask 283:
+[2024-05-21 02:00]   - Required input is missing: image
+[2024-05-21 02:00] Output will be ignored
+[2024-05-21 02:00] Failed to validate prompt for output 295:
+[2024-05-21 02:00] Output will be ignored
+[2024-05-21 02:00] Prompt executed in 0.52 seconds
+[2024-05-21 02:02] got prompt
+[2024-05-21 02:02] Failed to validate prompt for output 304:
+[2024-05-21 02:02] * Image To Mask 283:
+[2024-05-21 02:02]   - Required input is missing: image
+[2024-05-21 02:02] Output will be ignored
+[2024-05-21 02:02] Failed to validate prompt for output 295:
+[2024-05-21 02:02] Output will be ignored
+[2024-05-21 02:02] Prompt executed in 0.06 seconds
+[2024-05-21 02:02] got prompt
+[2024-05-21 02:02] Failed to validate prompt for output 304:
+[2024-05-21 02:02] * Image To Mask 283:
+[2024-05-21 02:02]   - Required input is missing: image
+[2024-05-21 02:02] Output will be ignored
+[2024-05-21 02:02] Failed to validate prompt for output 295:
+[2024-05-21 02:02] Output will be ignored
+[2024-05-21 02:02] Prompt executed in 0.09 seconds
+[2024-05-21 02:02] got prompt
+[2024-05-21 02:02] Failed to validate prompt for output 304:
+[2024-05-21 02:02] * Image To Mask 283:
+[2024-05-21 02:02]   - Required input is missing: image
+[2024-05-21 02:02] Output will be ignored
+[2024-05-21 02:02] Failed to validate prompt for output 295:
+[2024-05-21 02:02] Output will be ignored
+[2024-05-21 02:02] Prompt executed in 0.09 seconds
+[2024-05-21 02:03] got prompt
+[2024-05-21 02:03] 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.27it/s]100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.37it/s]
+[2024-05-21 02:03] Prompt executed in 6.64 seconds
+[2024-05-21 02:03] got prompt
+[2024-05-21 02:04] 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.30it/s]100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.39it/s]
+[2024-05-21 02:04] Prompt executed in 7.07 seconds
+[2024-05-21 02:04] got prompt
+[2024-05-21 02:05] 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.30it/s]100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.38it/s]
+[2024-05-21 02:05] !!! Exception during processing!!! index 3 is out of bounds for dimension 3 with size 3
+[2024-05-21 02:05] Traceback (most recent call last):
+  File "/home/ubuntu/ComfyUIScript/execution.py", line 151, in recursive_execute
+    output_data, output_ui = get_output_data(obj, input_data_all)
+  File "/home/ubuntu/ComfyUIScript/execution.py", line 81, in get_output_data
+    return_values = map_node_over_list(obj, input_data_all, obj.FUNCTION, allow_interrupt=True)
+  File "/home/ubuntu/ComfyUIScript/execution.py", line 74, in map_node_over_list
+    results.append(getattr(obj, func)(**slice_dict(input_data_all, i)))
+  File "/home/ubuntu/ComfyUIScript/comfy_extras/nodes_mask.py", line 129, in image_to_mask
+    mask = image[:, :, :, channels.index(channel)]
+IndexError: index 3 is out of bounds for dimension 3 with size 3
+
+[2024-05-21 02:05] Prompt executed in 6.57 seconds
+[2024-05-21 02:05] got prompt
+[2024-05-21 02:05] 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.30it/s]100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.40it/s]
+[2024-05-21 02:05] Prompt executed in 7.05 seconds
+[2024-05-21 02:05] got prompt
+[2024-05-21 02:05] 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.29it/s]100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.39it/s]
+[2024-05-21 02:05] Prompt executed in 6.61 seconds
+[2024-05-21 02:05] got prompt
+[2024-05-21 02:05] 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.30it/s]100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.39it/s]
+[2024-05-21 02:05] Prompt executed in 6.58 seconds
+[2024-05-21 02:06] got prompt
+[2024-05-21 02:06] 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.29it/s]100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.39it/s]
+[2024-05-21 02:06] Prompt executed in 6.58 seconds
