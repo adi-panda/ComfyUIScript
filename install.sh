@@ -35,11 +35,16 @@ wget --content-disposition -P models/inpaint "$inpaint_patch"
 wget --content-disposition -P models/inpaint "$big_lama"
 wget --content-disposition -P models/inpaint "$mat"
 
+mkdir -p custom_nodes/toona_utils
+upscale_modal="https://huggingface.co/lllyasviel/misc/resolve/main/fooocus_upscaler_s409985e5.bin"
+
+wget --content-disposition -P custom_nodes/toona_utils "$upscale_modal"
+
 pip install -r requirements.txt
 
 git clone https://github.com/ltdrdata/ComfyUI-Manager.git custom_nodes/ComfyUI_Manager
-git clone https://github.com/WASasquatch/was-node-suite-comfyui custom_nodes/was-node-suite-comfyui
 git clone https://github.com/BadCafeCode/masquerade-nodes-comfyui custom_nodes/masquerade-nodes-comfyui
 git clone https://github.com/JPS-GER/ComfyUI_JPS-Nodes custom_nodes/ComfyUI_JPS-Nodes
 git clone https://github.com/Acly/comfyui-inpaint-nodes custom_nodes/comfyui-inpaint-nodes
+git clone https://github.com/WASasquatch/was-node-suite-comfyui custom_nodes/was-node-suite-comfyui
 

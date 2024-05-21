@@ -1,35 +1,58 @@
-## ComfyUI-Manager: installing dependencies. (GitPython)
-[2024-05-21 21:00] ## ComfyUI-Manager: installing dependencies done.
-[2024-05-21 21:00] ** ComfyUI startup time: 2024-05-21 21:00:03.532135
-[2024-05-21 21:00] ** Platform: Linux
-[2024-05-21 21:00] ** Python version: 3.10.12 (main, Jun 11 2023, 05:26:28) [GCC 11.4.0]
-[2024-05-21 21:00] ** Python executable: /usr/bin/python
-[2024-05-21 21:00] ** Log path: /root/ComfyUIScript/comfyui.log
-[2024-05-21 21:00] 
+## ComfyUI-Manager: installing dependencies done.
+[2024-05-21 23:45] ** ComfyUI startup time: 2024-05-21 23:45:23.846151
+[2024-05-21 23:45] ** Platform: Linux
+[2024-05-21 23:45] ** Python version: 3.10.12 (main, Jun 11 2023, 05:26:28) [GCC 11.4.0]
+[2024-05-21 23:45] ** Python executable: /usr/bin/python
+[2024-05-21 23:45] ** Log path: /root/ComfyUIScript/comfyui.log
+[2024-05-21 23:45] 
 Prestartup times for custom nodes:
-[2024-05-21 21:00]    4.5 seconds: /root/ComfyUIScript/custom_nodes/ComfyUI_Manager
-[2024-05-21 21:00] 
+[2024-05-21 23:45]    0.1 seconds: /root/ComfyUIScript/custom_nodes/ComfyUI_Manager
+[2024-05-21 23:45] 
 Total VRAM 16109 MB, total RAM 225417 MB
-[2024-05-21 21:00] pytorch version: 2.1.0+cu118
-[2024-05-21 21:00] Set vram state to: NORMAL_VRAM
-[2024-05-21 21:00] Device: cuda:0 NVIDIA RTX A4000 : cudaMallocAsync
-[2024-05-21 21:00] VAE dtype: torch.bfloat16
-[2024-05-21 21:00] Using pytorch cross attention
-[2024-05-21 21:00] ****** User settings have been changed to be stored on the server instead of browser storage. ******
-[2024-05-21 21:00] ****** For multi-user setups add the --multi-user CLI argument to enable multiple user profiles. ******
-[2024-05-21 21:00] ### Loading: ComfyUI-Manager (V2.34.1)
-[2024-05-21 21:00] ### ComfyUI Revision: 2199 [ba8c0c78] | Released on '2024-05-21'
-[2024-05-21 21:00] 
-Import times for custom nodes:
-[2024-05-21 21:00]    0.0 seconds: /root/ComfyUIScript/custom_nodes/websocket_image_save.py
-[2024-05-21 21:00]    0.0 seconds: /root/ComfyUIScript/custom_nodes/ComfyUI_Manager
-[2024-05-21 21:00] 
-[2024-05-21 21:00] Starting server
+[2024-05-21 23:45] pytorch version: 2.1.0+cu118
+[2024-05-21 23:45] Set vram state to: NORMAL_VRAM
+[2024-05-21 23:45] Device: cuda:0 NVIDIA RTX A4000 : cudaMallocAsync
+[2024-05-21 23:45] VAE dtype: torch.bfloat16
+[2024-05-21 23:45] Using pytorch cross attention
+[2024-05-21 23:45] ### Loading: ComfyUI-Manager (V2.34.1)
+[2024-05-21 23:45] ### ComfyUI Revision: 2200 [860588ed] | Released on '2024-05-21'
+[2024-05-21 23:45] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/github-stats.json
+[2024-05-21 23:45] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/extension-node-map.json
+[2024-05-21 23:45] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/model-list.json
+[2024-05-21 23:45] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/alter-list.json
+[2024-05-21 23:45] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/custom-node-list.json
+[2024-05-21 23:45] [34mWAS Node Suite: [0mOpenCV Python FFMPEG support is enabled[0m
+[2024-05-21 23:45] [34mWAS Node Suite [93mWarning: [0m`ffmpeg_bin_path` is not set in `/root/ComfyUIScript/custom_nodes/was-node-suite-comfyui/was_suite_config.json` config file. Will attempt to use system ffmpeg binaries if available.[0m
+[2024-05-21 23:45] [34mWAS Node Suite: [0mFinished.[0m [32mLoaded[0m [0m212[0m [32mnodes successfully.[0m
+[2024-05-21 23:45] 
+	[3m[93m"Success is not final, failure is not fatal: It is the courage to continue that counts."[0m[3m - Winston Churchill[0m
+[2024-05-21 23:45] 
+[2024-05-21 23:45] Traceback (most recent call last):
+  File "/root/ComfyUIScript/nodes.py", line 1879, in load_custom_node
+    module_spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/root/ComfyUIScript/custom_nodes/toona_nodes/__init__.py", line 2, in <module>
+    from .toona_upscale import ToonaUpscale
+  File "/root/ComfyUIScript/custom_nodes/toona_nodes/toona_upscale.py", line 6, in <module>
+    from .upscaler import perform_upscale
+  File "/root/ComfyUIScript/custom_nodes/toona_nodes/upscaler.py", line 6, in <module>
+    from toona_nodes.ldm_patched.contrib.external_upscale_model import ImageUpscaleWithModel
+  File "/root/ComfyUIScript/custom_nodes/toona_nodes/ldm_patched/contrib/external_upscale_model.py", line 4, in <module>
+    from ldm_patched.pfn import model_loading
+ModuleNotFoundError: No module named 'ldm_patched'
 
-[2024-05-21 21:00] To see the GUI go to: http://127.0.0.1:8188
-[2024-05-21 21:00] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/model-list.json
-[2024-05-21 21:00] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/alter-list.json
-[2024-05-21 21:00] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/extension-node-map.json
-[2024-05-21 21:00] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/custom-node-list.json
-[2024-05-21 21:00] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/github-stats.json
-[2024-05-21 21:00] FETCH DATA from: /root/ComfyUIScript/custom_nodes/ComfyUI_Manager/extension-node-map.json [DONE]
+[2024-05-21 23:45] Cannot import /root/ComfyUIScript/custom_nodes/toona_nodes module for custom nodes: No module named 'ldm_patched'
+[2024-05-21 23:45] 
+Import times for custom nodes:
+[2024-05-21 23:45]    0.0 seconds: /root/ComfyUIScript/custom_nodes/websocket_image_save.py
+[2024-05-21 23:45]    0.0 seconds: /root/ComfyUIScript/custom_nodes/ComfyUI_JPS-Nodes
+[2024-05-21 23:45]    0.0 seconds: /root/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes
+[2024-05-21 23:45]    0.0 seconds (IMPORT FAILED): /root/ComfyUIScript/custom_nodes/toona_nodes
+[2024-05-21 23:45]    0.0 seconds: /root/ComfyUIScript/custom_nodes/masquerade-nodes-comfyui
+[2024-05-21 23:45]    0.0 seconds: /root/ComfyUIScript/custom_nodes/ComfyUI_Manager
+[2024-05-21 23:45]    1.6 seconds: /root/ComfyUIScript/custom_nodes/was-node-suite-comfyui
+[2024-05-21 23:45] 
+[2024-05-21 23:45] Starting server
+
+[2024-05-21 23:45] To see the GUI go to: http://127.0.0.1:8188

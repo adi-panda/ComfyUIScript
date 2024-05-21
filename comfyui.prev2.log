@@ -1,212 +1,60 @@
 ## ComfyUI-Manager: installing dependencies done.
-[2024-05-21 02:12] ** ComfyUI startup time: 2024-05-21 02:12:24.235750
-[2024-05-21 02:12] ** Platform: Linux
-[2024-05-21 02:12] ** Python version: 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
-[2024-05-21 02:12] ** Python executable: /usr/bin/python
-[2024-05-21 02:12] ** Log path: /home/ubuntu/ComfyUIScript/comfyui.log
-[2024-05-21 02:12] 
-#######################################################################
-[2024-05-21 02:12] [ComfyUI-Manager] Starting dependency installation/(de)activation for the extension
-[2024-05-21 02:12] 
-[2024-05-21 02:12] Install: pip packages for '/home/ubuntu/ComfyUIScript/custom_nodes/was-node-suite-comfyui'
-[2024-05-21 02:12]  Defaulting to user installation because normal site-packages is not writeable
-[2024-05-21 02:12]  Collecting git+https://github.com/WASasquatch/img2texture.git
-[2024-05-21 02:12]    Cloning https://github.com/WASasquatch/img2texture.git to /tmp/pip-req-build-p_gz7d4w
-[2024-05-21 02:12] [!]   Running command git clone --filter=blob:none --quiet https://github.com/WASasquatch/img2texture.git /tmp/pip-req-build-p_gz7d4w
-[2024-05-21 02:12]    Resolved https://github.com/WASasquatch/img2texture.git to commit a546609a915caf1dcb84a15bf44b5b639ad924e6
-[2024-05-21 02:12]    Preparing metadata (setup.py): started
-[2024-05-21 02:12]    Preparing metadata (setup.py): finished with status 'done'
-[2024-05-21 02:12]  [!] DEPRECATION: flatbuffers 1.12.1-git20200711.33e2d80-dfsg1-0.6 has a non-standard version number. pip 24.0 will enforce this behaviour change. A possible replacement is to upgrade to a newer version of flatbuffers or contact the author to suggest that they release a version with a conforming version number. Discussion can be found at https://github.com/pypa/pip/issues/12063
-[2024-05-21 02:12] [!] 
-[2024-05-21 02:12] [!] [notice] A new release of pip is available: 23.3.1 -> 24.0
-[2024-05-21 02:12] [!] [notice] To update, run: python -m pip install --upgrade pip
-[2024-05-21 02:12]  Defaulting to user installation because normal site-packages is not writeable
-[2024-05-21 02:12]  Collecting git+https://github.com/WASasquatch/cstr
-[2024-05-21 02:12]    Cloning https://github.com/WASasquatch/cstr to /tmp/pip-req-build-j24yvfhq
-[2024-05-21 02:12] [!]   Running command git clone --filter=blob:none --quiet https://github.com/WASasquatch/cstr /tmp/pip-req-build-j24yvfhq
-[2024-05-21 02:12]    Resolved https://github.com/WASasquatch/cstr to commit 0520c29a18a7a869a6e5983861d6f7a4c86f8e9b
-[2024-05-21 02:12]    Preparing metadata (setup.py): started
-[2024-05-21 02:12]    Preparing metadata (setup.py): finished with status 'done'
-[2024-05-21 02:12] [!] DEPRECATION: flatbuffers 1.12.1-git20200711.33e2d80-dfsg1-0.6 has a non-standard version number. pip 24.0 will enforce this behaviour change. A possible replacement is to upgrade to a newer version of flatbuffers or contact the author to suggest that they release a version with a conforming version number. Discussion can be found at https://github.com/pypa/pip/issues/12063
-[2024-05-21 02:12] [!] 
-[2024-05-21 02:12] [!] [notice] A new release of pip is available: 23.3.1 -> 24.0
-[2024-05-21 02:12] [!] [notice] To update, run: python -m pip install --upgrade pip
-[2024-05-21 02:12]  Defaulting to user installation because normal site-packages is not writeable
-[2024-05-21 02:12]    [!] DEPRECATION: flatbuffers 1.12.1-git20200711.33e2d80-dfsg1-0.6 has a non-standard version number. pip 24.0 will enforce this behaviour change. A possible replacement is to upgrade to a newer version of flatbuffers or contact the author to suggest that they release a version with a conforming version number. Discussion can be found at https://github.com/pypa/pip/issues/12063
-[2024-05-21 02:12] [!] 
-[2024-05-21 02:12] [!] [notice] A new release of pip is available: 23.3.1 -> 24.0
-[2024-05-21 02:12] [!] [notice] To update, run: python -m pip install --upgrade pip
-[2024-05-21 02:12]  Defaulting to user installation because normal site-packages is not writeable
-[2024-05-21 02:12]   [!] WARNING: opencv-python-headless 4.7.0.72 does not provide the extra 'ffmpeg'
-[2024-05-21 02:12] [!] DEPRECATION: flatbuffers 1.12.1-git20200711.33e2d80-dfsg1-0.6 has a non-standard version number. pip 24.0 will enforce this behaviour change. A possible replacement is to upgrade to a newer version of flatbuffers or contact the author to suggest that they release a version with a conforming version number. Discussion can be found at https://github.com/pypa/pip/issues/12063
-[2024-05-21 02:12] [!] 
-[2024-05-21 02:12] [!] [notice] A new release of pip is available: 23.3.1 -> 24.0
-[2024-05-21 02:12] [!] [notice] To update, run: python -m pip install --upgrade pip
-[2024-05-21 02:12]  Defaulting to user installation because normal site-packages is not writeable
-[2024-05-21 02:12]  Collecting git+https://github.com/WASasquatch/ffmpy.git
-[2024-05-21 02:12]    Cloning https://github.com/WASasquatch/ffmpy.git to /tmp/pip-req-build-yckh9usd
-[2024-05-21 02:12] [!]   Running command git clone --filter=blob:none --quiet https://github.com/WASasquatch/ffmpy.git /tmp/pip-req-build-yckh9usd
-[2024-05-21 02:12]    Resolved https://github.com/WASasquatch/ffmpy.git to commit f000737698b387ffaeab7cd871b0e9185811230d
-[2024-05-21 02:12]    Preparing metadata (setup.py): started
-[2024-05-21 02:12]    Preparing metadata (setup.py): finished with status 'done'
-[2024-05-21 02:12] [!] DEPRECATION: flatbuffers 1.12.1-git20200711.33e2d80-dfsg1-0.6 has a non-standard version number. pip 24.0 will enforce this behaviour change. A possible replacement is to upgrade to a newer version of flatbuffers or contact the author to suggest that they release a version with a conforming version number. Discussion can be found at https://github.com/pypa/pip/issues/12063
-[2024-05-21 02:12] [!] 
-[2024-05-21 02:12] [!] [notice] A new release of pip is available: 23.3.1 -> 24.0
-[2024-05-21 02:12] [!] [notice] To update, run: python -m pip install --upgrade pip
-[2024-05-21 02:12] 
-[ComfyUI-Manager] Startup script completed.
-[2024-05-21 02:12] #######################################################################
-[2024-05-21 02:12] 
-[2024-05-21 02:12] 
+[2024-05-21 23:44] ** ComfyUI startup time: 2024-05-21 23:44:45.496953
+[2024-05-21 23:44] ** Platform: Linux
+[2024-05-21 23:44] ** Python version: 3.10.12 (main, Jun 11 2023, 05:26:28) [GCC 11.4.0]
+[2024-05-21 23:44] ** Python executable: /usr/bin/python
+[2024-05-21 23:44] ** Log path: /root/ComfyUIScript/comfyui.log
+[2024-05-21 23:44] 
 Prestartup times for custom nodes:
-[2024-05-21 02:12]   11.6 seconds: /home/ubuntu/ComfyUIScript/custom_nodes/ComfyUI_Manager
-[2024-05-21 02:12] 
-Total VRAM 22516 MB, total RAM 227489 MB
-[2024-05-21 02:12] pytorch version: 2.0.1
-[2024-05-21 02:12] Set vram state to: NORMAL_VRAM
-[2024-05-21 02:12] Device: cuda:0 NVIDIA A10 : cudaMallocAsync
-[2024-05-21 02:12] VAE dtype: torch.bfloat16
-[2024-05-21 02:12] Using pytorch cross attention
-[2024-05-21 02:12] [34mWAS Node Suite: [0mOpenCV Python installed.[0m
-[2024-05-21 02:12] [34mWAS Node Suite: [0mFinished.[0m [32mLoaded[0m [0m212[0m [32mnodes successfully.[0m
-[2024-05-21 02:12] 
-	[3m[93m"Be the change that you wish to see in the world."[0m[3m - Mahatma Gandhi[0m
-[2024-05-21 02:12] 
-[2024-05-21 02:12] ### Loading: ComfyUI-Manager (V2.34.1)
-[2024-05-21 02:12] ### ComfyUI Revision: 2198 [1900e511] | Released on '2024-05-20'
-[2024-05-21 02:12] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/alter-list.json
-[2024-05-21 02:12] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/model-list.json
-[2024-05-21 02:12] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/custom-node-list.json
-[2024-05-21 02:12] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/github-stats.json
-[2024-05-21 02:12] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/extension-node-map.json
-[2024-05-21 02:12] /home/ubuntu/.local/lib/python3.10/site-packages/numba/np/ufunc/parallel.py:371: NumbaWarning: [1mThe TBB threading layer requires TBB version 2021 update 6 or later i.e., TBB_INTERFACE_VERSION >= 12060. Found TBB_INTERFACE_VERSION = 12050. The TBB threading layer is disabled.[0m
-  warnings.warn(problem)
-[2024-05-21 02:12] Note: NumExpr detected 30 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
-[2024-05-21 02:12] NumExpr defaulting to 8 threads.
-[2024-05-21 02:12] [36;20m[comfy_mtb] | INFO -> loaded [96m75[0m nodes successfuly[0m
-[2024-05-21 02:12] [36;20m[comfy_mtb] | INFO -> Some nodes (3) could not be loaded. This can be ignored, but go to http://127.0.0.1:8188/mtb if you want more information.[0m
-[2024-05-21 02:12] 
+[2024-05-21 23:44]    0.1 seconds: /root/ComfyUIScript/custom_nodes/ComfyUI_Manager
+[2024-05-21 23:44] 
+Total VRAM 16109 MB, total RAM 225417 MB
+[2024-05-21 23:44] pytorch version: 2.1.0+cu118
+[2024-05-21 23:44] Set vram state to: NORMAL_VRAM
+[2024-05-21 23:44] Device: cuda:0 NVIDIA RTX A4000 : cudaMallocAsync
+[2024-05-21 23:44] VAE dtype: torch.bfloat16
+[2024-05-21 23:44] Using pytorch cross attention
+[2024-05-21 23:44] ### Loading: ComfyUI-Manager (V2.34.1)
+[2024-05-21 23:44] ### ComfyUI Revision: 2200 [860588ed] | Released on '2024-05-21'
+[2024-05-21 23:44] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/model-list.json
+[2024-05-21 23:44] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/alter-list.json
+[2024-05-21 23:44] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/github-stats.json
+[2024-05-21 23:44] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/custom-node-list.json
+[2024-05-21 23:44] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/extension-node-map.json
+[2024-05-21 23:44] [34mWAS Node Suite: [0mOpenCV Python FFMPEG support is enabled[0m
+[2024-05-21 23:44] [34mWAS Node Suite [93mWarning: [0m`ffmpeg_bin_path` is not set in `/root/ComfyUIScript/custom_nodes/was-node-suite-comfyui/was_suite_config.json` config file. Will attempt to use system ffmpeg binaries if available.[0m
+[2024-05-21 23:44] [34mWAS Node Suite: [0mFinished.[0m [32mLoaded[0m [0m212[0m [32mnodes successfully.[0m
+[2024-05-21 23:44] 
+	[3m[93m"Your time is limited, don't waste it living someone else's life."[0m[3m - Steve Jobs[0m
+[2024-05-21 23:44] 
+[2024-05-21 23:44] Traceback (most recent call last):
+  File "/root/ComfyUIScript/nodes.py", line 1879, in load_custom_node
+    module_spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/root/ComfyUIScript/custom_nodes/toona_nodes/__init__.py", line 2, in <module>
+    from .toona_upscale import ToonaUpscale
+  File "/root/ComfyUIScript/custom_nodes/toona_nodes/toona_upscale.py", line 6, in <module>
+    from .upscaler import perform_upscale
+  File "/root/ComfyUIScript/custom_nodes/toona_nodes/upscaler.py", line 6, in <module>
+    from toona_nodes.ldm_patched.contrib.external_upscale_model import ImageUpscaleWithModel
+  File "/root/ComfyUIScript/custom_nodes/toona_nodes/ldm_patched/contrib/external_upscale_model.py", line 4, in <module>
+    from ldm_patched.pfn import model_loading
+ModuleNotFoundError: No module named 'ldm_patched'
+
+[2024-05-21 23:44] Cannot import /root/ComfyUIScript/custom_nodes/toona_nodes module for custom nodes: No module named 'ldm_patched'
+[2024-05-21 23:44] 
 Import times for custom nodes:
-[2024-05-21 02:12]    0.0 seconds: /home/ubuntu/ComfyUIScript/custom_nodes/websocket_image_save.py
-[2024-05-21 02:12]    0.0 seconds: /home/ubuntu/ComfyUIScript/custom_nodes/masquerade-nodes-comfyui
-[2024-05-21 02:12]    0.0 seconds: /home/ubuntu/ComfyUIScript/custom_nodes/ComfyUI_JPS-Nodes
-[2024-05-21 02:12]    0.0 seconds: /home/ubuntu/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes
-[2024-05-21 02:12]    0.0 seconds: /home/ubuntu/ComfyUIScript/custom_nodes/ComfyUI_Manager
-[2024-05-21 02:12]    1.6 seconds: /home/ubuntu/ComfyUIScript/custom_nodes/was-node-suite-comfyui
-[2024-05-21 02:12]    2.1 seconds: /home/ubuntu/ComfyUIScript/custom_nodes/comfy_mtb
-[2024-05-21 02:12] 
-[2024-05-21 02:12] Starting server
+[2024-05-21 23:44]    0.0 seconds: /root/ComfyUIScript/custom_nodes/websocket_image_save.py
+[2024-05-21 23:44]    0.0 seconds: /root/ComfyUIScript/custom_nodes/ComfyUI_JPS-Nodes
+[2024-05-21 23:44]    0.0 seconds: /root/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes
+[2024-05-21 23:44]    0.0 seconds: /root/ComfyUIScript/custom_nodes/masquerade-nodes-comfyui
+[2024-05-21 23:44]    0.0 seconds (IMPORT FAILED): /root/ComfyUIScript/custom_nodes/toona_nodes
+[2024-05-21 23:44]    0.0 seconds: /root/ComfyUIScript/custom_nodes/ComfyUI_Manager
+[2024-05-21 23:44]    1.5 seconds: /root/ComfyUIScript/custom_nodes/was-node-suite-comfyui
+[2024-05-21 23:44] 
+[2024-05-21 23:44] Starting server
 
-[2024-05-21 02:12] To see the GUI go to: http://127.0.0.1:8188
-[2024-05-21 02:12] FETCH DATA from: /home/ubuntu/ComfyUIScript/custom_nodes/ComfyUI_Manager/extension-node-map.json [DONE]
-[2024-05-21 02:12] got prompt
-[2024-05-21 02:12] model_type EPS
-[2024-05-21 02:12] Using pytorch attention in VAE
-[2024-05-21 02:12] Using pytorch attention in VAE
-[2024-05-21 02:12] Requested to load SDXLClipModel
-[2024-05-21 02:12] Loading 1 new model
-[2024-05-21 02:12] Requested to load AutoencoderKL
-[2024-05-21 02:12] Loading 1 new model
-[2024-05-21 02:12] Requested to load SDXL
-[2024-05-21 02:12] Loading 1 new model
-[2024-05-21 02:12] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:06<00:00,  3.27it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:06<00:00,  3.30it/s]
-[2024-05-21 02:12] Requested to load AutoencoderKL
-[2024-05-21 02:12] Loading 1 new model
-[2024-05-21 02:13] Prompt executed in 11.77 seconds
-[2024-05-21 02:15] got prompt
-[2024-05-21 02:15] Requested to load SDXL
-[2024-05-21 02:15] Loading 1 new model
-[2024-05-21 02:15] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.27it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.37it/s]
-[2024-05-21 02:15] Requested to load AutoencoderKL
-[2024-05-21 02:15] Loading 1 new model
-[2024-05-21 02:15] Prompt executed in 8.37 seconds
-[2024-05-21 02:15] got prompt
-[2024-05-21 02:15] Requested to load SDXL
-[2024-05-21 02:15] Loading 1 new model
-[2024-05-21 02:16] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.30it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.39it/s]
-[2024-05-21 02:16] Requested to load AutoencoderKL
-[2024-05-21 02:16] Loading 1 new model
-[2024-05-21 02:16] Prompt executed in 7.77 seconds
-[2024-05-21 02:16] got prompt
-[2024-05-21 02:16] Requested to load SDXL
-[2024-05-21 02:16] Loading 1 new model
-[2024-05-21 02:16] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.30it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.40it/s]
-[2024-05-21 02:16] Requested to load AutoencoderKL
-[2024-05-21 02:16] Loading 1 new model
-[2024-05-21 02:16] Prompt executed in 7.79 seconds
-[2024-05-21 02:16] got prompt
-[2024-05-21 02:16] Failed to validate prompt for output 297:
-[2024-05-21 02:16] * Images to RGB 329:
-[2024-05-21 02:16]   - Required input is missing: images
-[2024-05-21 02:16] Output will be ignored
-[2024-05-21 02:16] !!! Exception during processing!!! too many indices for tensor of dimension 3
-[2024-05-21 02:16] Traceback (most recent call last):
-  File "/home/ubuntu/ComfyUIScript/execution.py", line 151, in recursive_execute
-    output_data, output_ui = get_output_data(obj, input_data_all)
-  File "/home/ubuntu/ComfyUIScript/execution.py", line 81, in get_output_data
-    return_values = map_node_over_list(obj, input_data_all, obj.FUNCTION, allow_interrupt=True)
-  File "/home/ubuntu/ComfyUIScript/execution.py", line 74, in map_node_over_list
-    results.append(getattr(obj, func)(**slice_dict(input_data_all, i)))
-  File "/home/ubuntu/ComfyUIScript/comfy_extras/nodes_mask.py", line 129, in image_to_mask
-    mask = image[:, :, :, channels.index(channel)]
-IndexError: too many indices for tensor of dimension 3
-
-[2024-05-21 02:16] Prompt executed in 0.02 seconds
-[2024-05-21 02:16] got prompt
-[2024-05-21 02:16] !!! Exception during processing!!! too many indices for tensor of dimension 3
-[2024-05-21 02:16] Traceback (most recent call last):
-  File "/home/ubuntu/ComfyUIScript/execution.py", line 151, in recursive_execute
-    output_data, output_ui = get_output_data(obj, input_data_all)
-  File "/home/ubuntu/ComfyUIScript/execution.py", line 81, in get_output_data
-    return_values = map_node_over_list(obj, input_data_all, obj.FUNCTION, allow_interrupt=True)
-  File "/home/ubuntu/ComfyUIScript/execution.py", line 74, in map_node_over_list
-    results.append(getattr(obj, func)(**slice_dict(input_data_all, i)))
-  File "/home/ubuntu/ComfyUIScript/comfy_extras/nodes_mask.py", line 129, in image_to_mask
-    mask = image[:, :, :, channels.index(channel)]
-IndexError: too many indices for tensor of dimension 3
-
-[2024-05-21 02:16] Prompt executed in 0.02 seconds
-[2024-05-21 02:17] got prompt
-[2024-05-21 02:17] Requested to load SDXL
-[2024-05-21 02:17] Loading 1 new model
-[2024-05-21 02:17] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.31it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.38it/s]
-[2024-05-21 02:17] Requested to load AutoencoderKL
-[2024-05-21 02:17] Loading 1 new model
-[2024-05-21 02:17] Prompt executed in 7.83 seconds
-[2024-05-21 02:17] got prompt
-[2024-05-21 02:17] Requested to load SDXL
-[2024-05-21 02:17] Loading 1 new model
-[2024-05-21 02:18] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.30it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.40it/s]
-[2024-05-21 02:18] Requested to load AutoencoderKL
-[2024-05-21 02:18] Loading 1 new model
-[2024-05-21 02:18] Prompt executed in 7.74 seconds
-[2024-05-21 02:18] got prompt
-[2024-05-21 02:18] Requested to load SDXL
-[2024-05-21 02:18] Loading 1 new model
-[2024-05-21 02:18] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.29it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.40it/s]
-[2024-05-21 02:18] Requested to load AutoencoderKL
-[2024-05-21 02:18] Loading 1 new model
-[2024-05-21 02:18] Prompt executed in 7.77 seconds
-[2024-05-21 02:20] got prompt
-[2024-05-21 02:20] Requested to load SDXL
-[2024-05-21 02:20] Loading 1 new model
-[2024-05-21 02:20] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.31it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.38it/s]
-[2024-05-21 02:20] Requested to load AutoencoderKL
-[2024-05-21 02:20] Loading 1 new model
-[2024-05-21 02:20] Prompt executed in 8.29 seconds
-[2024-05-21 02:20] got prompt
-[2024-05-21 02:20] Requested to load SDXL
-[2024-05-21 02:20] Loading 1 new model
-[2024-05-21 02:20] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.30it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.40it/s]
-[2024-05-21 02:20] Requested to load AutoencoderKL
-[2024-05-21 02:20] Loading 1 new model
-[2024-05-21 02:20] Prompt executed in 7.66 seconds
-[2024-05-21 02:20] got prompt
-[2024-05-21 02:20] Requested to load SDXL
-[2024-05-21 02:20] Loading 1 new model
-[2024-05-21 02:20] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.29it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:05<00:00,  3.39it/s]
-[2024-05-21 02:20] Requested to load AutoencoderKL
-[2024-05-21 02:20] Loading 1 new model
-[2024-05-21 02:21] Prompt executed in 7.98 seconds
-[2024-05-21 02:21] 
+[2024-05-21 23:44] To see the GUI go to: http://127.0.0.1:8188
+[2024-05-21 23:45] 
 Stopped server
