@@ -28,8 +28,8 @@ class StableZero123_Conditioning:
         return {"required": { "clip_vision": ("CLIP_VISION",),
                               "init_image": ("IMAGE",),
                               "vae": ("VAE",),
-                              "width": ("INT", {"default": 256, "min": 16, "max": ldm_patched.contrib.external.MAX_RESOLUTION, "step": 8}),
-                              "height": ("INT", {"default": 256, "min": 16, "max": ldm_patched.contrib.external.MAX_RESOLUTION, "step": 8}),
+                              "width": ("INT", {"default": 256, "min": 16, "max": toona_nodes.ldm_patched.contrib.external.MAX_RESOLUTION, "step": 8}),
+                              "height": ("INT", {"default": 256, "min": 16, "max": toona_nodes.ldm_patched.contrib.external.MAX_RESOLUTION, "step": 8}),
                               "batch_size": ("INT", {"default": 1, "min": 1, "max": 4096}),
                               "elevation": ("FLOAT", {"default": 0.0, "min": -180.0, "max": 180.0}),
                               "azimuth": ("FLOAT", {"default": 0.0, "min": -180.0, "max": 180.0}),
@@ -44,7 +44,7 @@ class StableZero123_Conditioning:
     def encode(self, clip_vision, init_image, vae, width, height, batch_size, elevation, azimuth):
         output = clip_vision.encode_image(init_image)
         pooled = output.image_embeds.unsqueeze(0)
-        pixels = ldm_patched.modules.utils.common_upscale(init_image.movedim(-1,1), width, height, "bilinear", "center").movedim(1,-1)
+        pixels = toona_nodes.ldm_patched.modules.utils.common_upscale(init_image.movedim(-1,1), width, height, "bilinear", "center").movedim(1,-1)
         encode_pixels = pixels[:,:,:,:3]
         t = vae.encode(encode_pixels)
         cam_embeds = camera_embeddings(elevation, azimuth)
@@ -61,8 +61,8 @@ class StableZero123_Conditioning_Batched:
         return {"required": { "clip_vision": ("CLIP_VISION",),
                               "init_image": ("IMAGE",),
                               "vae": ("VAE",),
-                              "width": ("INT", {"default": 256, "min": 16, "max": ldm_patched.contrib.external.MAX_RESOLUTION, "step": 8}),
-                              "height": ("INT", {"default": 256, "min": 16, "max": ldm_patched.contrib.external.MAX_RESOLUTION, "step": 8}),
+                              "width": ("INT", {"default": 256, "min": 16, "max": toona_nodes.ldm_patched.contrib.external.MAX_RESOLUTION, "step": 8}),
+                              "height": ("INT", {"default": 256, "min": 16, "max": toona_nodes.ldm_patched.contrib.external.MAX_RESOLUTION, "step": 8}),
                               "batch_size": ("INT", {"default": 1, "min": 1, "max": 4096}),
                               "elevation": ("FLOAT", {"default": 0.0, "min": -180.0, "max": 180.0}),
                               "azimuth": ("FLOAT", {"default": 0.0, "min": -180.0, "max": 180.0}),
@@ -79,7 +79,7 @@ class StableZero123_Conditioning_Batched:
     def encode(self, clip_vision, init_image, vae, width, height, batch_size, elevation, azimuth, elevation_batch_increment, azimuth_batch_increment):
         output = clip_vision.encode_image(init_image)
         pooled = output.image_embeds.unsqueeze(0)
-        pixels = ldm_patched.modules.utils.common_upscale(init_image.movedim(-1,1), width, height, "bilinear", "center").movedim(1,-1)
+        pixels = toona_nodes.ldm_patched.modules.utils.common_upscale(init_image.movedim(-1,1), width, height, "bilinear", "center").movedim(1,-1)
         encode_pixels = pixels[:,:,:,:3]
         t = vae.encode(encode_pixels)
 

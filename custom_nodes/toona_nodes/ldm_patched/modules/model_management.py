@@ -348,7 +348,7 @@ class LoadedModel:
                         mem_counter += module_mem
                 elif hasattr(
                     m, "weight"
-                ):  # only modules with ldm_patched_cast_weights can be set to lowvram mode
+                ):  # only modules with toona_nodes.ldm_patched_cast_weights can be set to lowvram mode
                     m.to(self.device)
                     mem_counter += module_size(m)
                     print("lowvram: loaded module regularly", m)
@@ -574,7 +574,7 @@ def unet_manual_cast(weight_dtype, inference_device):
     if weight_dtype == torch.float32:
         return None
 
-    fp16_supported = ldm_patched.modules.model_management.should_use_fp16(
+    fp16_supported = toona_nodes.ldm_patched.modules.model_management.should_use_fp16(
         inference_device, prioritize_performance=False
     )
     if fp16_supported and weight_dtype == torch.float16:

@@ -8,7 +8,7 @@ from typing import Optional, Any
 
 from toona_nodes.ldm_patched.modules import model_management
 import toona_nodes.ldm_patched.modules.ops
-ops = ldm_patched.modules.ops.disable_weight_init
+ops = toona_nodes.ldm_patched.modules.ops.disable_weight_init
 
 if model_management.xformers_enabled_vae():
     import xformers

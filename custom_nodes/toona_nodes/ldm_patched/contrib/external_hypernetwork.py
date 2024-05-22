@@ -5,7 +5,7 @@ import toona_nodes.ldm_patched.utils.path_utils
 import torch
 
 def load_hypernetwork_patch(path, strength):
-    sd = ldm_patched.modules.utils.load_torch_file(path, safe_load=True)
+    sd = toona_nodes.ldm_patched.modules.utils.load_torch_file(path, safe_load=True)
     activation_func = sd.get('activation_func', 'linear')
     is_layer_norm = sd.get('is_layer_norm', False)
     use_dropout = sd.get('use_dropout', False)
@@ -108,7 +108,7 @@ class HypernetworkLoader:
     CATEGORY = "loaders"
 
     def load_hypernetwork(self, model, hypernetwork_name, strength):
-        hypernetwork_path = ldm_patched.utils.path_utils.get_full_path("hypernetworks", hypernetwork_name)
+        hypernetwork_path = toona_nodes.ldm_patched.utils.path_utils.get_full_path("hypernetworks", hypernetwork_name)
         model_hypernetwork = model.clone()
         patch = load_hypernetwork_patch(hypernetwork_path, strength)
         if patch is not None:

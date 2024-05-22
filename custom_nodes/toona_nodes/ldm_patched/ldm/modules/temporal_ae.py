@@ -5,7 +5,7 @@ import torch
 from einops import rearrange, repeat
 
 import toona_nodes.ldm_patched.modules.ops
-ops = ldm_patched.modules.ops.disable_weight_init
+ops = toona_nodes.ldm_patched.modules.ops.disable_weight_init
 
 from .diffusionmodules.model import (
     AttnBlock,

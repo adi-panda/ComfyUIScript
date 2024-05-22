@@ -39,7 +39,7 @@ class ControlBase:
         self.timestep_range = None
 
         if device is None:
-            device = ldm_patched.modules.model_management.get_torch_device()
+            device = toona_nodes.ldm_patched.modules.model_management.get_torch_device()
         self.device = device
         self.previous_controlnet = None
 
@@ -136,7 +136,7 @@ class ControlNet(ControlBase):
         super().__init__(device)
         self.control_model = control_model
         self.load_device = load_device
-        self.control_model_wrapped = ldm_patched.modules.model_patcher.ModelPatcher(self.control_model, load_device=load_device, offload_device=ldm_patched.modules.model_management.unet_offload_device())
+        self.control_model_wrapped = toona_nodes.ldm_patched.modules.model_patcher.ModelPatcher(self.control_model, load_device=load_device, offload_device=ldm_patched.modules.model_management.unet_offload_device())
         self.global_average_pooling = global_average_pooling
         self.model_sampling_current = None
         self.manual_cast_dtype = manual_cast_dtype
@@ -162,7 +162,7 @@ class ControlNet(ControlBase):
             if self.cond_hint is not None:
                 del self.cond_hint
             self.cond_hint = None
-            self.cond_hint = ldm_patched.modules.utils.common_upscale(self.cond_hint_original, x_noisy.shape[3] * 8, x_noisy.shape[2] * 8, 'nearest-exact', "center").to(dtype).to(self.device)
+            self.cond_hint = toona_nodes.ldm_patched.modules.utils.common_upscale(self.cond_hint_original, x_noisy.shape[3] * 8, x_noisy.shape[2] * 8, 'nearest-exact', "center").to(dtype).to(self.device)
         if x_noisy.shape[0] != self.cond_hint.shape[0]:
             self.cond_hint = broadcast_image_to(self.cond_hint, x_noisy.shape[0], batched_number)
 
@@ -208,7 +208,7 @@ class ControlLoraOps:
             self.bias = None
 
         def forward(self, input):
-            weight, bias = ldm_patched.modules.ops.cast_bias_weight(self, input)
+            weight, bias = toona_nodes.ldm_patched.modules.ops.cast_bias_weight(self, input)
             if self.up is not None:
                 return torch.nn.functional.linear(input, weight + (torch.mm(self.up.flatten(start_dim=1), self.down.flatten(start_dim=1))).reshape(self.weight.shape).type(input.dtype), bias)
             else:
@@ -248,7 +248,7 @@ class ControlLoraOps:
 
 
         def forward(self, input):
-            weight, bias = ldm_patched.modules.ops.cast_bias_weight(self, input)
+            weight, bias = toona_nodes.ldm_patched.modules.ops.cast_bias_weight(self, input)
             if self.up is not None:
                 return torch.nn.functional.conv2d(input, weight + (torch.mm(self.up.flatten(start_dim=1), self.down.flatten(start_dim=1))).reshape(self.weight.shape).type(input.dtype), bias, self.stride, self.padding, self.dilation, self.groups)
             else:
@@ -269,16 +269,16 @@ class ControlLora(ControlNet):
         self.manual_cast_dtype = model.manual_cast_dtype
         dtype = model.get_dtype()
         if self.manual_cast_dtype is None:
-            class control_lora_ops(ControlLoraOps, ldm_patched.modules.ops.disable_weight_init):
+            class control_lora_ops(ControlLoraOps, toona_nodes.ldm_patched.modules.ops.disable_weight_init):
                 pass
         else:
-            class control_lora_ops(ControlLoraOps, ldm_patched.modules.ops.manual_cast):
+            class control_lora_ops(ControlLoraOps, toona_nodes.ldm_patched.modules.ops.manual_cast):
                 pass
             dtype = self.manual_cast_dtype
 
         controlnet_config["operations"] = control_lora_ops
         controlnet_config["dtype"] = dtype
-        self.control_model = ldm_patched.controlnet.cldm.ControlNet(**controlnet_config)
+        self.control_model = toona_nodes.ldm_patched.controlnet.cldm.ControlNet(**controlnet_config)
         self.control_model.to(ldm_patched.modules.model_management.get_torch_device())
         diffusion_model = model.diffusion_model
         sd = diffusion_model.state_dict()
@@ -287,13 +287,13 @@ class ControlLora(ControlNet):
         for k in sd:
             weight = sd[k]
             try:
-                ldm_patched.modules.utils.set_attr(self.control_model, k, weight)
+                toona_nodes.ldm_patched.modules.utils.set_attr(self.control_model, k, weight)
             except:
                 pass
 
         for k in self.control_weights:
             if k not in {"lora_controlnet"}:
-                ldm_patched.modules.utils.set_attr(self.control_model, k, self.control_weights[k].to(dtype).to(ldm_patched.modules.model_management.get_torch_device()))
+                toona_nodes.ldm_patched.modules.utils.set_attr(self.control_model, k, self.control_weights[k].to(dtype).to(ldm_patched.modules.model_management.get_torch_device()))
 
     def copy(self):
         c = ControlLora(self.control_weights, global_average_pooling=self.global_average_pooling)
@@ -310,18 +310,18 @@ class ControlLora(ControlNet):
         return out
 
     def inference_memory_requirements(self, dtype):
-        return ldm_patched.modules.utils.calculate_parameters(self.control_weights) * ldm_patched.modules.model_management.dtype_size(dtype) + ControlBase.inference_memory_requirements(self, dtype)
+        return toona_nodes.ldm_patched.modules.utils.calculate_parameters(self.control_weights) * toona_nodes.ldm_patched.modules.model_management.dtype_size(dtype) + ControlBase.inference_memory_requirements(self, dtype)
 
 def load_controlnet(ckpt_path, model=None):
-    controlnet_data = ldm_patched.modules.utils.load_torch_file(ckpt_path, safe_load=True)
+    controlnet_data = toona_nodes.ldm_patched.modules.utils.load_torch_file(ckpt_path, safe_load=True)
     if "lora_controlnet" in controlnet_data:
         return ControlLora(controlnet_data)
 
     controlnet_config = None
     if "controlnet_cond_embedding.conv_in.weight" in controlnet_data: #diffusers format
-        unet_dtype = ldm_patched.modules.model_management.unet_dtype()
-        controlnet_config = ldm_patched.modules.model_detection.unet_config_from_diffusers_unet(controlnet_data, unet_dtype)
-        diffusers_keys = ldm_patched.modules.utils.unet_to_diffusers(controlnet_config)
+        unet_dtype = toona_nodes.ldm_patched.modules.model_management.unet_dtype()
+        controlnet_config = toona_nodes.ldm_patched.modules.model_detection.unet_config_from_diffusers_unet(controlnet_data, unet_dtype)
+        diffusers_keys = toona_nodes.ldm_patched.modules.utils.unet_to_diffusers(controlnet_config)
         diffusers_keys["controlnet_mid_block.weight"] = "middle_block_out.0.weight"
         diffusers_keys["controlnet_mid_block.bias"] = "middle_block_out.0.bias"
 
@@ -380,20 +380,20 @@ def load_controlnet(ckpt_path, model=None):
         return net
 
     if controlnet_config is None:
-        unet_dtype = ldm_patched.modules.model_management.unet_dtype()
-        controlnet_config = ldm_patched.modules.model_detection.model_config_from_unet(controlnet_data, prefix, unet_dtype, True).unet_config
-    load_device = ldm_patched.modules.model_management.get_torch_device()
-    manual_cast_dtype = ldm_patched.modules.model_management.unet_manual_cast(unet_dtype, load_device)
+        unet_dtype = toona_nodes.ldm_patched.modules.model_management.unet_dtype()
+        controlnet_config = toona_nodes.ldm_patched.modules.model_detection.model_config_from_unet(controlnet_data, prefix, unet_dtype, True).unet_config
+    load_device = toona_nodes.ldm_patched.modules.model_management.get_torch_device()
+    manual_cast_dtype = toona_nodes.ldm_patched.modules.model_management.unet_manual_cast(unet_dtype, load_device)
     if manual_cast_dtype is not None:
-        controlnet_config["operations"] = ldm_patched.modules.ops.manual_cast
+        controlnet_config["operations"] = toona_nodes.ldm_patched.modules.ops.manual_cast
     controlnet_config.pop("out_channels")
     controlnet_config["hint_channels"] = controlnet_data["{}input_hint_block.0.weight".format(prefix)].shape[1]
-    control_model = ldm_patched.controlnet.cldm.ControlNet(**controlnet_config)
+    control_model = toona_nodes.ldm_patched.controlnet.cldm.ControlNet(**controlnet_config)
 
     if pth:
         if 'difference' in controlnet_data:
             if model is not None:
-                ldm_patched.modules.model_management.load_models_gpu([model])
+                toona_nodes.ldm_patched.modules.model_management.load_models_gpu([model])
                 model_sd = model.model_state_dict()
                 for x in controlnet_data:
                     c_m = "control_model."
@@ -453,7 +453,7 @@ class T2IAdapter(ControlBase):
             self.control_input = None
             self.cond_hint = None
             width, height = self.scale_image_to(x_noisy.shape[3] * 8, x_noisy.shape[2] * 8)
-            self.cond_hint = ldm_patched.modules.utils.common_upscale(self.cond_hint_original, width, height, 'nearest-exact', "center").float().to(self.device)
+            self.cond_hint = toona_nodes.ldm_patched.modules.utils.common_upscale(self.cond_hint_original, width, height, 'nearest-exact', "center").float().to(self.device)
             if self.channels_in == 1 and self.cond_hint.shape[1] > 1:
                 self.cond_hint = torch.mean(self.cond_hint, 1, keepdim=True)
         if x_noisy.shape[0] != self.cond_hint.shape[0]:
@@ -486,12 +486,12 @@ def load_t2i_adapter(t2i_data):
                 prefix_replace["adapter.body.{}.resnets.{}.".format(i, j)] = "body.{}.".format(i * 2 + j)
             prefix_replace["adapter.body.{}.".format(i, j)] = "body.{}.".format(i * 2)
         prefix_replace["adapter."] = ""
-        t2i_data = ldm_patched.modules.utils.state_dict_prefix_replace(t2i_data, prefix_replace)
+        t2i_data = toona_nodes.ldm_patched.modules.utils.state_dict_prefix_replace(t2i_data, prefix_replace)
     keys = t2i_data.keys()
 
     if "body.0.in_conv.weight" in keys:
         cin = t2i_data['body.0.in_conv.weight'].shape[1]
-        model_ad = ldm_patched.t2ia.adapter.Adapter_light(cin=cin, channels=[320, 640, 1280, 1280], nums_rb=4)
+        model_ad = toona_nodes.ldm_patched.t2ia.adapter.Adapter_light(cin=cin, channels=[320, 640, 1280, 1280], nums_rb=4)
     elif 'conv_in.weight' in keys:
         cin = t2i_data['conv_in.weight'].shape[1]
         channel = t2i_data['conv_in.weight'].shape[0]
@@ -503,7 +503,7 @@ def load_t2i_adapter(t2i_data):
         xl = False
         if cin == 256 or cin == 768:
             xl = True
-        model_ad = ldm_patched.t2ia.adapter.Adapter(cin=cin, channels=[channel, channel*2, channel*4, channel*4][:4], nums_rb=2, ksize=ksize, sk=True, use_conv=use_conv, xl=xl)
+        model_ad = toona_nodes.ldm_patched.t2ia.adapter.Adapter(cin=cin, channels=[channel, channel*2, channel*4, channel*4][:4], nums_rb=2, ksize=ksize, sk=True, use_conv=use_conv, xl=xl)
     else:
         return None
     missing, unexpected = model_ad.load_state_dict(t2i_data)

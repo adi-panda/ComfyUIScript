@@ -122,6 +122,11 @@ class ToonaCutMask:
         interested_mask = mask_np[a:b, c:d]
         interested_image = image_np[a:b, c:d]
 
+        print("Image cut Data Type: ", interested_image.dtype)
+        print("Mask cut Data Type: ", interested_mask.dtype)
+        print("image cut min max" , interested_image.min(), interested_image.max())
+        print("mask cut min max" , interested_mask.min(), interested_mask.max())
+
         result_mask = torch.from_numpy(interested_mask).unsqueeze(0)
         result_image = torch.from_numpy(interested_image).unsqueeze(0)
 

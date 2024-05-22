@@ -16,7 +16,7 @@ if model_management.xformers_enabled():
 
 from toona_nodes.ldm_patched.modules.args_parser import args
 import toona_nodes.ldm_patched.modules.ops
-ops = ldm_patched.modules.ops.disable_weight_init
+ops = toona_nodes.ldm_patched.modules.ops.disable_weight_init
 
 # CrossAttn precision handling
 if args.disable_attention_upcast:

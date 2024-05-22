@@ -82,11 +82,11 @@ class ModelSamplingDiscrete:
     def patch(self, model, sampling, zsnr):
         m = model.clone()
 
-        sampling_base = ldm_patched.modules.model_sampling.ModelSamplingDiscrete
+        sampling_base = toona_nodes.ldm_patched.modules.model_sampling.ModelSamplingDiscrete
         if sampling == "eps":
-            sampling_type = ldm_patched.modules.model_sampling.EPS
+            sampling_type = toona_nodes.ldm_patched.modules.model_sampling.EPS
         elif sampling == "v_prediction":
-            sampling_type = ldm_patched.modules.model_sampling.V_PREDICTION
+            sampling_type = toona_nodes.ldm_patched.modules.model_sampling.V_PREDICTION
         elif sampling == "lcm":
             sampling_type = LCM
             sampling_base = ModelSamplingDiscreteDistilled
@@ -119,9 +119,9 @@ class ModelSamplingContinuousEDM:
         m = model.clone()
 
         if sampling == "eps":
-            sampling_type = ldm_patched.modules.model_sampling.EPS
+            sampling_type = toona_nodes.ldm_patched.modules.model_sampling.EPS
         elif sampling == "v_prediction":
-            sampling_type = ldm_patched.modules.model_sampling.V_PREDICTION
+            sampling_type = toona_nodes.ldm_patched.modules.model_sampling.V_PREDICTION
 
         class ModelSamplingAdvanced(ldm_patched.modules.model_sampling.ModelSamplingContinuousEDM, sampling_type):
             pass

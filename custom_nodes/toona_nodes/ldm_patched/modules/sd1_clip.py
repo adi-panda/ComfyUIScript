@@ -77,7 +77,7 @@ class SDClipModel(torch.nn.Module, ClipTokenWeightEncoder):
         with open(textmodel_json_config) as f:
             config = json.load(f)
 
-        self.transformer = model_class(config, dtype, device, ldm_patched.modules.ops.manual_cast)
+        self.transformer = model_class(config, dtype, device, toona_nodes.ldm_patched.modules.ops.manual_cast)
         self.num_layers = self.transformer.num_layers
 
         self.max_length = max_length

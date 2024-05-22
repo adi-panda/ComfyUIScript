@@ -6,7 +6,8 @@ from toona_nodes.ldm_patched.pfn.architecture.RRDB import RRDBNet as ESRGAN
 from toona_nodes.ldm_patched.contrib.external_upscale_model import ImageUpscaleWithModel
 from collections import OrderedDict
 
-model_filename = 'fooocus_upscaler_s409985e5.bin'
+current_path = os.path.dirname(os.path.realpath(__file__))
+model_filename = os.path.join(current_path, 'fooocus_upscaler_s409985e5.bin')
 opImageUpscaleWithModel = ImageUpscaleWithModel()
 model = None
 

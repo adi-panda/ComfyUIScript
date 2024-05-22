@@ -12,7 +12,7 @@ def composite(destination, source, x, y, mask = None, multiplier = 8, resize_sou
     if resize_source:
         source = torch.nn.functional.interpolate(source, size=(destination.shape[2], destination.shape[3]), mode="bilinear")
 
-    source = ldm_patched.modules.utils.repeat_to_batch_size(source, destination.shape[0])
+    source = toona_nodes.ldm_patched.modules.utils.repeat_to_batch_size(source, destination.shape[0])
 
     x = max(-source.shape[3] * multiplier, min(x, destination.shape[3] * multiplier))
     y = max(-source.shape[2] * multiplier, min(y, destination.shape[2] * multiplier))
@@ -25,7 +25,7 @@ def composite(destination, source, x, y, mask = None, multiplier = 8, resize_sou
     else:
         mask = mask.to(destination.device, copy=True)
         mask = torch.nn.functional.interpolate(mask.reshape((-1, 1, mask.shape[-2], mask.shape[-1])), size=(source.shape[2], source.shape[3]), mode="bilinear")
-        mask = ldm_patched.modules.utils.repeat_to_batch_size(mask, source.shape[0])
+        mask = toona_nodes.ldm_patched.modules.utils.repeat_to_batch_size(mask, source.shape[0])
 
     # calculate the bounds of the source that will be overlapping the destination
     # this prevents the source trying to overwrite latent pixels that are out of bounds

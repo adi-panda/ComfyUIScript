@@ -45,9 +45,9 @@ class BaseModel(torch.nn.Module):
 
         if not unet_config.get("disable_unet_model_creation", False):
             if self.manual_cast_dtype is not None:
-                operations = ldm_patched.modules.ops.manual_cast
+                operations = toona_nodes.ldm_patched.modules.ops.manual_cast
             else:
-                operations = ldm_patched.modules.ops.disable_weight_init
+                operations = toona_nodes.ldm_patched.modules.ops.disable_weight_init
             self.diffusion_model = UNetModel(**unet_config, device=device, operations=operations)
         self.model_type = model_type
         self.model_sampling = model_sampling(model_config, model_type)
@@ -143,15 +143,15 @@ class BaseModel(torch.nn.Module):
                     elif ck == "masked_image":
                         cond_concat.append(blank_inpaint_image_like(noise))
             data = torch.cat(cond_concat, dim=1)
-            out['c_concat'] = ldm_patched.modules.conds.CONDNoiseShape(data)
+            out['c_concat'] = toona_nodes.ldm_patched.modules.conds.CONDNoiseShape(data)
 
         adm = self.encode_adm(**kwargs)
         if adm is not None:
-            out['y'] = ldm_patched.modules.conds.CONDRegular(adm)
+            out['y'] = toona_nodes.ldm_patched.modules.conds.CONDRegular(adm)
 
         cross_attn = kwargs.get("cross_attn", None)
         if cross_attn is not None:
-            out['c_crossattn'] = ldm_patched.modules.conds.CONDCrossAttn(cross_attn)
+            out['c_crossattn'] = toona_nodes.ldm_patched.modules.conds.CONDCrossAttn(cross_attn)
 
         return out
 
@@ -205,13 +205,13 @@ class BaseModel(torch.nn.Module):
         self.inpaint_model = True
 
     def memory_required(self, input_shape):
-        if ldm_patched.modules.model_management.xformers_enabled() or ldm_patched.modules.model_management.pytorch_attention_flash_attention():
+        if toona_nodes.ldm_patched.modules.model_management.xformers_enabled() or toona_nodes.ldm_patched.modules.model_management.pytorch_attention_flash_attention():
             dtype = self.get_dtype()
             if self.manual_cast_dtype is not None:
                 dtype = self.manual_cast_dtype
             #TODO: this needs to be tweaked
             area = input_shape[0] * input_shape[2] * input_shape[3]
-            return (area * ldm_patched.modules.model_management.dtype_size(dtype) / 50) * (1024 * 1024)
+            return (area * toona_nodes.ldm_patched.modules.model_management.dtype_size(dtype) / 50) * (1024 * 1024)
         else:
             #TODO: this formula might be too aggressive since I tweaked the sub-quad and split algorithms to use less memory.
             area = input_shape[0] * input_shape[2] * input_shape[3]
@@ -335,7 +335,7 @@ class SVD_img2vid(BaseModel):
         out = {}
         adm = self.encode_adm(**kwargs)
         if adm is not None:
-            out['y'] = ldm_patched.modules.conds.CONDRegular(adm)
+            out['y'] = toona_nodes.ldm_patched.modules.conds.CONDRegular(adm)
 
         latent_image = kwargs.get("concat_latent_image", None)
         noise = kwargs.get("noise", None)
@@ -349,23 +349,23 @@ class SVD_img2vid(BaseModel):
 
         latent_image = utils.resize_to_batch_size(latent_image, noise.shape[0])
 
-        out['c_concat'] = ldm_patched.modules.conds.CONDNoiseShape(latent_image)
+        out['c_concat'] = toona_nodes.ldm_patched.modules.conds.CONDNoiseShape(latent_image)
 
         cross_attn = kwargs.get("cross_attn", None)
         if cross_attn is not None:
-            out['c_crossattn'] = ldm_patched.modules.conds.CONDCrossAttn(cross_attn)
+            out['c_crossattn'] = toona_nodes.ldm_patched.modules.conds.CONDCrossAttn(cross_attn)
 
         if "time_conditioning" in kwargs:
-            out["time_context"] = ldm_patched.modules.conds.CONDCrossAttn(kwargs["time_conditioning"])
+            out["time_context"] = toona_nodes.ldm_patched.modules.conds.CONDCrossAttn(kwargs["time_conditioning"])
 
-        out['image_only_indicator'] = ldm_patched.modules.conds.CONDConstant(torch.zeros((1,), device=device))
-        out['num_video_frames'] = ldm_patched.modules.conds.CONDConstant(noise.shape[0])
+        out['image_only_indicator'] = toona_nodes.ldm_patched.modules.conds.CONDConstant(torch.zeros((1,), device=device))
+        out['num_video_frames'] = toona_nodes.ldm_patched.modules.conds.CONDConstant(noise.shape[0])
         return out
 
 class Stable_Zero123(BaseModel):
     def __init__(self, model_config, model_type=ModelType.EPS, device=None, cc_projection_weight=None, cc_projection_bias=None):
         super().__init__(model_config, model_type, device=device)
-        self.cc_projection = ldm_patched.modules.ops.manual_cast.Linear(cc_projection_weight.shape[1], cc_projection_weight.shape[0], dtype=self.get_dtype(), device=device)
+        self.cc_projection = toona_nodes.ldm_patched.modules.ops.manual_cast.Linear(cc_projection_weight.shape[1], cc_projection_weight.shape[0], dtype=self.get_dtype(), device=device)
         self.cc_projection.weight.copy_(cc_projection_weight)
         self.cc_projection.bias.copy_(cc_projection_bias)
 
@@ -383,13 +383,13 @@ class Stable_Zero123(BaseModel):
 
         latent_image = utils.resize_to_batch_size(latent_image, noise.shape[0])
 
-        out['c_concat'] = ldm_patched.modules.conds.CONDNoiseShape(latent_image)
+        out['c_concat'] = toona_nodes.ldm_patched.modules.conds.CONDNoiseShape(latent_image)
 
         cross_attn = kwargs.get("cross_attn", None)
         if cross_attn is not None:
             if cross_attn.shape[-1] != 768:
                 cross_attn = self.cc_projection(cross_attn)
-            out['c_crossattn'] = ldm_patched.modules.conds.CONDCrossAttn(cross_attn)
+            out['c_crossattn'] = toona_nodes.ldm_patched.modules.conds.CONDCrossAttn(cross_attn)
         return out
 
 class SD_X4Upscaler(BaseModel):
@@ -420,6 +420,6 @@ class SD_X4Upscaler(BaseModel):
 
         image = utils.resize_to_batch_size(image, noise.shape[0])
 
-        out['c_concat'] = ldm_patched.modules.conds.CONDNoiseShape(image)
-        out['y'] = ldm_patched.modules.conds.CONDRegular(noise_level)
+        out['c_concat'] = toona_nodes.ldm_patched.modules.conds.CONDNoiseShape(image)
+        out['y'] = toona_nodes.ldm_patched.modules.conds.CONDRegular(noise_level)
         return out

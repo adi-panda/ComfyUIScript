@@ -19,8 +19,8 @@ class ImageOnlyCheckpointLoader:
     CATEGORY = "loaders/video_models"
 
     def load_checkpoint(self, ckpt_name, output_vae=True, output_clip=True):
-        ckpt_path = ldm_patched.utils.path_utils.get_full_path("checkpoints", ckpt_name)
-        out = ldm_patched.modules.sd.load_checkpoint_guess_config(ckpt_path, output_vae=True, output_clip=False, output_clipvision=True, embedding_directory=ldm_patched.utils.path_utils.get_folder_paths("embeddings"))
+        ckpt_path = toona_nodes.ldm_patched.utils.path_utils.get_full_path("checkpoints", ckpt_name)
+        out = toona_nodes.ldm_patched.modules.sd.load_checkpoint_guess_config(ckpt_path, output_vae=True, output_clip=False, output_clipvision=True, embedding_directory=ldm_patched.utils.path_utils.get_folder_paths("embeddings"))
         return (out[0], out[3], out[2])
 
 
@@ -30,8 +30,8 @@ class SVD_img2vid_Conditioning:
         return {"required": { "clip_vision": ("CLIP_VISION",),
                               "init_image": ("IMAGE",),
                               "vae": ("VAE",),
-                              "width": ("INT", {"default": 1024, "min": 16, "max": ldm_patched.contrib.external.MAX_RESOLUTION, "step": 8}),
-                              "height": ("INT", {"default": 576, "min": 16, "max": ldm_patched.contrib.external.MAX_RESOLUTION, "step": 8}),
+                              "width": ("INT", {"default": 1024, "min": 16, "max": toona_nodes.ldm_patched.contrib.external.MAX_RESOLUTION, "step": 8}),
+                              "height": ("INT", {"default": 576, "min": 16, "max": toona_nodes.ldm_patched.contrib.external.MAX_RESOLUTION, "step": 8}),
                               "video_frames": ("INT", {"default": 14, "min": 1, "max": 4096}),
                               "motion_bucket_id": ("INT", {"default": 127, "min": 1, "max": 1023}),
                               "fps": ("INT", {"default": 6, "min": 1, "max": 1024}),
@@ -47,7 +47,7 @@ class SVD_img2vid_Conditioning:
     def encode(self, clip_vision, init_image, vae, width, height, video_frames, motion_bucket_id, fps, augmentation_level):
         output = clip_vision.encode_image(init_image)
         pooled = output.image_embeds.unsqueeze(0)
-        pixels = ldm_patched.modules.utils.common_upscale(init_image.movedim(-1,1), width, height, "bilinear", "center").movedim(1,-1)
+        pixels = toona_nodes.ldm_patched.modules.utils.common_upscale(init_image.movedim(-1,1), width, height, "bilinear", "center").movedim(1,-1)
         encode_pixels = pixels[:,:,:,:3]
         if augmentation_level > 0:
             encode_pixels += torch.randn_like(pixels) * augmentation_level
@@ -93,7 +93,7 @@ class ImageOnlyCheckpointSave(ldm_patched.contrib.external_model_merging.Checkpo
                 "hidden": {"prompt": "PROMPT", "extra_pnginfo": "EXTRA_PNGINFO"},}
 
     def save(self, model, clip_vision, vae, filename_prefix, prompt=None, extra_pnginfo=None):
-        ldm_patched.contrib.external_model_merging.save_checkpoint(model, clip_vision=clip_vision, vae=vae, filename_prefix=filename_prefix, output_dir=self.output_dir, prompt=prompt, extra_pnginfo=extra_pnginfo)
+        toona_nodes.ldm_patched.contrib.external_model_merging.save_checkpoint(model, clip_vision=clip_vision, vae=vae, filename_prefix=filename_prefix, output_dir=self.output_dir, prompt=prompt, extra_pnginfo=extra_pnginfo)
         return {}
 
 NODE_CLASS_MAPPINGS = {

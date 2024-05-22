@@ -152,7 +152,7 @@ def detect_unet_config(state_dict, key_prefix, dtype):
     return unet_config
 
 def model_config_from_unet_config(unet_config):
-    for model_config in ldm_patched.modules.supported_models.models:
+    for model_config in toona_nodes.ldm_patched.modules.supported_models.models:
         if model_config.matches(unet_config):
             return model_config(unet_config)
 
@@ -163,7 +163,7 @@ def model_config_from_unet(state_dict, unet_key_prefix, dtype, use_base_if_no_ma
     unet_config = detect_unet_config(state_dict, unet_key_prefix, dtype)
     model_config = model_config_from_unet_config(unet_config)
     if model_config is None and use_base_if_no_match:
-        return ldm_patched.modules.supported_models_base.BASE(unet_config)
+        return toona_nodes.ldm_patched.modules.supported_models_base.BASE(unet_config)
     else:
         return model_config
 

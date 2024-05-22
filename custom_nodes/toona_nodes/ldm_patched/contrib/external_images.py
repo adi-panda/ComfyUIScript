@@ -11,7 +11,7 @@ import numpy as np
 import json
 import os
 
-MAX_RESOLUTION = ldm_patched.contrib.external.MAX_RESOLUTION
+MAX_RESOLUTION = toona_nodes.ldm_patched.contrib.external.MAX_RESOLUTION
 
 class ImageCrop:
     @classmethod
@@ -52,7 +52,7 @@ class RepeatImageBatch:
 
 class SaveAnimatedWEBP:
     def __init__(self):
-        self.output_dir = ldm_patched.utils.path_utils.get_output_directory()
+        self.output_dir = toona_nodes.ldm_patched.utils.path_utils.get_output_directory()
         self.type = "output"
         self.prefix_append = ""
 
@@ -81,7 +81,7 @@ class SaveAnimatedWEBP:
     def save_images(self, images, fps, filename_prefix, lossless, quality, method, num_frames=0, prompt=None, extra_pnginfo=None):
         method = self.methods.get(method)
         filename_prefix += self.prefix_append
-        full_output_folder, filename, counter, subfolder, filename_prefix = ldm_patched.utils.path_utils.get_save_image_path(filename_prefix, self.output_dir, images[0].shape[1], images[0].shape[0])
+        full_output_folder, filename, counter, subfolder, filename_prefix = toona_nodes.ldm_patched.utils.path_utils.get_save_image_path(filename_prefix, self.output_dir, images[0].shape[1], images[0].shape[0])
         results = list()
         pil_images = []
         for image in images:
@@ -118,7 +118,7 @@ class SaveAnimatedWEBP:
 
 class SaveAnimatedPNG:
     def __init__(self):
-        self.output_dir = ldm_patched.utils.path_utils.get_output_directory()
+        self.output_dir = toona_nodes.ldm_patched.utils.path_utils.get_output_directory()
         self.type = "output"
         self.prefix_append = ""
 
@@ -142,7 +142,7 @@ class SaveAnimatedPNG:
 
     def save_images(self, images, fps, compress_level, filename_prefix="ldm_patched", prompt=None, extra_pnginfo=None):
         filename_prefix += self.prefix_append
-        full_output_folder, filename, counter, subfolder, filename_prefix = ldm_patched.utils.path_utils.get_save_image_path(filename_prefix, self.output_dir, images[0].shape[1], images[0].shape[0])
+        full_output_folder, filename, counter, subfolder, filename_prefix = toona_nodes.ldm_patched.utils.path_utils.get_save_image_path(filename_prefix, self.output_dir, images[0].shape[1], images[0].shape[0])
         results = list()
         pil_images = []
         for image in images:

@@ -122,7 +122,7 @@ class ModelMergeBlocks:
         return (m, )
 
 def save_checkpoint(model, clip=None, vae=None, clip_vision=None, filename_prefix=None, output_dir=None, prompt=None, extra_pnginfo=None):
-    full_output_folder, filename, counter, subfolder, filename_prefix = ldm_patched.utils.path_utils.get_save_image_path(filename_prefix, output_dir)
+    full_output_folder, filename, counter, subfolder, filename_prefix = toona_nodes.ldm_patched.utils.path_utils.get_save_image_path(filename_prefix, output_dir)
     prompt_info = ""
     if prompt is not None:
         prompt_info = json.dumps(prompt)
@@ -130,9 +130,9 @@ def save_checkpoint(model, clip=None, vae=None, clip_vision=None, filename_prefi
     metadata = {}
 
     enable_modelspec = True
-    if isinstance(model.model, ldm_patched.modules.model_base.SDXL):
+    if isinstance(model.model, toona_nodes.ldm_patched.modules.model_base.SDXL):
         metadata["modelspec.architecture"] = "stable-diffusion-xl-v1-base"
-    elif isinstance(model.model, ldm_patched.modules.model_base.SDXLRefiner):
+    elif isinstance(model.model, toona_nodes.ldm_patched.modules.model_base.SDXLRefiner):
         metadata["modelspec.architecture"] = "stable-diffusion-xl-v1-refiner"
     else:
         enable_modelspec = False
@@ -147,9 +147,9 @@ def save_checkpoint(model, clip=None, vae=None, clip_vision=None, filename_prefi
     # "stable-diffusion-v2-768-v", "stable-diffusion-v2-unclip-l", "stable-diffusion-v2-unclip-h",
     # "v2-inpainting"
 
-    if model.model.model_type == ldm_patched.modules.model_base.ModelType.EPS:
+    if model.model.model_type == toona_nodes.ldm_patched.modules.model_base.ModelType.EPS:
         metadata["modelspec.predict_key"] = "epsilon"
-    elif model.model.model_type == ldm_patched.modules.model_base.ModelType.V_PREDICTION:
+    elif model.model.model_type == toona_nodes.ldm_patched.modules.model_base.ModelType.V_PREDICTION:
         metadata["modelspec.predict_key"] = "v"
 
     if not args.disable_server_info:
@@ -161,11 +161,11 @@ def save_checkpoint(model, clip=None, vae=None, clip_vision=None, filename_prefi
     output_checkpoint = f"{filename}_{counter:05}_.safetensors"
     output_checkpoint = os.path.join(full_output_folder, output_checkpoint)
 
-    ldm_patched.modules.sd.save_checkpoint(output_checkpoint, model, clip, vae, clip_vision, metadata=metadata)
+    toona_nodes.ldm_patched.modules.sd.save_checkpoint(output_checkpoint, model, clip, vae, clip_vision, metadata=metadata)
 
 class CheckpointSave:
     def __init__(self):
-        self.output_dir = ldm_patched.utils.path_utils.get_output_directory()
+        self.output_dir = toona_nodes.ldm_patched.utils.path_utils.get_output_directory()
 
     @classmethod
     def INPUT_TYPES(s):
@@ -186,7 +186,7 @@ class CheckpointSave:
 
 class CLIPSave:
     def __init__(self):
-        self.output_dir = ldm_patched.utils.path_utils.get_output_directory()
+        self.output_dir = toona_nodes.ldm_patched.utils.path_utils.get_output_directory()
 
     @classmethod
     def INPUT_TYPES(s):
@@ -211,7 +211,7 @@ class CLIPSave:
                 for x in extra_pnginfo:
                     metadata[x] = json.dumps(extra_pnginfo[x])
 
-        ldm_patched.modules.model_management.load_models_gpu([clip.load_model()])
+        toona_nodes.ldm_patched.modules.model_management.load_models_gpu([clip.load_model()])
         clip_sd = clip.get_sd()
 
         for prefix in ["clip_l.", "clip_g.", ""]:
@@ -230,19 +230,19 @@ class CLIPSave:
                 replace_prefix[prefix] = ""
             replace_prefix["transformer."] = ""
 
-            full_output_folder, filename, counter, subfolder, filename_prefix_ = ldm_patched.utils.path_utils.get_save_image_path(filename_prefix_, self.output_dir)
+            full_output_folder, filename, counter, subfolder, filename_prefix_ = toona_nodes.ldm_patched.utils.path_utils.get_save_image_path(filename_prefix_, self.output_dir)
 
             output_checkpoint = f"{filename}_{counter:05}_.safetensors"
             output_checkpoint = os.path.join(full_output_folder, output_checkpoint)
 
-            current_clip_sd = ldm_patched.modules.utils.state_dict_prefix_replace(current_clip_sd, replace_prefix)
+            current_clip_sd = toona_nodes.ldm_patched.modules.utils.state_dict_prefix_replace(current_clip_sd, replace_prefix)
 
-            ldm_patched.modules.utils.save_torch_file(current_clip_sd, output_checkpoint, metadata=metadata)
+            toona_nodes.ldm_patched.modules.utils.save_torch_file(current_clip_sd, output_checkpoint, metadata=metadata)
         return {}
 
 class VAESave:
     def __init__(self):
-        self.output_dir = ldm_patched.utils.path_utils.get_output_directory()
+        self.output_dir = toona_nodes.ldm_patched.utils.path_utils.get_output_directory()
 
     @classmethod
     def INPUT_TYPES(s):
@@ -256,7 +256,7 @@ class VAESave:
     CATEGORY = "advanced/model_merging"
 
     def save(self, vae, filename_prefix, prompt=None, extra_pnginfo=None):
-        full_output_folder, filename, counter, subfolder, filename_prefix = ldm_patched.utils.path_utils.get_save_image_path(filename_prefix, self.output_dir)
+        full_output_folder, filename, counter, subfolder, filename_prefix = toona_nodes.ldm_patched.utils.path_utils.get_save_image_path(filename_prefix, self.output_dir)
         prompt_info = ""
         if prompt is not None:
             prompt_info = json.dumps(prompt)
@@ -271,7 +271,7 @@ class VAESave:
         output_checkpoint = f"{filename}_{counter:05}_.safetensors"
         output_checkpoint = os.path.join(full_output_folder, output_checkpoint)
 
-        ldm_patched.modules.utils.save_torch_file(vae.get_sd(), output_checkpoint, metadata=metadata)
+        toona_nodes.ldm_patched.modules.utils.save_torch_file(vae.get_sd(), output_checkpoint, metadata=metadata)
         return {}
 
 NODE_CLASS_MAPPINGS = {

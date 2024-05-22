@@ -37,10 +37,10 @@ import toona_nodes.ldm_patched.utils.path_utils
 import toona_nodes.ldm_patched.utils.latent_visualization
 
 def before_node_execution():
-    ldm_patched.modules.model_management.throw_exception_if_processing_interrupted()
+    toona_nodes.ldm_patched.modules.model_management.throw_exception_if_processing_interrupted()
 
 def interrupt_processing(value=True):
-    ldm_patched.modules.model_management.interrupt_current_processing(value)
+    toona_nodes.ldm_patched.modules.model_management.interrupt_current_processing(value)
 
 MAX_RESOLUTION=8192
 
@@ -419,7 +419,7 @@ class InpaintModelConditioning:
 
 class SaveLatent:
     def __init__(self):
-        self.output_dir = ldm_patched.utils.path_utils.get_output_directory()
+        self.output_dir = toona_nodes.ldm_patched.utils.path_utils.get_output_directory()
 
     @classmethod
     def INPUT_TYPES(s):
@@ -435,7 +435,7 @@ class SaveLatent:
     CATEGORY = "_for_testing"
 
     def save(self, samples, filename_prefix="ldm_patched", prompt=None, extra_pnginfo=None):
-        full_output_folder, filename, counter, subfolder, filename_prefix = ldm_patched.utils.path_utils.get_save_image_path(filename_prefix, self.output_dir)
+        full_output_folder, filename, counter, subfolder, filename_prefix = toona_nodes.ldm_patched.utils.path_utils.get_save_image_path(filename_prefix, self.output_dir)
 
         # support save metadata for latent sharing
         prompt_info = ""
@@ -464,14 +464,14 @@ class SaveLatent:
         output["latent_tensor"] = samples["samples"]
         output["latent_format_version_0"] = torch.tensor([])
 
-        ldm_patched.modules.utils.save_torch_file(output, file, metadata=metadata)
+        toona_nodes.ldm_patched.modules.utils.save_torch_file(output, file, metadata=metadata)
         return { "ui": { "latents": results } }
 
 
 class LoadLatent:
     @classmethod
     def INPUT_TYPES(s):
-        input_dir = ldm_patched.utils.path_utils.get_input_directory()
+        input_dir = toona_nodes.ldm_patched.utils.path_utils.get_input_directory()
         files = [f for f in os.listdir(input_dir) if os.path.isfile(os.path.join(input_dir, f)) and f.endswith(".latent")]
         return {"required": {"latent": [sorted(files), ]}, }
 
@@ -481,7 +481,7 @@ class LoadLatent:
     FUNCTION = "load"
 
     def load(self, latent):
-        latent_path = ldm_patched.utils.path_utils.get_annotated_filepath(latent)
+        latent_path = toona_nodes.ldm_patched.utils.path_utils.get_annotated_filepath(latent)
         latent = safetensors.torch.load_file(latent_path, device="cpu")
         multiplier = 1.0
         if "latent_format_version_0" not in latent:
@@ -491,7 +491,7 @@ class LoadLatent:
 
     @classmethod
     def IS_CHANGED(s, latent):
-        image_path = ldm_patched.utils.path_utils.get_annotated_filepath(latent)
+        image_path = toona_nodes.ldm_patched.utils.path_utils.get_annotated_filepath(latent)
         m = hashlib.sha256()
         with open(image_path, 'rb') as f:
             m.update(f.read())
@@ -499,7 +499,7 @@ class LoadLatent:
 
     @classmethod
     def VALIDATE_INPUTS(s, latent):
-        if not ldm_patched.utils.path_utils.exists_annotated_filepath(latent):
+        if not toona_nodes.ldm_patched.utils.path_utils.exists_annotated_filepath(latent):
             return "Invalid latent file: {}".format(latent)
         return True
 
@@ -515,9 +515,9 @@ class CheckpointLoader:
     CATEGORY = "advanced/loaders"
 
     def load_checkpoint(self, config_name, ckpt_name, output_vae=True, output_clip=True):
-        config_path = ldm_patched.utils.path_utils.get_full_path("configs", config_name)
-        ckpt_path = ldm_patched.utils.path_utils.get_full_path("checkpoints", ckpt_name)
-        return ldm_patched.modules.sd.load_checkpoint(config_path, ckpt_path, output_vae=True, output_clip=True, embedding_directory=ldm_patched.utils.path_utils.get_folder_paths("embeddings"))
+        config_path = toona_nodes.ldm_patched.utils.path_utils.get_full_path("configs", config_name)
+        ckpt_path = toona_nodes.ldm_patched.utils.path_utils.get_full_path("checkpoints", ckpt_name)
+        return toona_nodes.ldm_patched.modules.sd.load_checkpoint(config_path, ckpt_path, output_vae=True, output_clip=True, embedding_directory=ldm_patched.utils.path_utils.get_folder_paths("embeddings"))
 
 class CheckpointLoaderSimple:
     @classmethod
@@ -530,15 +530,15 @@ class CheckpointLoaderSimple:
     CATEGORY = "loaders"
 
     def load_checkpoint(self, ckpt_name, output_vae=True, output_clip=True):
-        ckpt_path = ldm_patched.utils.path_utils.get_full_path("checkpoints", ckpt_name)
-        out = ldm_patched.modules.sd.load_checkpoint_guess_config(ckpt_path, output_vae=True, output_clip=True, embedding_directory=ldm_patched.utils.path_utils.get_folder_paths("embeddings"))
+        ckpt_path = toona_nodes.ldm_patched.utils.path_utils.get_full_path("checkpoints", ckpt_name)
+        out = toona_nodes.ldm_patched.modules.sd.load_checkpoint_guess_config(ckpt_path, output_vae=True, output_clip=True, embedding_directory=ldm_patched.utils.path_utils.get_folder_paths("embeddings"))
         return out[:3]
 
 class DiffusersLoader:
     @classmethod
     def INPUT_TYPES(cls):
         paths = []
-        for search_path in ldm_patched.utils.path_utils.get_folder_paths("diffusers"):
+        for search_path in toona_nodes.ldm_patched.utils.path_utils.get_folder_paths("diffusers"):
             if os.path.exists(search_path):
                 for root, subdir, files in os.walk(search_path, followlinks=True):
                     if "model_index.json" in files:
@@ -551,14 +551,14 @@ class DiffusersLoader:
     CATEGORY = "advanced/loaders/deprecated"
 
     def load_checkpoint(self, model_path, output_vae=True, output_clip=True):
-        for search_path in ldm_patched.utils.path_utils.get_folder_paths("diffusers"):
+        for search_path in toona_nodes.ldm_patched.utils.path_utils.get_folder_paths("diffusers"):
             if os.path.exists(search_path):
                 path = os.path.join(search_path, model_path)
                 if os.path.exists(path):
                     model_path = path
                     break
 
-        return ldm_patched.modules.diffusers_load.load_diffusers(model_path, output_vae=output_vae, output_clip=output_clip, embedding_directory=ldm_patched.utils.path_utils.get_folder_paths("embeddings"))
+        return toona_nodes.ldm_patched.modules.diffusers_load.load_diffusers(model_path, output_vae=output_vae, output_clip=output_clip, embedding_directory=ldm_patched.utils.path_utils.get_folder_paths("embeddings"))
 
 
 class unCLIPCheckpointLoader:
@@ -572,8 +572,8 @@ class unCLIPCheckpointLoader:
     CATEGORY = "loaders"
 
     def load_checkpoint(self, ckpt_name, output_vae=True, output_clip=True):
-        ckpt_path = ldm_patched.utils.path_utils.get_full_path("checkpoints", ckpt_name)
-        out = ldm_patched.modules.sd.load_checkpoint_guess_config(ckpt_path, output_vae=True, output_clip=True, output_clipvision=True, embedding_directory=ldm_patched.utils.path_utils.get_folder_paths("embeddings"))
+        ckpt_path = toona_nodes.ldm_patched.utils.path_utils.get_full_path("checkpoints", ckpt_name)
+        out = toona_nodes.ldm_patched.modules.sd.load_checkpoint_guess_config(ckpt_path, output_vae=True, output_clip=True, output_clipvision=True, embedding_directory=ldm_patched.utils.path_utils.get_folder_paths("embeddings"))
         return out
 
 class CLIPSetLastLayer:
@@ -613,7 +613,7 @@ class LoraLoader:
         if strength_model == 0 and strength_clip == 0:
             return (model, clip)
 
-        lora_path = ldm_patched.utils.path_utils.get_full_path("loras", lora_name)
+        lora_path = toona_nodes.ldm_patched.utils.path_utils.get_full_path("loras", lora_name)
         lora = None
         if self.loaded_lora is not None:
             if self.loaded_lora[0] == lora_path:
@@ -624,10 +624,10 @@ class LoraLoader:
                 del temp
 
         if lora is None:
-            lora = ldm_patched.modules.utils.load_torch_file(lora_path, safe_load=True)
+            lora = toona_nodes.ldm_patched.modules.utils.load_torch_file(lora_path, safe_load=True)
             self.loaded_lora = (lora_path, lora)
 
-        model_lora, clip_lora = ldm_patched.modules.sd.load_lora_for_models(model, clip, lora, strength_model, strength_clip)
+        model_lora, clip_lora = toona_nodes.ldm_patched.modules.sd.load_lora_for_models(model, clip, lora, strength_model, strength_clip)
         return (model_lora, clip_lora)
 
 class LoraLoaderModelOnly(LoraLoader):
@@ -646,8 +646,8 @@ class LoraLoaderModelOnly(LoraLoader):
 class VAELoader:
     @staticmethod
     def vae_list():
-        vaes = ldm_patched.utils.path_utils.get_filename_list("vae")
-        approx_vaes = ldm_patched.utils.path_utils.get_filename_list("vae_approx")
+        vaes = toona_nodes.ldm_patched.utils.path_utils.get_filename_list("vae")
+        approx_vaes = toona_nodes.ldm_patched.utils.path_utils.get_filename_list("vae_approx")
         sdxl_taesd_enc = False
         sdxl_taesd_dec = False
         sd1_taesd_enc = False
@@ -671,16 +671,16 @@ class VAELoader:
     @staticmethod
     def load_taesd(name):
         sd = {}
-        approx_vaes = ldm_patched.utils.path_utils.get_filename_list("vae_approx")
+        approx_vaes = toona_nodes.ldm_patched.utils.path_utils.get_filename_list("vae_approx")
 
         encoder = next(filter(lambda a: a.startswith("{}_encoder.".format(name)), approx_vaes))
         decoder = next(filter(lambda a: a.startswith("{}_decoder.".format(name)), approx_vaes))
 
-        enc = ldm_patched.modules.utils.load_torch_file(ldm_patched.utils.path_utils.get_full_path("vae_approx", encoder))
+        enc = toona_nodes.ldm_patched.modules.utils.load_torch_file(ldm_patched.utils.path_utils.get_full_path("vae_approx", encoder))
         for k in enc:
             sd["taesd_encoder.{}".format(k)] = enc[k]
 
-        dec = ldm_patched.modules.utils.load_torch_file(ldm_patched.utils.path_utils.get_full_path("vae_approx", decoder))
+        dec = toona_nodes.ldm_patched.modules.utils.load_torch_file(ldm_patched.utils.path_utils.get_full_path("vae_approx", decoder))
         for k in dec:
             sd["taesd_decoder.{}".format(k)] = dec[k]
 
@@ -703,9 +703,9 @@ class VAELoader:
         if vae_name in ["taesd", "taesdxl"]:
             sd = self.load_taesd(vae_name)
         else:
-            vae_path = ldm_patched.utils.path_utils.get_full_path("vae", vae_name)
-            sd = ldm_patched.modules.utils.load_torch_file(vae_path)
-        vae = ldm_patched.modules.sd.VAE(sd=sd)
+            vae_path = toona_nodes.ldm_patched.utils.path_utils.get_full_path("vae", vae_name)
+            sd = toona_nodes.ldm_patched.modules.utils.load_torch_file(vae_path)
+        vae = toona_nodes.ldm_patched.modules.sd.VAE(sd=sd)
         return (vae,)
 
 class ControlNetLoader:
@@ -719,8 +719,8 @@ class ControlNetLoader:
     CATEGORY = "loaders"
 
     def load_controlnet(self, control_net_name):
-        controlnet_path = ldm_patched.utils.path_utils.get_full_path("controlnet", control_net_name)
-        controlnet = ldm_patched.modules.controlnet.load_controlnet(controlnet_path)
+        controlnet_path = toona_nodes.ldm_patched.utils.path_utils.get_full_path("controlnet", control_net_name)
+        controlnet = toona_nodes.ldm_patched.modules.controlnet.load_controlnet(controlnet_path)
         return (controlnet,)
 
 class DiffControlNetLoader:
@@ -735,8 +735,8 @@ class DiffControlNetLoader:
     CATEGORY = "loaders"
 
     def load_controlnet(self, model, control_net_name):
-        controlnet_path = ldm_patched.utils.path_utils.get_full_path("controlnet", control_net_name)
-        controlnet = ldm_patched.modules.controlnet.load_controlnet(controlnet_path, model)
+        controlnet_path = toona_nodes.ldm_patched.utils.path_utils.get_full_path("controlnet", control_net_name)
+        controlnet = toona_nodes.ldm_patched.modules.controlnet.load_controlnet(controlnet_path, model)
         return (controlnet,)
 
 
@@ -828,8 +828,8 @@ class UNETLoader:
     CATEGORY = "advanced/loaders"
 
     def load_unet(self, unet_name):
-        unet_path = ldm_patched.utils.path_utils.get_full_path("unet", unet_name)
-        model = ldm_patched.modules.sd.load_unet(unet_path)
+        unet_path = toona_nodes.ldm_patched.utils.path_utils.get_full_path("unet", unet_name)
+        model = toona_nodes.ldm_patched.modules.sd.load_unet(unet_path)
         return (model,)
 
 class CLIPLoader:
@@ -843,8 +843,8 @@ class CLIPLoader:
     CATEGORY = "advanced/loaders"
 
     def load_clip(self, clip_name):
-        clip_path = ldm_patched.utils.path_utils.get_full_path("clip", clip_name)
-        clip = ldm_patched.modules.sd.load_clip(ckpt_paths=[clip_path], embedding_directory=ldm_patched.utils.path_utils.get_folder_paths("embeddings"))
+        clip_path = toona_nodes.ldm_patched.utils.path_utils.get_full_path("clip", clip_name)
+        clip = toona_nodes.ldm_patched.modules.sd.load_clip(ckpt_paths=[clip_path], embedding_directory=ldm_patched.utils.path_utils.get_folder_paths("embeddings"))
         return (clip,)
 
 class DualCLIPLoader:
@@ -858,9 +858,9 @@ class DualCLIPLoader:
     CATEGORY = "advanced/loaders"
 
     def load_clip(self, clip_name1, clip_name2):
-        clip_path1 = ldm_patched.utils.path_utils.get_full_path("clip", clip_name1)
-        clip_path2 = ldm_patched.utils.path_utils.get_full_path("clip", clip_name2)
-        clip = ldm_patched.modules.sd.load_clip(ckpt_paths=[clip_path1, clip_path2], embedding_directory=ldm_patched.utils.path_utils.get_folder_paths("embeddings"))
+        clip_path1 = toona_nodes.ldm_patched.utils.path_utils.get_full_path("clip", clip_name1)
+        clip_path2 = toona_nodes.ldm_patched.utils.path_utils.get_full_path("clip", clip_name2)
+        clip = toona_nodes.ldm_patched.modules.sd.load_clip(ckpt_paths=[clip_path1, clip_path2], embedding_directory=ldm_patched.utils.path_utils.get_folder_paths("embeddings"))
         return (clip,)
 
 class CLIPVisionLoader:
@@ -874,8 +874,8 @@ class CLIPVisionLoader:
     CATEGORY = "loaders"
 
     def load_clip(self, clip_name):
-        clip_path = ldm_patched.utils.path_utils.get_full_path("clip_vision", clip_name)
-        clip_vision = ldm_patched.modules.clip_vision.load(clip_path)
+        clip_path = toona_nodes.ldm_patched.utils.path_utils.get_full_path("clip_vision", clip_name)
+        clip_vision = toona_nodes.ldm_patched.modules.clip_vision.load(clip_path)
         return (clip_vision,)
 
 class CLIPVisionEncode:
@@ -904,8 +904,8 @@ class StyleModelLoader:
     CATEGORY = "loaders"
 
     def load_style_model(self, style_model_name):
-        style_model_path = ldm_patched.utils.path_utils.get_full_path("style_models", style_model_name)
-        style_model = ldm_patched.modules.sd.load_style_model(style_model_path)
+        style_model_path = toona_nodes.ldm_patched.utils.path_utils.get_full_path("style_models", style_model_name)
+        style_model = toona_nodes.ldm_patched.modules.sd.load_style_model(style_model_path)
         return (style_model,)
 
 
@@ -969,8 +969,8 @@ class GLIGENLoader:
     CATEGORY = "loaders"
 
     def load_gligen(self, gligen_name):
-        gligen_path = ldm_patched.utils.path_utils.get_full_path("gligen", gligen_name)
-        gligen = ldm_patched.modules.sd.load_gligen(gligen_path)
+        gligen_path = toona_nodes.ldm_patched.utils.path_utils.get_full_path("gligen", gligen_name)
+        gligen = toona_nodes.ldm_patched.modules.sd.load_gligen(gligen_path)
         return (gligen,)
 
 class GLIGENTextBoxApply:
@@ -1006,7 +1006,7 @@ class GLIGENTextBoxApply:
 
 class EmptyLatentImage:
     def __init__(self):
-        self.device = ldm_patched.modules.model_management.intermediate_device()
+        self.device = toona_nodes.ldm_patched.modules.model_management.intermediate_device()
 
     @classmethod
     def INPUT_TYPES(s):
@@ -1112,7 +1112,7 @@ class LatentUpscale:
                 width = max(64, width)
                 height = max(64, height)
 
-            s["samples"] = ldm_patched.modules.utils.common_upscale(samples["samples"], width // 8, height // 8, upscale_method, crop)
+            s["samples"] = toona_nodes.ldm_patched.modules.utils.common_upscale(samples["samples"], width // 8, height // 8, upscale_method, crop)
         return (s,)
 
 class LatentUpscaleBy:
@@ -1131,7 +1131,7 @@ class LatentUpscaleBy:
         s = samples.copy()
         width = round(samples["samples"].shape[3] * scale_by)
         height = round(samples["samples"].shape[2] * scale_by)
-        s["samples"] = ldm_patched.modules.utils.common_upscale(samples["samples"], width, height, upscale_method, "disabled")
+        s["samples"] = toona_nodes.ldm_patched.modules.utils.common_upscale(samples["samples"], width, height, upscale_method, "disabled")
         return (s,)
 
 class LatentRotate:
@@ -1247,7 +1247,7 @@ class LatentBlend:
 
         if samples1.shape != samples2.shape:
             samples2.permute(0, 3, 1, 2)
-            samples2 = ldm_patched.modules.utils.common_upscale(samples2, samples1.shape[3], samples1.shape[2], 'bicubic', crop='center')
+            samples2 = toona_nodes.ldm_patched.modules.utils.common_upscale(samples2, samples1.shape[3], samples1.shape[2], 'bicubic', crop='center')
             samples2.permute(0, 2, 3, 1)
 
         samples_blended = self.blend_mode(samples1, samples2, blend_mode)
@@ -1316,15 +1316,15 @@ def common_ksampler(model, seed, steps, cfg, sampler_name, scheduler, positive, 
         noise = torch.zeros(latent_image.size(), dtype=latent_image.dtype, layout=latent_image.layout, device="cpu")
     else:
         batch_inds = latent["batch_index"] if "batch_index" in latent else None
-        noise = ldm_patched.modules.sample.prepare_noise(latent_image, seed, batch_inds)
+        noise = toona_nodes.ldm_patched.modules.sample.prepare_noise(latent_image, seed, batch_inds)
 
     noise_mask = None
     if "noise_mask" in latent:
         noise_mask = latent["noise_mask"]
 
-    callback = ldm_patched.utils.latent_visualization.prepare_callback(model, steps)
-    disable_pbar = not ldm_patched.modules.utils.PROGRESS_BAR_ENABLED
-    samples = ldm_patched.modules.sample.sample(model, noise, steps, cfg, sampler_name, scheduler, positive, negative, latent_image,
+    callback = toona_nodes.ldm_patched.utils.latent_visualization.prepare_callback(model, steps)
+    disable_pbar = not toona_nodes.ldm_patched.modules.utils.PROGRESS_BAR_ENABLED
+    samples = toona_nodes.ldm_patched.modules.sample.sample(model, noise, steps, cfg, sampler_name, scheduler, positive, negative, latent_image,
                                   denoise=denoise, disable_noise=disable_noise, start_step=start_step, last_step=last_step,
                                   force_full_denoise=force_full_denoise, noise_mask=noise_mask, callback=callback, disable_pbar=disable_pbar, seed=seed)
     out = latent.copy()
@@ -1392,7 +1392,7 @@ class KSamplerAdvanced:
 
 class SaveImage:
     def __init__(self):
-        self.output_dir = ldm_patched.utils.path_utils.get_output_directory()
+        self.output_dir = toona_nodes.ldm_patched.utils.path_utils.get_output_directory()
         self.type = "output"
         self.prefix_append = ""
         self.compress_level = 4
@@ -1414,7 +1414,7 @@ class SaveImage:
 
     def save_images(self, images, filename_prefix="ldm_patched", prompt=None, extra_pnginfo=None):
         filename_prefix += self.prefix_append
-        full_output_folder, filename, counter, subfolder, filename_prefix = ldm_patched.utils.path_utils.get_save_image_path(filename_prefix, self.output_dir, images[0].shape[1], images[0].shape[0])
+        full_output_folder, filename, counter, subfolder, filename_prefix = toona_nodes.ldm_patched.utils.path_utils.get_save_image_path(filename_prefix, self.output_dir, images[0].shape[1], images[0].shape[0])
         results = list()
         for image in images:
             i = 255. * image.cpu().numpy()
@@ -1441,7 +1441,7 @@ class SaveImage:
 
 class PreviewImage(SaveImage):
     def __init__(self):
-        self.output_dir = ldm_patched.utils.path_utils.get_temp_directory()
+        self.output_dir = toona_nodes.ldm_patched.utils.path_utils.get_temp_directory()
         self.type = "temp"
         self.prefix_append = "_temp_" + ''.join(random.choice("abcdefghijklmnopqrstupvxyz") for x in range(5))
         self.compress_level = 1
@@ -1456,7 +1456,7 @@ class PreviewImage(SaveImage):
 class LoadImage:
     @classmethod
     def INPUT_TYPES(s):
-        input_dir = ldm_patched.utils.path_utils.get_input_directory()
+        input_dir = toona_nodes.ldm_patched.utils.path_utils.get_input_directory()
         files = [f for f in os.listdir(input_dir) if os.path.isfile(os.path.join(input_dir, f))]
         return {"required":
                     {"image": (sorted(files), {"image_upload": True})},
@@ -1467,7 +1467,7 @@ class LoadImage:
     RETURN_TYPES = ("IMAGE", "MASK")
     FUNCTION = "load_image"
     def load_image(self, image):
-        image_path = ldm_patched.utils.path_utils.get_annotated_filepath(image)
+        image_path = toona_nodes.ldm_patched.utils.path_utils.get_annotated_filepath(image)
         img = Image.open(image_path)
         output_images = []
         output_masks = []
@@ -1497,7 +1497,7 @@ class LoadImage:
 
     @classmethod
     def IS_CHANGED(s, image):
-        image_path = ldm_patched.utils.path_utils.get_annotated_filepath(image)
+        image_path = toona_nodes.ldm_patched.utils.path_utils.get_annotated_filepath(image)
         m = hashlib.sha256()
         with open(image_path, 'rb') as f:
             m.update(f.read())
@@ -1505,7 +1505,7 @@ class LoadImage:
 
     @classmethod
     def VALIDATE_INPUTS(s, image):
-        if not ldm_patched.utils.path_utils.exists_annotated_filepath(image):
+        if not toona_nodes.ldm_patched.utils.path_utils.exists_annotated_filepath(image):
             return "Invalid image file: {}".format(image)
 
         return True
@@ -1514,7 +1514,7 @@ class LoadImageMask:
     _color_channels = ["alpha", "red", "green", "blue"]
     @classmethod
     def INPUT_TYPES(s):
-        input_dir = ldm_patched.utils.path_utils.get_input_directory()
+        input_dir = toona_nodes.ldm_patched.utils.path_utils.get_input_directory()
         files = [f for f in os.listdir(input_dir) if os.path.isfile(os.path.join(input_dir, f))]
         return {"required":
                     {"image": (sorted(files), {"image_upload": True}),
@@ -1526,7 +1526,7 @@ class LoadImageMask:
     RETURN_TYPES = ("MASK",)
     FUNCTION = "load_image"
     def load_image(self, image, channel):
-        image_path = ldm_patched.utils.path_utils.get_annotated_filepath(image)
+        image_path = toona_nodes.ldm_patched.utils.path_utils.get_annotated_filepath(image)
         i = Image.open(image_path)
         i = ImageOps.exif_transpose(i)
         if i.getbands() != ("R", "G", "B", "A"):
@@ -1546,7 +1546,7 @@ class LoadImageMask:
 
     @classmethod
     def IS_CHANGED(s, image, channel):
-        image_path = ldm_patched.utils.path_utils.get_annotated_filepath(image)
+        image_path = toona_nodes.ldm_patched.utils.path_utils.get_annotated_filepath(image)
         m = hashlib.sha256()
         with open(image_path, 'rb') as f:
             m.update(f.read())
@@ -1554,7 +1554,7 @@ class LoadImageMask:
 
     @classmethod
     def VALIDATE_INPUTS(s, image):
-        if not ldm_patched.utils.path_utils.exists_annotated_filepath(image):
+        if not toona_nodes.ldm_patched.utils.path_utils.exists_annotated_filepath(image):
             return "Invalid image file: {}".format(image)
 
         return True
@@ -1585,7 +1585,7 @@ class ImageScale:
             elif height == 0:
                 height = max(1, round(samples.shape[2] * width / samples.shape[3]))
 
-            s = ldm_patched.modules.utils.common_upscale(samples, width, height, upscale_method, crop)
+            s = toona_nodes.ldm_patched.modules.utils.common_upscale(samples, width, height, upscale_method, crop)
             s = s.movedim(1,-1)
         return (s,)
 
@@ -1605,7 +1605,7 @@ class ImageScaleBy:
         samples = image.movedim(-1,1)
         width = round(samples.shape[3] * scale_by)
         height = round(samples.shape[2] * scale_by)
-        s = ldm_patched.modules.utils.common_upscale(samples, width, height, upscale_method, "disabled")
+        s = toona_nodes.ldm_patched.modules.utils.common_upscale(samples, width, height, upscale_method, "disabled")
         s = s.movedim(1,-1)
         return (s,)
 
@@ -1637,7 +1637,7 @@ class ImageBatch:
 
     def batch(self, image1, image2):
         if image1.shape[1:] != image2.shape[1:]:
-            image2 = ldm_patched.modules.utils.common_upscale(image2.movedim(-1,1), image1.shape[2], image1.shape[1], "bilinear", "center").movedim(1,-1)
+            image2 = toona_nodes.ldm_patched.modules.utils.common_upscale(image2.movedim(-1,1), image1.shape[2], image1.shape[1], "bilinear", "center").movedim(1,-1)
         s = torch.cat((image1, image2), dim=0)
         return (s,)
 
@@ -1895,7 +1895,7 @@ def load_custom_node(module_path, ignore=set()):
 
 def load_custom_nodes():
     base_node_names = set(NODE_CLASS_MAPPINGS.keys())
-    node_paths = ldm_patched.utils.path_utils.get_folder_paths("custom_nodes")
+    node_paths = toona_nodes.ldm_patched.utils.path_utils.get_folder_paths("custom_nodes")
     node_import_times = []
     for custom_node_path in node_paths:
         possible_modules = os.listdir(os.path.realpath(custom_node_path))

@@ -1,58 +1,85 @@
 ## ComfyUI-Manager: installing dependencies done.
-[2024-05-21 23:45] ** ComfyUI startup time: 2024-05-21 23:45:23.846151
-[2024-05-21 23:45] ** Platform: Linux
-[2024-05-21 23:45] ** Python version: 3.10.12 (main, Jun 11 2023, 05:26:28) [GCC 11.4.0]
-[2024-05-21 23:45] ** Python executable: /usr/bin/python
-[2024-05-21 23:45] ** Log path: /root/ComfyUIScript/comfyui.log
-[2024-05-21 23:45] 
+[2024-05-22 00:16] ** ComfyUI startup time: 2024-05-22 00:16:54.525174
+[2024-05-22 00:16] ** Platform: Linux
+[2024-05-22 00:16] ** Python version: 3.10.12 (main, Jun 11 2023, 05:26:28) [GCC 11.4.0]
+[2024-05-22 00:16] ** Python executable: /usr/bin/python
+[2024-05-22 00:16] ** Log path: /root/ComfyUIScript/comfyui.log
+[2024-05-22 00:16] 
 Prestartup times for custom nodes:
-[2024-05-21 23:45]    0.1 seconds: /root/ComfyUIScript/custom_nodes/ComfyUI_Manager
-[2024-05-21 23:45] 
+[2024-05-22 00:16]    0.1 seconds: /root/ComfyUIScript/custom_nodes/ComfyUI_Manager
+[2024-05-22 00:16] 
 Total VRAM 16109 MB, total RAM 225417 MB
-[2024-05-21 23:45] pytorch version: 2.1.0+cu118
-[2024-05-21 23:45] Set vram state to: NORMAL_VRAM
-[2024-05-21 23:45] Device: cuda:0 NVIDIA RTX A4000 : cudaMallocAsync
-[2024-05-21 23:45] VAE dtype: torch.bfloat16
-[2024-05-21 23:45] Using pytorch cross attention
-[2024-05-21 23:45] ### Loading: ComfyUI-Manager (V2.34.1)
-[2024-05-21 23:45] ### ComfyUI Revision: 2200 [860588ed] | Released on '2024-05-21'
-[2024-05-21 23:45] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/github-stats.json
-[2024-05-21 23:45] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/extension-node-map.json
-[2024-05-21 23:45] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/model-list.json
-[2024-05-21 23:45] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/alter-list.json
-[2024-05-21 23:45] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/custom-node-list.json
-[2024-05-21 23:45] [34mWAS Node Suite: [0mOpenCV Python FFMPEG support is enabled[0m
-[2024-05-21 23:45] [34mWAS Node Suite [93mWarning: [0m`ffmpeg_bin_path` is not set in `/root/ComfyUIScript/custom_nodes/was-node-suite-comfyui/was_suite_config.json` config file. Will attempt to use system ffmpeg binaries if available.[0m
-[2024-05-21 23:45] [34mWAS Node Suite: [0mFinished.[0m [32mLoaded[0m [0m212[0m [32mnodes successfully.[0m
-[2024-05-21 23:45] 
-	[3m[93m"Success is not final, failure is not fatal: It is the courage to continue that counts."[0m[3m - Winston Churchill[0m
-[2024-05-21 23:45] 
-[2024-05-21 23:45] Traceback (most recent call last):
-  File "/root/ComfyUIScript/nodes.py", line 1879, in load_custom_node
-    module_spec.loader.exec_module(module)
-  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
-  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-  File "/root/ComfyUIScript/custom_nodes/toona_nodes/__init__.py", line 2, in <module>
-    from .toona_upscale import ToonaUpscale
-  File "/root/ComfyUIScript/custom_nodes/toona_nodes/toona_upscale.py", line 6, in <module>
-    from .upscaler import perform_upscale
-  File "/root/ComfyUIScript/custom_nodes/toona_nodes/upscaler.py", line 6, in <module>
-    from toona_nodes.ldm_patched.contrib.external_upscale_model import ImageUpscaleWithModel
-  File "/root/ComfyUIScript/custom_nodes/toona_nodes/ldm_patched/contrib/external_upscale_model.py", line 4, in <module>
-    from ldm_patched.pfn import model_loading
-ModuleNotFoundError: No module named 'ldm_patched'
-
-[2024-05-21 23:45] Cannot import /root/ComfyUIScript/custom_nodes/toona_nodes module for custom nodes: No module named 'ldm_patched'
-[2024-05-21 23:45] 
+[2024-05-22 00:16] pytorch version: 2.1.0+cu118
+[2024-05-22 00:16] Set vram state to: NORMAL_VRAM
+[2024-05-22 00:16] Device: cuda:0 NVIDIA RTX A4000 : cudaMallocAsync
+[2024-05-22 00:16] VAE dtype: torch.bfloat16
+[2024-05-22 00:16] Using pytorch cross attention
+[2024-05-22 00:16] ### Loading: ComfyUI-Manager (V2.34.1)
+[2024-05-22 00:16] ### ComfyUI Revision: 2201 [dd8fe63e] | Released on '2024-05-21'
+[2024-05-22 00:16] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/model-list.json
+[2024-05-22 00:16] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/extension-node-map.json
+[2024-05-22 00:16] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/alter-list.json
+[2024-05-22 00:16] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/github-stats.json
+[2024-05-22 00:16] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/custom-node-list.json
+[2024-05-22 00:16] [34mWAS Node Suite: [0mOpenCV Python FFMPEG support is enabled[0m
+[2024-05-22 00:16] [34mWAS Node Suite [93mWarning: [0m`ffmpeg_bin_path` is not set in `/root/ComfyUIScript/custom_nodes/was-node-suite-comfyui/was_suite_config.json` config file. Will attempt to use system ffmpeg binaries if available.[0m
+[2024-05-22 00:16] [34mWAS Node Suite: [0mFinished.[0m [32mLoaded[0m [0m212[0m [32mnodes successfully.[0m
+[2024-05-22 00:16] 
+	[3m[93m"Art is the lie that enables us to recognize the truth."[0m[3m - Friedrich Nietzsche[0m
+[2024-05-22 00:16] 
+[2024-05-22 00:16] Total VRAM 16109 MB, total RAM 225417 MB
+[2024-05-22 00:16] Set vram state to: HIGH_VRAM
+[2024-05-22 00:16] Device: cuda:0 NVIDIA RTX A4000 : cudaMallocAsync
+[2024-05-22 00:16] VAE dtype: torch.bfloat16
+[2024-05-22 00:16] 
 Import times for custom nodes:
-[2024-05-21 23:45]    0.0 seconds: /root/ComfyUIScript/custom_nodes/websocket_image_save.py
-[2024-05-21 23:45]    0.0 seconds: /root/ComfyUIScript/custom_nodes/ComfyUI_JPS-Nodes
-[2024-05-21 23:45]    0.0 seconds: /root/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes
-[2024-05-21 23:45]    0.0 seconds (IMPORT FAILED): /root/ComfyUIScript/custom_nodes/toona_nodes
-[2024-05-21 23:45]    0.0 seconds: /root/ComfyUIScript/custom_nodes/masquerade-nodes-comfyui
-[2024-05-21 23:45]    0.0 seconds: /root/ComfyUIScript/custom_nodes/ComfyUI_Manager
-[2024-05-21 23:45]    1.6 seconds: /root/ComfyUIScript/custom_nodes/was-node-suite-comfyui
-[2024-05-21 23:45] 
-[2024-05-21 23:45] Starting server
+[2024-05-22 00:16]    0.0 seconds: /root/ComfyUIScript/custom_nodes/websocket_image_save.py
+[2024-05-22 00:16]    0.0 seconds: /root/ComfyUIScript/custom_nodes/masquerade-nodes-comfyui
+[2024-05-22 00:16]    0.0 seconds: /root/ComfyUIScript/custom_nodes/ComfyUI_JPS-Nodes
+[2024-05-22 00:16]    0.0 seconds: /root/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes
+[2024-05-22 00:16]    0.0 seconds: /root/ComfyUIScript/custom_nodes/toona_nodes
+[2024-05-22 00:16]    0.0 seconds: /root/ComfyUIScript/custom_nodes/ComfyUI_Manager
+[2024-05-22 00:16]    1.7 seconds: /root/ComfyUIScript/custom_nodes/was-node-suite-comfyui
+[2024-05-22 00:16] 
+[2024-05-22 00:16] Starting server
 
-[2024-05-21 23:45] To see the GUI go to: http://127.0.0.1:8188
+[2024-05-22 00:16] To see the GUI go to: http://127.0.0.1:8188
+[2024-05-22 00:17] FETCH DATA from: /root/ComfyUIScript/custom_nodes/ComfyUI_Manager/extension-node-map.json [DONE]
+[2024-05-22 00:17] got prompt
+[2024-05-22 00:17] Toona Cut Mask:
+[2024-05-22 00:17] Inpaint Respective Field:  0.392
+[2024-05-22 00:17] Image:  (768, 535, 3)
+[2024-05-22 00:17] Mask:  (768, 535)
+[2024-05-22 00:17] Image cut Data Type:  float32
+[2024-05-22 00:17] Mask cut Data Type:  float32
+[2024-05-22 00:17] image cut min max 0.0 0.99607843
+[2024-05-22 00:17] mask cut min max 0.0 1.0
+[2024-05-22 00:17] Toona Upscale:
+[2024-05-22 00:17] torch.float32
+[2024-05-22 00:17] torch.float32
+[2024-05-22 00:17] Upscaling image with shape (303, 302, 3) ...
+[2024-05-22 00:17] post upscale shape (1212, 1208, 3)
+[2024-05-22 00:17] Image:  (1024, 1024, 3)
+[2024-05-22 00:17] Image Data Type:  uint8
+[2024-05-22 00:17] Mask:  (1024, 1024)
+[2024-05-22 00:17] Mask Data Type:  uint8
+[2024-05-22 00:17] image min max 0 255
+[2024-05-22 00:17] mask min max 0 255
+[2024-05-22 00:17] 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  9.76it/s]100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  9.70it/s]
+[2024-05-22 00:17] model_type EPS
+[2024-05-22 00:17] Using pytorch attention in VAE
+[2024-05-22 00:17] Using pytorch attention in VAE
+[2024-05-22 00:17] Requested to load SDXLClipModel
+[2024-05-22 00:17] Loading 1 new model
+[2024-05-22 00:17] Requested to load AutoencoderKL
+[2024-05-22 00:17] Loading 1 new model
+[2024-05-22 00:17] [ApplyFooocusInpaint] 960 Lora keys loaded, 0 remaining keys not found in model.
+[2024-05-22 00:17] [comfyui-inpaint-nodes] Injecting patched comfy.model_patcher.ModelPatcher.calculate_weight
+[2024-05-22 00:17] Requested to load SDXL
+[2024-05-22 00:17] Loading 1 new model
+[2024-05-22 00:17] 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 30/30 [00:02<00:00, 13.67it/s]
+[2024-05-22 00:17] Requested to load AutoencoderKL
+[2024-05-22 00:17] Loading 1 new model
+[2024-05-22 00:17] Prompt executed in 15.63 seconds
+[2024-05-22 00:18] 
+Stopped server

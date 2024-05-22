@@ -69,14 +69,15 @@ class ToonaUpscale:
 
     CATEGORY = "Toona Nodes"
 
-    def run(self, image, mask, inpaint_respective_field):
-        print ("Toona Cut Mask:") 
-        print ("Inpaint Respective Field: ", inpaint_respective_field)
+    def run(self, image, mask):
+        print ("Toona Upscale:") 
+        print (image.dtype)
+        print (mask.dtype)
         interested_image = image[0, :, : ,:].detach().cpu().numpy()
         interested_mask = mask[0, :, :].detach().cpu().numpy()
-        print("Image: ", interested_image.shape)
-        print("Mask: ", interested_mask.shape)
 
+        interested_image = (interested_image * 255).astype(np.uint8)
+        interested_mask = (interested_mask * 255).astype(np.uint8)
 
         # super resolution 
         if get_image_shape_ceil(interested_image) < 1024:
@@ -89,6 +90,20 @@ class ToonaUpscale:
 
         # process mask
         interested_mask = up255(resample_image(interested_mask, W, H), t=127)
+
+        print("Image: ", interested_image.shape)
+        # print data type of interested_image
+        print("Image Data Type: ", interested_image.dtype)
+        print("Mask: ", interested_mask.shape)
+        # print data type of interested_mask
+        print("Mask Data Type: ", interested_mask.dtype)
+
+        print("image min max" , interested_image.min(), interested_image.max())
+        print("mask min max" , interested_mask.min(), interested_mask.max())
+        interested_image = (interested_image / 255.0).astype(np.float32)
+
+        # Convert the interested_mask_uint8 back to float32
+        interested_mask = (interested_mask / 255.0).astype(np.float32)
 
         result_mask = torch.from_numpy(interested_mask).unsqueeze(0)
         result_image = torch.from_numpy(interested_image).unsqueeze(0)

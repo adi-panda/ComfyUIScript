@@ -54,11 +54,11 @@ def get_previewer(device, latent_format):
         taesd_decoder_path = None
         if latent_format.taesd_decoder_name is not None:
             taesd_decoder_path = next(
-                (fn for fn in ldm_patched.utils.path_utils.get_filename_list("vae_approx")
+                (fn for fn in toona_nodes.ldm_patched.utils.path_utils.get_filename_list("vae_approx")
                     if fn.startswith(latent_format.taesd_decoder_name)),
                 ""
             )
-            taesd_decoder_path = ldm_patched.utils.path_utils.get_full_path("vae_approx", taesd_decoder_path)
+            taesd_decoder_path = toona_nodes.ldm_patched.utils.path_utils.get_full_path("vae_approx", taesd_decoder_path)
 
         if method == LatentPreviewMethod.Auto:
             method = LatentPreviewMethod.Latent2RGB
@@ -84,7 +84,7 @@ def prepare_callback(model, steps, x0_output_dict=None):
 
     previewer = get_previewer(model.load_device, model.model.latent_format)
 
-    pbar = ldm_patched.modules.utils.ProgressBar(steps)
+    pbar = toona_nodes.ldm_patched.modules.utils.ProgressBar(steps)
     def callback(step, x0, x, total_steps):
         if x0_output_dict is not None:
             x0_output_dict["x0"] = x0

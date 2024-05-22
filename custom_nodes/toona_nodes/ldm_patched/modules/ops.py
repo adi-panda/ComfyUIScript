@@ -3,7 +3,7 @@ import toona_nodes.ldm_patched.modules.model_management
 
 def cast_bias_weight(s, input):
     bias = None
-    non_blocking = ldm_patched.modules.model_management.device_supports_non_blocking(input.device)
+    non_blocking = toona_nodes.ldm_patched.modules.model_management.device_supports_non_blocking(input.device)
     if s.bias is not None:
         bias = s.bias.to(device=input.device, dtype=input.dtype, non_blocking=non_blocking)
     weight = s.weight.to(device=input.device, dtype=input.dtype, non_blocking=non_blocking)
@@ -12,7 +12,7 @@ def cast_bias_weight(s, input):
 
 class disable_weight_init:
     class Linear(torch.nn.Linear):
-        ldm_patched_cast_weights = False
+        toona_nodes.ldm_patched_cast_weights = False
         def reset_parameters(self):
             return None
 
@@ -27,7 +27,7 @@ class disable_weight_init:
                 return super().forward(*args, **kwargs)
 
     class Conv2d(torch.nn.Conv2d):
-        ldm_patched_cast_weights = False
+        toona_nodes.ldm_patched_cast_weights = False
         def reset_parameters(self):
             return None
 
@@ -42,7 +42,7 @@ class disable_weight_init:
                 return super().forward(*args, **kwargs)
 
     class Conv3d(torch.nn.Conv3d):
-        ldm_patched_cast_weights = False
+        toona_nodes.ldm_patched_cast_weights = False
         def reset_parameters(self):
             return None
 
@@ -57,7 +57,7 @@ class disable_weight_init:
                 return super().forward(*args, **kwargs)
 
     class GroupNorm(torch.nn.GroupNorm):
-        ldm_patched_cast_weights = False
+        toona_nodes.ldm_patched_cast_weights = False
         def reset_parameters(self):
             return None
 
@@ -73,7 +73,7 @@ class disable_weight_init:
 
 
     class LayerNorm(torch.nn.LayerNorm):
-        ldm_patched_cast_weights = False
+        toona_nodes.ldm_patched_cast_weights = False
         def reset_parameters(self):
             return None
 
@@ -99,16 +99,16 @@ class disable_weight_init:
 
 class manual_cast(disable_weight_init):
     class Linear(disable_weight_init.Linear):
-        ldm_patched_cast_weights = True
+        toona_nodes.ldm_patched_cast_weights = True
 
     class Conv2d(disable_weight_init.Conv2d):
-        ldm_patched_cast_weights = True
+        toona_nodes.ldm_patched_cast_weights = True
 
     class Conv3d(disable_weight_init.Conv3d):
-        ldm_patched_cast_weights = True
+        toona_nodes.ldm_patched_cast_weights = True
 
     class GroupNorm(disable_weight_init.GroupNorm):
-        ldm_patched_cast_weights = True
+        toona_nodes.ldm_patched_cast_weights = True
 
     class LayerNorm(disable_weight_init.LayerNorm):
-        ldm_patched_cast_weights = True
+        toona_nodes.ldm_patched_cast_weights = True

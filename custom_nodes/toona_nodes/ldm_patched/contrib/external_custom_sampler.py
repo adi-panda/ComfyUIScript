@@ -28,8 +28,8 @@ class BasicScheduler:
         if denoise < 1.0:
             total_steps = int(steps/denoise)
 
-        ldm_patched.modules.model_management.load_models_gpu([model])
-        sigmas = ldm_patched.modules.samplers.calculate_sigmas_scheduler(model.model, scheduler, total_steps).cpu()
+        toona_nodes.ldm_patched.modules.model_management.load_models_gpu([model])
+        sigmas = toona_nodes.ldm_patched.modules.samplers.calculate_sigmas_scheduler(model.model, scheduler, total_steps).cpu()
         sigmas = sigmas[-(steps + 1):]
         return (sigmas, )
 
@@ -107,7 +107,7 @@ class SDTurboScheduler:
     def get_sigmas(self, model, steps, denoise):
         start_step = 10 - int(10 * denoise)
         timesteps = torch.flip(torch.arange(1, 11) * 100 - 1, (0,))[start_step:start_step + steps]
-        ldm_patched.modules.model_management.load_models_gpu([model])
+        toona_nodes.ldm_patched.modules.model_management.load_models_gpu([model])
         sigmas = model.model.model_sampling.sigma(timesteps)
         sigmas = torch.cat([sigmas, sigmas.new_zeros([1])])
         return (sigmas, )
@@ -180,7 +180,7 @@ class KSamplerSelect:
     FUNCTION = "get_sampler"
 
     def get_sampler(self, sampler_name):
-        sampler = ldm_patched.modules.samplers.sampler_object(sampler_name)
+        sampler = toona_nodes.ldm_patched.modules.samplers.sampler_object(sampler_name)
         return (sampler, )
 
 class SamplerDPMPP_2M_SDE:
@@ -203,7 +203,7 @@ class SamplerDPMPP_2M_SDE:
             sampler_name = "dpmpp_2m_sde"
         else:
             sampler_name = "dpmpp_2m_sde_gpu"
-        sampler = ldm_patched.modules.samplers.ksampler(sampler_name, {"eta": eta, "s_noise": s_noise, "solver_type": solver_type})
+        sampler = toona_nodes.ldm_patched.modules.samplers.ksampler(sampler_name, {"eta": eta, "s_noise": s_noise, "solver_type": solver_type})
         return (sampler, )
 
 
@@ -227,7 +227,7 @@ class SamplerDPMPP_SDE:
             sampler_name = "dpmpp_sde"
         else:
             sampler_name = "dpmpp_sde_gpu"
-        sampler = ldm_patched.modules.samplers.ksampler(sampler_name, {"eta": eta, "s_noise": s_noise, "r": r})
+        sampler = toona_nodes.ldm_patched.modules.samplers.ksampler(sampler_name, {"eta": eta, "s_noise": s_noise, "r": r})
         return (sampler, )
 
 class SamplerCustom:
@@ -260,17 +260,17 @@ class SamplerCustom:
             noise = torch.zeros(latent_image.size(), dtype=latent_image.dtype, layout=latent_image.layout, device="cpu")
         else:
             batch_inds = latent["batch_index"] if "batch_index" in latent else None
-            noise = ldm_patched.modules.sample.prepare_noise(latent_image, noise_seed, batch_inds)
+            noise = toona_nodes.ldm_patched.modules.sample.prepare_noise(latent_image, noise_seed, batch_inds)
 
         noise_mask = None
         if "noise_mask" in latent:
             noise_mask = latent["noise_mask"]
 
         x0_output = {}
-        callback = ldm_patched.utils.latent_visualization.prepare_callback(model, sigmas.shape[-1] - 1, x0_output)
+        callback = toona_nodes.ldm_patched.utils.latent_visualization.prepare_callback(model, sigmas.shape[-1] - 1, x0_output)
 
-        disable_pbar = not ldm_patched.modules.utils.PROGRESS_BAR_ENABLED
-        samples = ldm_patched.modules.sample.sample_custom(model, noise, cfg, sampler, sigmas, positive, negative, latent_image, noise_mask=noise_mask, callback=callback, disable_pbar=disable_pbar, seed=noise_seed)
+        disable_pbar = not toona_nodes.ldm_patched.modules.utils.PROGRESS_BAR_ENABLED
+        samples = toona_nodes.ldm_patched.modules.sample.sample_custom(model, noise, cfg, sampler, sigmas, positive, negative, latent_image, noise_mask=noise_mask, callback=callback, disable_pbar=disable_pbar, seed=noise_seed)
 
         out = latent.copy()
         out["samples"] = samples

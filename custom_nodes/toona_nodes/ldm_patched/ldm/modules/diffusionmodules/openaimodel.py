@@ -15,7 +15,7 @@ from .util import (
 from ..attention import SpatialTransformer, SpatialVideoTransformer, default
 from toona_nodes.ldm_patched.ldm.util import exists
 import toona_nodes.ldm_patched.modules.ops
-ops = ldm_patched.modules.ops.disable_weight_init
+ops = toona_nodes.ldm_patched.modules.ops.disable_weight_init
 
 class TimestepBlock(nn.Module):
     """

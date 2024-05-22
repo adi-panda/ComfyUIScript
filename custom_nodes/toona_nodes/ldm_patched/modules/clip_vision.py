@@ -33,13 +33,13 @@ class ClipVisionModel():
         with open(json_config) as f:
             config = json.load(f)
 
-        self.load_device = ldm_patched.modules.model_management.text_encoder_device()
-        offload_device = ldm_patched.modules.model_management.text_encoder_offload_device()
-        self.dtype = ldm_patched.modules.model_management.text_encoder_dtype(self.load_device)
-        self.model = ldm_patched.modules.clip_model.CLIPVisionModelProjection(config, self.dtype, offload_device, ldm_patched.modules.ops.manual_cast)
+        self.load_device = toona_nodes.ldm_patched.modules.model_management.text_encoder_device()
+        offload_device = toona_nodes.ldm_patched.modules.model_management.text_encoder_offload_device()
+        self.dtype = toona_nodes.ldm_patched.modules.model_management.text_encoder_dtype(self.load_device)
+        self.model = toona_nodes.ldm_patched.modules.clip_model.CLIPVisionModelProjection(config, self.dtype, offload_device, toona_nodes.ldm_patched.modules.ops.manual_cast)
         self.model.eval()
 
-        self.patcher = ldm_patched.modules.model_patcher.ModelPatcher(self.model, load_device=self.load_device, offload_device=offload_device)
+        self.patcher = toona_nodes.ldm_patched.modules.model_patcher.ModelPatcher(self.model, load_device=self.load_device, offload_device=offload_device)
 
     def load_sd(self, sd):
         return self.model.load_state_dict(sd, strict=False)
@@ -48,7 +48,7 @@ class ClipVisionModel():
         return self.model.state_dict()
 
     def encode_image(self, image):
-        ldm_patched.modules.model_management.load_model_gpu(self.patcher)
+        toona_nodes.ldm_patched.modules.model_management.load_model_gpu(self.patcher)
         pixel_values = clip_preprocess(image.to(self.load_device)).float()
         out = self.model(pixel_values=pixel_values, intermediate_output=-2)
 

@@ -18,10 +18,10 @@ class UpscaleModelLoader:
     CATEGORY = "loaders"
 
     def load_model(self, model_name):
-        model_path = ldm_patched.utils.path_utils.get_full_path("upscale_models", model_name)
-        sd = ldm_patched.modules.utils.load_torch_file(model_path, safe_load=True)
+        model_path = toona_nodes.ldm_patched.utils.path_utils.get_full_path("upscale_models", model_name)
+        sd = toona_nodes.ldm_patched.modules.utils.load_torch_file(model_path, safe_load=True)
         if "module.layers.0.residual_group.blocks.0.norm1.weight" in sd:
-            sd = ldm_patched.modules.utils.state_dict_prefix_replace(sd, {"module.":""})
+            sd = toona_nodes.ldm_patched.modules.utils.state_dict_prefix_replace(sd, {"module.":""})
         out = model_loading.load_state_dict(sd).eval()
         return (out, )
 
@@ -49,9 +49,9 @@ class ImageUpscaleWithModel:
         oom = True
         while oom:
             try:
-                steps = in_img.shape[0] * ldm_patched.modules.utils.get_tiled_scale_steps(in_img.shape[3], in_img.shape[2], tile_x=tile, tile_y=tile, overlap=overlap)
-                pbar = ldm_patched.modules.utils.ProgressBar(steps)
-                s = ldm_patched.modules.utils.tiled_scale(in_img, lambda a: upscale_model(a), tile_x=tile, tile_y=tile, overlap=overlap, upscale_amount=upscale_model.scale, pbar=pbar)
+                steps = in_img.shape[0] * toona_nodes.ldm_patched.modules.utils.get_tiled_scale_steps(in_img.shape[3], in_img.shape[2], tile_x=tile, tile_y=tile, overlap=overlap)
+                pbar = toona_nodes.ldm_patched.modules.utils.ProgressBar(steps)
+                s = toona_nodes.ldm_patched.modules.utils.tiled_scale(in_img, lambda a: upscale_model(a), tile_x=tile, tile_y=tile, overlap=overlap, upscale_amount=upscale_model.scale, pbar=pbar)
                 oom = False
             except model_management.OOM_EXCEPTION as e:
                 tile //= 2

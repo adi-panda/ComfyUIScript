@@ -92,13 +92,13 @@ class FuseModule(nn.Module):
 
 class PhotoMakerIDEncoder(ldm_patched.modules.clip_model.CLIPVisionModelProjection):
     def __init__(self):
-        self.load_device = ldm_patched.modules.model_management.text_encoder_device()
-        offload_device = ldm_patched.modules.model_management.text_encoder_offload_device()
-        dtype = ldm_patched.modules.model_management.text_encoder_dtype(self.load_device)
+        self.load_device = toona_nodes.ldm_patched.modules.model_management.text_encoder_device()
+        offload_device = toona_nodes.ldm_patched.modules.model_management.text_encoder_offload_device()
+        dtype = toona_nodes.ldm_patched.modules.model_management.text_encoder_dtype(self.load_device)
 
-        super().__init__(VISION_CONFIG_DICT, dtype, offload_device, ldm_patched.modules.ops.manual_cast)
-        self.visual_projection_2 = ldm_patched.modules.ops.manual_cast.Linear(1024, 1280, bias=False)
-        self.fuse_module = FuseModule(2048, ldm_patched.modules.ops.manual_cast)
+        super().__init__(VISION_CONFIG_DICT, dtype, offload_device, toona_nodes.ldm_patched.modules.ops.manual_cast)
+        self.visual_projection_2 = toona_nodes.ldm_patched.modules.ops.manual_cast.Linear(1024, 1280, bias=False)
+        self.fuse_module = FuseModule(2048, toona_nodes.ldm_patched.modules.ops.manual_cast)
 
     def forward(self, id_pixel_values, prompt_embeds, class_tokens_mask):
         b, num_inputs, c, h, w = id_pixel_values.shape
@@ -128,9 +128,9 @@ class PhotoMakerLoader:
     CATEGORY = "_for_testing/photomaker"
 
     def load_photomaker_model(self, photomaker_model_name):
-        photomaker_model_path = ldm_patched.utils.path_utils.get_full_path("photomaker", photomaker_model_name)
+        photomaker_model_path = toona_nodes.ldm_patched.utils.path_utils.get_full_path("photomaker", photomaker_model_name)
         photomaker_model = PhotoMakerIDEncoder()
-        data = ldm_patched.modules.utils.load_torch_file(photomaker_model_path, safe_load=True)
+        data = toona_nodes.ldm_patched.modules.utils.load_torch_file(photomaker_model_path, safe_load=True)
         if "id_encoder" in data:
             data = data["id_encoder"]
         photomaker_model.load_state_dict(data)
@@ -153,7 +153,7 @@ class PhotoMakerEncode:
 
     def apply_photomaker(self, photomaker, image, clip, text):
         special_token = "photomaker"
-        pixel_values = ldm_patched.modules.clip_vision.clip_preprocess(image.to(photomaker.load_device)).float()
+        pixel_values = toona_nodes.ldm_patched.modules.clip_vision.clip_preprocess(image.to(photomaker.load_device)).float()
         try:
             index = text.split(" ").index(special_token) + 1
         except ValueError:

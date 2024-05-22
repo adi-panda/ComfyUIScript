@@ -22,15 +22,15 @@ def load_diffusers(model_path, output_vae=True, output_clip=True, embedding_dire
     if text_encoder2_path is not None:
         text_encoder_paths.append(text_encoder2_path)
 
-    unet = ldm_patched.modules.sd.load_unet(unet_path)
+    unet = toona_nodes.ldm_patched.modules.sd.load_unet(unet_path)
 
     clip = None
     if output_clip:
-        clip = ldm_patched.modules.sd.load_clip(text_encoder_paths, embedding_directory=embedding_directory)
+        clip = toona_nodes.ldm_patched.modules.sd.load_clip(text_encoder_paths, embedding_directory=embedding_directory)
 
     vae = None
     if output_vae:
-        sd = ldm_patched.modules.utils.load_torch_file(vae_path)
-        vae = ldm_patched.modules.sd.VAE(sd=sd)
+        sd = toona_nodes.ldm_patched.modules.utils.load_torch_file(vae_path)
+        vae = toona_nodes.ldm_patched.modules.sd.VAE(sd=sd)
 
     return (unet, clip, vae)
