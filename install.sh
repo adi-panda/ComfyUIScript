@@ -35,7 +35,6 @@ wget --content-disposition -P models/inpaint "$inpaint_patch"
 wget --content-disposition -P models/inpaint "$big_lama"
 wget --content-disposition -P models/inpaint "$mat"
 
-mkdir -p custom_nodes/toona_utils
 upscale_modal="https://huggingface.co/lllyasviel/misc/resolve/main/fooocus_upscaler_s409985e5.bin"
 
 wget --content-disposition -P custom_nodes/toona_nodes "$upscale_modal"

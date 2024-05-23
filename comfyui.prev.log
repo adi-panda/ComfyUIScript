@@ -1,93 +1,66 @@
 ## ComfyUI-Manager: installing dependencies done.
-[2024-05-22 17:23] ** ComfyUI startup time: 2024-05-22 17:23:07.625215
-[2024-05-22 17:23] ** Platform: Linux
-[2024-05-22 17:23] ** Python version: 3.10.12 (main, Jun 11 2023, 05:26:28) [GCC 11.4.0]
-[2024-05-22 17:23] ** Python executable: /usr/bin/python
-[2024-05-22 17:23] ** Log path: /workspace/ComfyUIScript/comfyui.log
-[2024-05-22 17:23] 
+[2024-05-23 00:59] ** ComfyUI startup time: 2024-05-23 00:59:46.015313
+[2024-05-23 00:59] ** Platform: Linux
+[2024-05-23 00:59] ** Python version: 3.10.12 (main, Jun 11 2023, 05:26:28) [GCC 11.4.0]
+[2024-05-23 00:59] ** Python executable: /usr/bin/python
+[2024-05-23 00:59] ** Log path: /root/ComfyUIScript/comfyui.log
+[2024-05-23 00:59] 
 Prestartup times for custom nodes:
-[2024-05-22 17:23]    0.1 seconds: /workspace/ComfyUIScript/custom_nodes/ComfyUI_Manager
-[2024-05-22 17:23] 
-Total VRAM 16102 MB, total RAM 386613 MB
-[2024-05-22 17:23] pytorch version: 2.1.0+cu118
-[2024-05-22 17:23] Set vram state to: NORMAL_VRAM
-[2024-05-22 17:23] Device: cuda:0 NVIDIA RTX A4000 : cudaMallocAsync
-[2024-05-22 17:23] VAE dtype: torch.bfloat16
-[2024-05-22 17:23] Using pytorch cross attention
-[2024-05-22 17:23] Total VRAM 16102 MB, total RAM 386613 MB
-[2024-05-22 17:23] Set vram state to: HIGH_VRAM
-[2024-05-22 17:23] Device: cuda:0 NVIDIA RTX A4000 : cudaMallocAsync
-[2024-05-22 17:23] VAE dtype: torch.bfloat16
-[2024-05-22 17:23] ### Loading: ComfyUI-Manager (V2.34.1)
-[2024-05-22 17:23] ### ComfyUI Revision: 2202 [46dc7bc5] | Released on '2024-05-22'
-[2024-05-22 17:23] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/model-list.json
-[2024-05-22 17:23] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/alter-list.json
-[2024-05-22 17:23] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/github-stats.json
-[2024-05-22 17:23] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/extension-node-map.json
-[2024-05-22 17:23] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/custom-node-list.json
-[2024-05-22 17:23] [31mWAS Node Suite [0mError: [0mOpenCV Python module still cannot be imported. There is a system conflict.[0m
-[2024-05-22 17:23] [34mWAS Node Suite: [0mFinished.[0m [32mLoaded[0m [0m212[0m [32mnodes successfully.[0m
-[2024-05-22 17:23] 
-	[3m[93m"Believe you can and you're halfway there."[0m[3m - Theodore Roosevelt[0m
-[2024-05-22 17:23] 
-[2024-05-22 17:23] 
+[2024-05-23 00:59]    0.1 seconds: /root/ComfyUIScript/custom_nodes/ComfyUI_Manager
+[2024-05-23 00:59] 
+Total VRAM 24248 MB, total RAM 515602 MB
+[2024-05-23 00:59] pytorch version: 2.1.0+cu118
+[2024-05-23 00:59] Set vram state to: NORMAL_VRAM
+[2024-05-23 00:59] Device: cuda:0 NVIDIA RTX A5000 : cudaMallocAsync
+[2024-05-23 00:59] VAE dtype: torch.bfloat16
+[2024-05-23 00:59] Using pytorch cross attention
+[2024-05-23 00:59] Total VRAM 24248 MB, total RAM 515602 MB
+[2024-05-23 00:59] Set vram state to: HIGH_VRAM
+[2024-05-23 00:59] Device: cuda:0 NVIDIA RTX A5000 : cudaMallocAsync
+[2024-05-23 00:59] VAE dtype: torch.bfloat16
+[2024-05-23 00:59] Traceback (most recent call last):
+  File "/root/ComfyUIScript/nodes.py", line 1879, in load_custom_node
+    module_spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1016, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1073, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: '/root/ComfyUIScript/custom_nodes/toona_utils/__init__.py'
+
+[2024-05-23 00:59] Cannot import /root/ComfyUIScript/custom_nodes/toona_utils module for custom nodes: [Errno 2] No such file or directory: '/root/ComfyUIScript/custom_nodes/toona_utils/__init__.py'
+[2024-05-23 00:59] ### Loading: ComfyUI-Manager (V2.34.1)
+[2024-05-23 00:59] ### ComfyUI Revision: 2203 [24be4e7e] | Released on '2024-05-22'
+[2024-05-23 00:59] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/model-list.json
+[2024-05-23 00:59] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/alter-list.json
+[2024-05-23 00:59] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/github-stats.json
+[2024-05-23 00:59] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/custom-node-list.json
+[2024-05-23 00:59] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/extension-node-map.json
+[2024-05-23 00:59] [34mWAS Node Suite: [0mOpenCV Python FFMPEG support is enabled[0m
+[2024-05-23 00:59] [34mWAS Node Suite [93mWarning: [0m`ffmpeg_bin_path` is not set in `/root/ComfyUIScript/custom_nodes/was-node-suite-comfyui/was_suite_config.json` config file. Will attempt to use system ffmpeg binaries if available.[0m
+[2024-05-23 00:59] [34mWAS Node Suite: [0mFinished.[0m [32mLoaded[0m [0m212[0m [32mnodes successfully.[0m
+[2024-05-23 00:59] 
+	[3m[93m"The only way to do great work is to love what you do."[0m[3m - Steve Jobs[0m
+[2024-05-23 00:59] 
+[2024-05-23 00:59] ### Loading: ComfyUI-Impact-Pack (V5.5.11)
+[2024-05-23 00:59] ### Loading: ComfyUI-Impact-Pack (Subpack: V0.5)
+[2024-05-23 00:59] [Impact Pack] Wildcards loading done.
+[2024-05-23 00:59] 
 Import times for custom nodes:
-[2024-05-22 17:23]    0.0 seconds: /workspace/ComfyUIScript/custom_nodes/websocket_image_save.py
-[2024-05-22 17:23]    0.0 seconds: /workspace/ComfyUIScript/custom_nodes/masquerade-nodes-comfyui
-[2024-05-22 17:23]    0.0 seconds: /workspace/ComfyUIScript/custom_nodes/ComfyUI_JPS-Nodes
-[2024-05-22 17:23]    0.0 seconds: /workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes
-[2024-05-22 17:23]    0.0 seconds: /workspace/ComfyUIScript/custom_nodes/toona_nodes
-[2024-05-22 17:23]    0.0 seconds: /workspace/ComfyUIScript/custom_nodes/ComfyUI_Manager
-[2024-05-22 17:23]    1.4 seconds: /workspace/ComfyUIScript/custom_nodes/was-node-suite-comfyui
-[2024-05-22 17:23] 
-[2024-05-22 17:23] Starting server
+[2024-05-23 00:59]    0.0 seconds: /root/ComfyUIScript/custom_nodes/websocket_image_save.py
+[2024-05-23 00:59]    0.0 seconds (IMPORT FAILED): /root/ComfyUIScript/custom_nodes/toona_utils
+[2024-05-23 00:59]    0.0 seconds: /root/ComfyUIScript/custom_nodes/cg-use-everywhere
+[2024-05-23 00:59]    0.0 seconds: /root/ComfyUIScript/custom_nodes/ComfyUI_JPS-Nodes
+[2024-05-23 00:59]    0.0 seconds: /root/ComfyUIScript/custom_nodes/ComfyUI_IPAdapter_plus
+[2024-05-23 00:59]    0.0 seconds: /root/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes
+[2024-05-23 00:59]    0.0 seconds: /root/ComfyUIScript/custom_nodes/masquerade-nodes-comfyui
+[2024-05-23 00:59]    0.0 seconds: /root/ComfyUIScript/custom_nodes/ComfyUI-AutomaticCFG
+[2024-05-23 00:59]    0.0 seconds: /root/ComfyUIScript/custom_nodes/toona_nodes
+[2024-05-23 00:59]    0.0 seconds: /root/ComfyUIScript/custom_nodes/ComfyUI_Manager
+[2024-05-23 00:59]    0.2 seconds: /root/ComfyUIScript/custom_nodes/ComfyUI_essentials
+[2024-05-23 00:59]    0.6 seconds: /root/ComfyUIScript/custom_nodes/ComfyUI-Impact-Pack
+[2024-05-23 00:59]    1.5 seconds: /root/ComfyUIScript/custom_nodes/was-node-suite-comfyui
+[2024-05-23 00:59] 
+[2024-05-23 00:59] Starting server
 
-[2024-05-22 17:23] To see the GUI go to: http://127.0.0.1:8188
-[2024-05-22 17:23] FETCH DATA from: /workspace/ComfyUIScript/custom_nodes/ComfyUI_Manager/extension-node-map.json [DONE]
-[2024-05-22 17:23] got prompt
-[2024-05-22 17:23] Failed to validate prompt for output 399:
-[2024-05-22 17:23] * LoadImage 48:
-[2024-05-22 17:23]   - Custom validation failed for node: image - Invalid image file: clipspace/clipspace-mask-90290.png [input]
-[2024-05-22 17:23] Output will be ignored
-[2024-05-22 17:23] Failed to validate prompt for output 384:
-[2024-05-22 17:23] Output will be ignored
-[2024-05-22 17:23] Failed to validate prompt for output 385:
-[2024-05-22 17:23] Output will be ignored
-[2024-05-22 17:23] Failed to validate prompt for output 295:
-[2024-05-22 17:23] Output will be ignored
-[2024-05-22 17:23] invalid prompt: {'type': 'prompt_outputs_failed_validation', 'message': 'Prompt outputs failed validation', 'details': '', 'extra_info': {}}
-[2024-05-22 17:24] got prompt
-[2024-05-22 17:24] Toona Cut Mask:
-[2024-05-22 17:24] Inpaint Respective Field:  1.0
-[2024-05-22 17:24] Image:  (768, 535, 3)
-[2024-05-22 17:24] Mask:  (768, 535)
-[2024-05-22 17:24] Image cut Data Type:  float32
-[2024-05-22 17:24] Mask cut Data Type:  float32
-[2024-05-22 17:24] image cut min max 0.0 0.99607843
-[2024-05-22 17:24] mask cut min max 0.0 1.0
-[2024-05-22 17:24] Toona Upscale:
-[2024-05-22 17:24] torch.float32
-[2024-05-22 17:24] torch.float32
-[2024-05-22 17:24] Upscaling image with shape (768, 535, 3) ...
-[2024-05-22 17:24] post upscale shape (3072, 2140, 3)
-[2024-05-22 17:24] Image:  (1216, 832, 3)
-[2024-05-22 17:24] Image Data Type:  uint8
-[2024-05-22 17:24] Mask:  (1216, 832)
-[2024-05-22 17:24] Mask Data Type:  uint8
-[2024-05-22 17:24] image min max 0 255
-[2024-05-22 17:24] mask min max 0 255
-[2024-05-22 17:24] !!! Exception during processing!!! No module named 'cv2'
-[2024-05-22 17:24] Traceback (most recent call last):
-  File "/workspace/ComfyUIScript/execution.py", line 151, in recursive_execute
-    output_data, output_ui = get_output_data(obj, input_data_all)
-  File "/workspace/ComfyUIScript/execution.py", line 81, in get_output_data
-    return_values = map_node_over_list(obj, input_data_all, obj.FUNCTION, allow_interrupt=True)
-  File "/workspace/ComfyUIScript/execution.py", line 74, in map_node_over_list
-    results.append(getattr(obj, func)(**slice_dict(input_data_all, i)))
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/nodes.py", line 240, in fill
-    import cv2
-ModuleNotFoundError: No module named 'cv2'
-
-[2024-05-22 17:24] Prompt executed in 3.42 seconds
-[2024-05-22 17:24] 
+[2024-05-23 00:59] To see the GUI go to: http://127.0.0.1:8188
+[2024-05-23 01:01] 
 Stopped server

@@ -1,749 +1,66 @@
 ## ComfyUI-Manager: installing dependencies done.
-[2024-05-22 17:24] ** ComfyUI startup time: 2024-05-22 17:24:47.113040
-[2024-05-22 17:24] ** Platform: Linux
-[2024-05-22 17:24] ** Python version: 3.10.12 (main, Jun 11 2023, 05:26:28) [GCC 11.4.0]
-[2024-05-22 17:24] ** Python executable: /usr/bin/python
-[2024-05-22 17:24] ** Log path: /workspace/ComfyUIScript/comfyui.log
-[2024-05-22 17:24] 
+[2024-05-23 01:02] ** ComfyUI startup time: 2024-05-23 01:02:02.882214
+[2024-05-23 01:02] ** Platform: Linux
+[2024-05-23 01:02] ** Python version: 3.10.12 (main, Jun 11 2023, 05:26:28) [GCC 11.4.0]
+[2024-05-23 01:02] ** Python executable: /usr/bin/python
+[2024-05-23 01:02] ** Log path: /root/ComfyUIScript/comfyui.log
+[2024-05-23 01:02] 
 Prestartup times for custom nodes:
-[2024-05-22 17:24]    0.1 seconds: /workspace/ComfyUIScript/custom_nodes/ComfyUI_Manager
-[2024-05-22 17:24] 
-Total VRAM 16102 MB, total RAM 386613 MB
-[2024-05-22 17:24] pytorch version: 2.1.0+cu118
-[2024-05-22 17:24] Set vram state to: NORMAL_VRAM
-[2024-05-22 17:24] Device: cuda:0 NVIDIA RTX A4000 : cudaMallocAsync
-[2024-05-22 17:24] VAE dtype: torch.bfloat16
-[2024-05-22 17:24] Using pytorch cross attention
-[2024-05-22 17:24] Total VRAM 16102 MB, total RAM 386613 MB
-[2024-05-22 17:24] Set vram state to: HIGH_VRAM
-[2024-05-22 17:24] Device: cuda:0 NVIDIA RTX A4000 : cudaMallocAsync
-[2024-05-22 17:24] VAE dtype: torch.bfloat16
-[2024-05-22 17:24] ### Loading: ComfyUI-Manager (V2.34.1)
-[2024-05-22 17:24] ### ComfyUI Revision: 2202 [46dc7bc5] | Released on '2024-05-22'
-[2024-05-22 17:24] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/alter-list.json
-[2024-05-22 17:24] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/github-stats.json
-[2024-05-22 17:24] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/model-list.json
-[2024-05-22 17:24] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/custom-node-list.json
-[2024-05-22 17:24] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/extension-node-map.json
-[2024-05-22 17:24] [34mWAS Node Suite: [0mOpenCV Python FFMPEG support is enabled[0m
-[2024-05-22 17:24] [34mWAS Node Suite [93mWarning: [0m`ffmpeg_bin_path` is not set in `/workspace/ComfyUIScript/custom_nodes/was-node-suite-comfyui/was_suite_config.json` config file. Will attempt to use system ffmpeg binaries if available.[0m
-[2024-05-22 17:24] [34mWAS Node Suite: [0mFinished.[0m [32mLoaded[0m [0m212[0m [32mnodes successfully.[0m
-[2024-05-22 17:24] 
-	[3m[93m"Art is the most intense mode of individualism that the world has known."[0m[3m - Oscar Wilde[0m
-[2024-05-22 17:24] 
-[2024-05-22 17:24] 
+[2024-05-23 01:02]    0.1 seconds: /root/ComfyUIScript/custom_nodes/ComfyUI_Manager
+[2024-05-23 01:02] 
+Total VRAM 24248 MB, total RAM 515602 MB
+[2024-05-23 01:02] pytorch version: 2.1.0+cu118
+[2024-05-23 01:02] Set vram state to: NORMAL_VRAM
+[2024-05-23 01:02] Device: cuda:0 NVIDIA RTX A5000 : cudaMallocAsync
+[2024-05-23 01:02] VAE dtype: torch.bfloat16
+[2024-05-23 01:02] Using pytorch cross attention
+[2024-05-23 01:02] Total VRAM 24248 MB, total RAM 515602 MB
+[2024-05-23 01:02] Set vram state to: HIGH_VRAM
+[2024-05-23 01:02] Device: cuda:0 NVIDIA RTX A5000 : cudaMallocAsync
+[2024-05-23 01:02] VAE dtype: torch.bfloat16
+[2024-05-23 01:02] Traceback (most recent call last):
+  File "/root/ComfyUIScript/nodes.py", line 1879, in load_custom_node
+    module_spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1016, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1073, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: '/root/ComfyUIScript/custom_nodes/toona_utils/__init__.py'
+
+[2024-05-23 01:02] Cannot import /root/ComfyUIScript/custom_nodes/toona_utils module for custom nodes: [Errno 2] No such file or directory: '/root/ComfyUIScript/custom_nodes/toona_utils/__init__.py'
+[2024-05-23 01:02] ### Loading: ComfyUI-Manager (V2.34.1)
+[2024-05-23 01:02] ### ComfyUI Revision: 2203 [24be4e7e] | Released on '2024-05-22'
+[2024-05-23 01:02] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/custom-node-list.json
+[2024-05-23 01:02] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/extension-node-map.json
+[2024-05-23 01:02] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/alter-list.json
+[2024-05-23 01:02] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/github-stats.json
+[2024-05-23 01:02] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/model-list.json
+[2024-05-23 01:02] [34mWAS Node Suite: [0mOpenCV Python FFMPEG support is enabled[0m
+[2024-05-23 01:02] [34mWAS Node Suite [93mWarning: [0m`ffmpeg_bin_path` is not set in `/root/ComfyUIScript/custom_nodes/was-node-suite-comfyui/was_suite_config.json` config file. Will attempt to use system ffmpeg binaries if available.[0m
+[2024-05-23 01:02] [34mWAS Node Suite: [0mFinished.[0m [32mLoaded[0m [0m212[0m [32mnodes successfully.[0m
+[2024-05-23 01:02] 
+	[3m[93m"Art is the most powerful tool we have to connect with the world and express our individuality."[0m[3m - Unknown[0m
+[2024-05-23 01:02] 
+[2024-05-23 01:02] ### Loading: ComfyUI-Impact-Pack (V5.5.11)
+[2024-05-23 01:02] ### Loading: ComfyUI-Impact-Pack (Subpack: V0.5)
+[2024-05-23 01:02] [Impact Pack] Wildcards loading done.
+[2024-05-23 01:02] 
 Import times for custom nodes:
-[2024-05-22 17:24]    0.0 seconds: /workspace/ComfyUIScript/custom_nodes/websocket_image_save.py
-[2024-05-22 17:24]    0.0 seconds: /workspace/ComfyUIScript/custom_nodes/masquerade-nodes-comfyui
-[2024-05-22 17:24]    0.0 seconds: /workspace/ComfyUIScript/custom_nodes/ComfyUI_JPS-Nodes
-[2024-05-22 17:24]    0.0 seconds: /workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes
-[2024-05-22 17:24]    0.0 seconds: /workspace/ComfyUIScript/custom_nodes/toona_nodes
-[2024-05-22 17:24]    0.0 seconds: /workspace/ComfyUIScript/custom_nodes/ComfyUI_Manager
-[2024-05-22 17:24]    1.0 seconds: /workspace/ComfyUIScript/custom_nodes/was-node-suite-comfyui
-[2024-05-22 17:24] 
-[2024-05-22 17:24] Starting server
+[2024-05-23 01:02]    0.0 seconds: /root/ComfyUIScript/custom_nodes/websocket_image_save.py
+[2024-05-23 01:02]    0.0 seconds: /root/ComfyUIScript/custom_nodes/cg-use-everywhere
+[2024-05-23 01:02]    0.0 seconds (IMPORT FAILED): /root/ComfyUIScript/custom_nodes/toona_utils
+[2024-05-23 01:02]    0.0 seconds: /root/ComfyUIScript/custom_nodes/masquerade-nodes-comfyui
+[2024-05-23 01:02]    0.0 seconds: /root/ComfyUIScript/custom_nodes/ComfyUI_IPAdapter_plus
+[2024-05-23 01:02]    0.0 seconds: /root/ComfyUIScript/custom_nodes/ComfyUI-AutomaticCFG
+[2024-05-23 01:02]    0.0 seconds: /root/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes
+[2024-05-23 01:02]    0.0 seconds: /root/ComfyUIScript/custom_nodes/ComfyUI_JPS-Nodes
+[2024-05-23 01:02]    0.0 seconds: /root/ComfyUIScript/custom_nodes/ComfyUI_essentials
+[2024-05-23 01:02]    0.0 seconds: /root/ComfyUIScript/custom_nodes/toona_nodes
+[2024-05-23 01:02]    0.0 seconds: /root/ComfyUIScript/custom_nodes/ComfyUI_Manager
+[2024-05-23 01:02]    0.6 seconds: /root/ComfyUIScript/custom_nodes/ComfyUI-Impact-Pack
+[2024-05-23 01:02]    1.4 seconds: /root/ComfyUIScript/custom_nodes/was-node-suite-comfyui
+[2024-05-23 01:02] 
+[2024-05-23 01:02] Starting server
 
-[2024-05-22 17:24] To see the GUI go to: http://127.0.0.1:8188
-[2024-05-22 17:24] FETCH DATA from: /workspace/ComfyUIScript/custom_nodes/ComfyUI_Manager/extension-node-map.json [DONE]
-[2024-05-22 17:25] got prompt
-[2024-05-22 17:25] Toona Cut Mask:
-[2024-05-22 17:25] Inpaint Respective Field:  1.0
-[2024-05-22 17:25] Image:  (768, 535, 3)
-[2024-05-22 17:25] Mask:  (768, 535)
-[2024-05-22 17:25] Image cut Data Type:  float32
-[2024-05-22 17:25] Mask cut Data Type:  float32
-[2024-05-22 17:25] image cut min max 0.0 0.99607843
-[2024-05-22 17:25] mask cut min max 0.0 1.0
-[2024-05-22 17:25] Toona Upscale:
-[2024-05-22 17:25] torch.float32
-[2024-05-22 17:25] torch.float32
-[2024-05-22 17:25] Upscaling image with shape (768, 535, 3) ...
-[2024-05-22 17:25] post upscale shape (3072, 2140, 3)
-[2024-05-22 17:25] Image:  (1216, 832, 3)
-[2024-05-22 17:25] Image Data Type:  uint8
-[2024-05-22 17:25] Mask:  (1216, 832)
-[2024-05-22 17:25] Mask Data Type:  uint8
-[2024-05-22 17:25] image min max 0 255
-[2024-05-22 17:25] mask min max 0 255
-[2024-05-22 17:25] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.17it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.17it/s]
-[2024-05-22 17:25] model_type EPS
-[2024-05-22 17:25] Using pytorch attention in VAE
-[2024-05-22 17:25] Using pytorch attention in VAE
-[2024-05-22 17:25] Requested to load SDXLClipModel
-[2024-05-22 17:25] Loading 1 new model
-[2024-05-22 17:25] Requested to load AutoencoderKL
-[2024-05-22 17:25] Loading 1 new model
-[2024-05-22 17:25] [ApplyFooocusInpaint] 960 Lora keys loaded, 0 remaining keys not found in model.
-[2024-05-22 17:25] [comfyui-inpaint-nodes] Injecting patched comfy.model_patcher.ModelPatcher.calculate_weight
-[2024-05-22 17:25] Requested to load SDXL
-[2024-05-22 17:25] Loading 1 new model
-[2024-05-22 17:25] 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 30/30 [00:10<00:00,  2.83it/s]100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 30/30 [00:10<00:00,  2.82it/s]
-[2024-05-22 17:25] Prompt executed in 32.00 seconds
-[2024-05-22 17:32] got prompt
-[2024-05-22 17:32] got prompt
-[2024-05-22 17:32] 
-[2024-05-22 17:32] got prompt
-[2024-05-22 17:32] got prompt
-[2024-05-22 17:32] !!! Exception during processing!!! Allocation on device 0 would exceed allowed memory. (out of memory)
-Currently allocated     : 7.71 GiB
-Requested               : 180.00 MiB
-Device limit            : 15.72 GiB
-Free (according to CUDA): 25.06 MiB
-PyTorch limit (set by user-supplied memory fraction)
-                        : 17179869184.00 GiB
-[2024-05-22 17:32] Traceback (most recent call last):
-  File "/workspace/ComfyUIScript/execution.py", line 151, in recursive_execute
-    output_data, output_ui = get_output_data(obj, input_data_all)
-  File "/workspace/ComfyUIScript/execution.py", line 81, in get_output_data
-    return_values = map_node_over_list(obj, input_data_all, obj.FUNCTION, allow_interrupt=True)
-  File "/workspace/ComfyUIScript/execution.py", line 74, in map_node_over_list
-    results.append(getattr(obj, func)(**slice_dict(input_data_all, i)))
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/nodes.py", line 381, in inpaint
-    work_image = inpaint_model(work_image.to(device), work_mask.to(device))
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1527, in _call_impl
-    return forward_call(*args, **kwargs)
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/mat/arch/MAT.py", line 1608, in forward
-    output = self.model(
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1527, in _call_impl
-    return forward_call(*args, **kwargs)
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/mat/arch/MAT.py", line 1583, in forward
-    img = self.synthesis(images_in, masks_in, ws, noise_mode=noise_mode)
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1527, in _call_impl
-    return forward_call(*args, **kwargs)
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/mat/arch/MAT.py", line 1500, in forward
-    out_stg1 = self.first_stage(images_in, masks_in, ws, noise_mode=noise_mode)
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1527, in _call_impl
-    return forward_call(*args, **kwargs)
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/mat/arch/MAT.py", line 1440, in forward
-    x, img = block(
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1527, in _call_impl
-    return forward_call(*args, **kwargs)
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/mat/arch/MAT.py", line 1285, in forward
-    x = self.conv1(x, style, noise_mode=noise_mode)
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1527, in _call_impl
-    return forward_call(*args, **kwargs)
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/mat/arch/MAT.py", line 150, in forward
-    out = bias_act(
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/mat/arch/utils.py", line 172, in bias_act
-    return _bias_act_ref(
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/mat/arch/utils.py", line 128, in _bias_act_ref
-    x = spec.func(x, alpha=alpha)
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/mat/arch/utils.py", line 52, in <lambda>
-    func=lambda x, alpha, **_: torch.nn.functional.leaky_relu(x, alpha),
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/functional.py", line 1646, in leaky_relu
-    result = torch._C._nn.leaky_relu(input, negative_slope)
-torch.cuda.OutOfMemoryError: Allocation on device 0 would exceed allowed memory. (out of memory)
-Currently allocated     : 7.71 GiB
-Requested               : 180.00 MiB
-Device limit            : 15.72 GiB
-Free (according to CUDA): 25.06 MiB
-PyTorch limit (set by user-supplied memory fraction)
-                        : 17179869184.00 GiB
-
-[2024-05-22 17:32] Prompt executed in 2.57 seconds
-[2024-05-22 17:32] 
-[2024-05-22 17:32] !!! Exception during processing!!! Allocation on device 0 would exceed allowed memory. (out of memory)
-Currently allocated     : 7.71 GiB
-Requested               : 180.00 MiB
-Device limit            : 15.72 GiB
-Free (according to CUDA): 25.06 MiB
-PyTorch limit (set by user-supplied memory fraction)
-                        : 17179869184.00 GiB
-[2024-05-22 17:32] Traceback (most recent call last):
-  File "/workspace/ComfyUIScript/execution.py", line 151, in recursive_execute
-    output_data, output_ui = get_output_data(obj, input_data_all)
-  File "/workspace/ComfyUIScript/execution.py", line 81, in get_output_data
-    return_values = map_node_over_list(obj, input_data_all, obj.FUNCTION, allow_interrupt=True)
-  File "/workspace/ComfyUIScript/execution.py", line 74, in map_node_over_list
-    results.append(getattr(obj, func)(**slice_dict(input_data_all, i)))
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/nodes.py", line 381, in inpaint
-    work_image = inpaint_model(work_image.to(device), work_mask.to(device))
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1527, in _call_impl
-    return forward_call(*args, **kwargs)
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/mat/arch/MAT.py", line 1608, in forward
-    output = self.model(
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1527, in _call_impl
-    return forward_call(*args, **kwargs)
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/mat/arch/MAT.py", line 1583, in forward
-    img = self.synthesis(images_in, masks_in, ws, noise_mode=noise_mode)
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1527, in _call_impl
-    return forward_call(*args, **kwargs)
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/mat/arch/MAT.py", line 1500, in forward
-    out_stg1 = self.first_stage(images_in, masks_in, ws, noise_mode=noise_mode)
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1527, in _call_impl
-    return forward_call(*args, **kwargs)
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/mat/arch/MAT.py", line 1440, in forward
-    x, img = block(
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1527, in _call_impl
-    return forward_call(*args, **kwargs)
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/mat/arch/MAT.py", line 1285, in forward
-    x = self.conv1(x, style, noise_mode=noise_mode)
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1527, in _call_impl
-    return forward_call(*args, **kwargs)
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/mat/arch/MAT.py", line 150, in forward
-    out = bias_act(
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/mat/arch/utils.py", line 172, in bias_act
-    return _bias_act_ref(
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/mat/arch/utils.py", line 128, in _bias_act_ref
-    x = spec.func(x, alpha=alpha)
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/mat/arch/utils.py", line 52, in <lambda>
-    func=lambda x, alpha, **_: torch.nn.functional.leaky_relu(x, alpha),
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/functional.py", line 1646, in leaky_relu
-    result = torch._C._nn.leaky_relu(input, negative_slope)
-torch.cuda.OutOfMemoryError: Allocation on device 0 would exceed allowed memory. (out of memory)
-Currently allocated     : 7.71 GiB
-Requested               : 180.00 MiB
-Device limit            : 15.72 GiB
-Free (according to CUDA): 25.06 MiB
-PyTorch limit (set by user-supplied memory fraction)
-                        : 17179869184.00 GiB
-
-[2024-05-22 17:32] Prompt executed in 2.50 seconds
-[2024-05-22 17:32] 
-[2024-05-22 17:32] !!! Exception during processing!!! Allocation on device 0 would exceed allowed memory. (out of memory)
-Currently allocated     : 8.07 GiB
-Requested               : 180.00 MiB
-Device limit            : 15.72 GiB
-Free (according to CUDA): 25.06 MiB
-PyTorch limit (set by user-supplied memory fraction)
-                        : 17179869184.00 GiB
-[2024-05-22 17:32] Traceback (most recent call last):
-  File "/workspace/ComfyUIScript/execution.py", line 151, in recursive_execute
-    output_data, output_ui = get_output_data(obj, input_data_all)
-  File "/workspace/ComfyUIScript/execution.py", line 81, in get_output_data
-    return_values = map_node_over_list(obj, input_data_all, obj.FUNCTION, allow_interrupt=True)
-  File "/workspace/ComfyUIScript/execution.py", line 74, in map_node_over_list
-    results.append(getattr(obj, func)(**slice_dict(input_data_all, i)))
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/nodes.py", line 381, in inpaint
-    work_image = inpaint_model(work_image.to(device), work_mask.to(device))
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1527, in _call_impl
-    return forward_call(*args, **kwargs)
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/mat/arch/MAT.py", line 1608, in forward
-    output = self.model(
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1527, in _call_impl
-    return forward_call(*args, **kwargs)
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/mat/arch/MAT.py", line 1583, in forward
-    img = self.synthesis(images_in, masks_in, ws, noise_mode=noise_mode)
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1527, in _call_impl
-    return forward_call(*args, **kwargs)
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/mat/arch/MAT.py", line 1500, in forward
-    out_stg1 = self.first_stage(images_in, masks_in, ws, noise_mode=noise_mode)
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1527, in _call_impl
-    return forward_call(*args, **kwargs)
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/mat/arch/MAT.py", line 1399, in forward
-    x, mask = self.conv_first(x, masks_in)  # input size
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1527, in _call_impl
-    return forward_call(*args, **kwargs)
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/mat/arch/MAT.py", line 505, in forward
-    x = self.conv(x)
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1527, in _call_impl
-    return forward_call(*args, **kwargs)
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/mat/arch/utils.py", line 694, in forward
-    out = bias_act(
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/mat/arch/utils.py", line 172, in bias_act
-    return _bias_act_ref(
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/mat/arch/utils.py", line 128, in _bias_act_ref
-    x = spec.func(x, alpha=alpha)
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/mat/arch/utils.py", line 52, in <lambda>
-    func=lambda x, alpha, **_: torch.nn.functional.leaky_relu(x, alpha),
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/functional.py", line 1646, in leaky_relu
-    result = torch._C._nn.leaky_relu(input, negative_slope)
-torch.cuda.OutOfMemoryError: Allocation on device 0 would exceed allowed memory. (out of memory)
-Currently allocated     : 8.07 GiB
-Requested               : 180.00 MiB
-Device limit            : 15.72 GiB
-Free (according to CUDA): 25.06 MiB
-PyTorch limit (set by user-supplied memory fraction)
-                        : 17179869184.00 GiB
-
-[2024-05-22 17:32] Prompt executed in 2.30 seconds
-[2024-05-22 17:32] 
-[2024-05-22 17:32] !!! Exception during processing!!! Allocation on device 0 would exceed allowed memory. (out of memory)
-Currently allocated     : 7.62 GiB
-Requested               : 180.70 MiB
-Device limit            : 15.72 GiB
-Free (according to CUDA): 25.06 MiB
-PyTorch limit (set by user-supplied memory fraction)
-                        : 17179869184.00 GiB
-[2024-05-22 17:32] Traceback (most recent call last):
-  File "/workspace/ComfyUIScript/execution.py", line 151, in recursive_execute
-    output_data, output_ui = get_output_data(obj, input_data_all)
-  File "/workspace/ComfyUIScript/execution.py", line 81, in get_output_data
-    return_values = map_node_over_list(obj, input_data_all, obj.FUNCTION, allow_interrupt=True)
-  File "/workspace/ComfyUIScript/execution.py", line 74, in map_node_over_list
-    results.append(getattr(obj, func)(**slice_dict(input_data_all, i)))
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/nodes.py", line 381, in inpaint
-    work_image = inpaint_model(work_image.to(device), work_mask.to(device))
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1527, in _call_impl
-    return forward_call(*args, **kwargs)
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/mat/arch/MAT.py", line 1608, in forward
-    output = self.model(
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1527, in _call_impl
-    return forward_call(*args, **kwargs)
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/mat/arch/MAT.py", line 1583, in forward
-    img = self.synthesis(images_in, masks_in, ws, noise_mode=noise_mode)
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1527, in _call_impl
-    return forward_call(*args, **kwargs)
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/mat/arch/MAT.py", line 1500, in forward
-    out_stg1 = self.first_stage(images_in, masks_in, ws, noise_mode=noise_mode)
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1527, in _call_impl
-    return forward_call(*args, **kwargs)
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/mat/arch/MAT.py", line 1402, in forward
-    x, mask = block(x, mask)
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1527, in _call_impl
-    return forward_call(*args, **kwargs)
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/mat/arch/MAT.py", line 505, in forward
-    x = self.conv(x)
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1527, in _call_impl
-    return forward_call(*args, **kwargs)
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/mat/arch/utils.py", line 683, in forward
-    x = conv2d_resample(
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/mat/arch/utils.py", line 570, in conv2d_resample
-    x = upfirdn2d(x=x, f=f, padding=[px0, px1, py0, py1], flip_filter=flip_filter)
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/mat/arch/utils.py", line 369, in upfirdn2d
-    return _upfirdn2d_ref(
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/mat/arch/utils.py", line 325, in _upfirdn2d_ref
-    x = conv2d(input=x, weight=f, groups=num_channels)
-torch.cuda.OutOfMemoryError: Allocation on device 0 would exceed allowed memory. (out of memory)
-Currently allocated     : 7.62 GiB
-Requested               : 180.70 MiB
-Device limit            : 15.72 GiB
-Free (according to CUDA): 25.06 MiB
-PyTorch limit (set by user-supplied memory fraction)
-                        : 17179869184.00 GiB
-
-[2024-05-22 17:32] Prompt executed in 2.33 seconds
-[2024-05-22 17:32] got prompt
-[2024-05-22 17:32] got prompt
-[2024-05-22 17:32] got prompt
-[2024-05-22 17:32] 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.29it/s]100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.29it/s]
-[2024-05-22 17:32] got prompt
-[2024-05-22 17:32] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 30/30 [00:10<00:00,  2.83it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 30/30 [00:10<00:00,  2.83it/s]
-[2024-05-22 17:32] Prompt executed in 11.68 seconds
-[2024-05-22 17:32] 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.92it/s]100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.92it/s]
-[2024-05-22 17:33] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 30/30 [00:10<00:00,  2.79it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 30/30 [00:10<00:00,  2.79it/s]
-[2024-05-22 17:33] Prompt executed in 11.77 seconds
-[2024-05-22 17:33] 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.49it/s]100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.49it/s]
-[2024-05-22 17:33] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 30/30 [00:10<00:00,  2.76it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 30/30 [00:10<00:00,  2.75it/s]
-[2024-05-22 17:33] Prompt executed in 11.89 seconds
-[2024-05-22 17:33] 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.29it/s]100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.28it/s]
-[2024-05-22 17:33] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 30/30 [00:11<00:00,  2.73it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 30/30 [00:11<00:00,  2.72it/s]
-[2024-05-22 17:33] Prompt executed in 12.05 seconds
-[2024-05-22 17:37] got prompt
-[2024-05-22 17:37] 
-[2024-05-22 17:37] !!! Exception during processing!!! Allocation on device 0 would exceed allowed memory. (out of memory)
-Currently allocated     : 6.91 GiB
-Requested               : 180.00 MiB
-Device limit            : 15.72 GiB
-Free (according to CUDA): 11.06 MiB
-PyTorch limit (set by user-supplied memory fraction)
-                        : 17179869184.00 GiB
-[2024-05-22 17:37] Traceback (most recent call last):
-  File "/workspace/ComfyUIScript/execution.py", line 151, in recursive_execute
-    output_data, output_ui = get_output_data(obj, input_data_all)
-  File "/workspace/ComfyUIScript/execution.py", line 81, in get_output_data
-    return_values = map_node_over_list(obj, input_data_all, obj.FUNCTION, allow_interrupt=True)
-  File "/workspace/ComfyUIScript/execution.py", line 74, in map_node_over_list
-    results.append(getattr(obj, func)(**slice_dict(input_data_all, i)))
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/nodes.py", line 381, in inpaint
-    work_image = inpaint_model(work_image.to(device), work_mask.to(device))
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1527, in _call_impl
-    return forward_call(*args, **kwargs)
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/mat/arch/MAT.py", line 1608, in forward
-    output = self.model(
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1527, in _call_impl
-    return forward_call(*args, **kwargs)
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/mat/arch/MAT.py", line 1583, in forward
-    img = self.synthesis(images_in, masks_in, ws, noise_mode=noise_mode)
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1527, in _call_impl
-    return forward_call(*args, **kwargs)
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/mat/arch/MAT.py", line 1500, in forward
-    out_stg1 = self.first_stage(images_in, masks_in, ws, noise_mode=noise_mode)
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1527, in _call_impl
-    return forward_call(*args, **kwargs)
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/mat/arch/MAT.py", line 1399, in forward
-    x, mask = self.conv_first(x, masks_in)  # input size
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1527, in _call_impl
-    return forward_call(*args, **kwargs)
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/mat/arch/MAT.py", line 505, in forward
-    x = self.conv(x)
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1527, in _call_impl
-    return forward_call(*args, **kwargs)
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/mat/arch/utils.py", line 683, in forward
-    x = conv2d_resample(
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/mat/arch/utils.py", line 615, in conv2d_resample
-    return _conv2d_wrapper(
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/mat/arch/utils.py", line 495, in _conv2d_wrapper
-    return op(x, w, stride=stride, padding=padding, groups=groups)
-torch.cuda.OutOfMemoryError: Allocation on device 0 would exceed allowed memory. (out of memory)
-Currently allocated     : 6.91 GiB
-Requested               : 180.00 MiB
-Device limit            : 15.72 GiB
-Free (according to CUDA): 11.06 MiB
-PyTorch limit (set by user-supplied memory fraction)
-                        : 17179869184.00 GiB
-
-[2024-05-22 17:37] Prompt executed in 2.64 seconds
-[2024-05-22 17:37] got prompt
-[2024-05-22 17:37] 
-[2024-05-22 17:37] !!! Exception during processing!!! Allocation on device 0 would exceed allowed memory. (out of memory)
-Currently allocated     : 6.91 GiB
-Requested               : 180.00 MiB
-Device limit            : 15.72 GiB
-Free (according to CUDA): 11.06 MiB
-PyTorch limit (set by user-supplied memory fraction)
-                        : 17179869184.00 GiB
-[2024-05-22 17:37] Traceback (most recent call last):
-  File "/workspace/ComfyUIScript/execution.py", line 151, in recursive_execute
-    output_data, output_ui = get_output_data(obj, input_data_all)
-  File "/workspace/ComfyUIScript/execution.py", line 81, in get_output_data
-    return_values = map_node_over_list(obj, input_data_all, obj.FUNCTION, allow_interrupt=True)
-  File "/workspace/ComfyUIScript/execution.py", line 74, in map_node_over_list
-    results.append(getattr(obj, func)(**slice_dict(input_data_all, i)))
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/nodes.py", line 381, in inpaint
-    work_image = inpaint_model(work_image.to(device), work_mask.to(device))
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1527, in _call_impl
-    return forward_call(*args, **kwargs)
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/mat/arch/MAT.py", line 1608, in forward
-    output = self.model(
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1527, in _call_impl
-    return forward_call(*args, **kwargs)
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/mat/arch/MAT.py", line 1583, in forward
-    img = self.synthesis(images_in, masks_in, ws, noise_mode=noise_mode)
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1527, in _call_impl
-    return forward_call(*args, **kwargs)
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/mat/arch/MAT.py", line 1500, in forward
-    out_stg1 = self.first_stage(images_in, masks_in, ws, noise_mode=noise_mode)
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1527, in _call_impl
-    return forward_call(*args, **kwargs)
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/mat/arch/MAT.py", line 1399, in forward
-    x, mask = self.conv_first(x, masks_in)  # input size
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1527, in _call_impl
-    return forward_call(*args, **kwargs)
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/mat/arch/MAT.py", line 505, in forward
-    x = self.conv(x)
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1527, in _call_impl
-    return forward_call(*args, **kwargs)
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/mat/arch/utils.py", line 683, in forward
-    x = conv2d_resample(
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/mat/arch/utils.py", line 615, in conv2d_resample
-    return _conv2d_wrapper(
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/mat/arch/utils.py", line 495, in _conv2d_wrapper
-    return op(x, w, stride=stride, padding=padding, groups=groups)
-torch.cuda.OutOfMemoryError: Allocation on device 0 would exceed allowed memory. (out of memory)
-Currently allocated     : 6.91 GiB
-Requested               : 180.00 MiB
-Device limit            : 15.72 GiB
-Free (according to CUDA): 11.06 MiB
-PyTorch limit (set by user-supplied memory fraction)
-                        : 17179869184.00 GiB
-
-[2024-05-22 17:37] Prompt executed in 2.57 seconds
-[2024-05-22 17:37] got prompt
-[2024-05-22 17:37] 
-[2024-05-22 17:37] !!! Exception during processing!!! Allocation on device 0 would exceed allowed memory. (out of memory)
-Currently allocated     : 6.91 GiB
-Requested               : 180.00 MiB
-Device limit            : 15.72 GiB
-Free (according to CUDA): 11.06 MiB
-PyTorch limit (set by user-supplied memory fraction)
-                        : 17179869184.00 GiB
-[2024-05-22 17:37] Traceback (most recent call last):
-  File "/workspace/ComfyUIScript/execution.py", line 151, in recursive_execute
-    output_data, output_ui = get_output_data(obj, input_data_all)
-  File "/workspace/ComfyUIScript/execution.py", line 81, in get_output_data
-    return_values = map_node_over_list(obj, input_data_all, obj.FUNCTION, allow_interrupt=True)
-  File "/workspace/ComfyUIScript/execution.py", line 74, in map_node_over_list
-    results.append(getattr(obj, func)(**slice_dict(input_data_all, i)))
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/nodes.py", line 381, in inpaint
-    work_image = inpaint_model(work_image.to(device), work_mask.to(device))
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1527, in _call_impl
-    return forward_call(*args, **kwargs)
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/mat/arch/MAT.py", line 1608, in forward
-    output = self.model(
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1527, in _call_impl
-    return forward_call(*args, **kwargs)
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/mat/arch/MAT.py", line 1583, in forward
-    img = self.synthesis(images_in, masks_in, ws, noise_mode=noise_mode)
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1527, in _call_impl
-    return forward_call(*args, **kwargs)
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/mat/arch/MAT.py", line 1500, in forward
-    out_stg1 = self.first_stage(images_in, masks_in, ws, noise_mode=noise_mode)
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1527, in _call_impl
-    return forward_call(*args, **kwargs)
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/mat/arch/MAT.py", line 1399, in forward
-    x, mask = self.conv_first(x, masks_in)  # input size
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1527, in _call_impl
-    return forward_call(*args, **kwargs)
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/mat/arch/MAT.py", line 505, in forward
-    x = self.conv(x)
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1527, in _call_impl
-    return forward_call(*args, **kwargs)
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/mat/arch/utils.py", line 683, in forward
-    x = conv2d_resample(
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/mat/arch/utils.py", line 615, in conv2d_resample
-    return _conv2d_wrapper(
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/mat/arch/utils.py", line 495, in _conv2d_wrapper
-    return op(x, w, stride=stride, padding=padding, groups=groups)
-torch.cuda.OutOfMemoryError: Allocation on device 0 would exceed allowed memory. (out of memory)
-Currently allocated     : 6.91 GiB
-Requested               : 180.00 MiB
-Device limit            : 15.72 GiB
-Free (according to CUDA): 11.06 MiB
-PyTorch limit (set by user-supplied memory fraction)
-                        : 17179869184.00 GiB
-
-[2024-05-22 17:37] Prompt executed in 2.69 seconds
-[2024-05-22 17:38] got prompt
-[2024-05-22 17:38] Toona Cut Mask:
-[2024-05-22 17:38] Inpaint Respective Field:  1.0
-[2024-05-22 17:38] Image:  (768, 535, 3)
-[2024-05-22 17:38] Mask:  (768, 535)
-[2024-05-22 17:38] Image cut Data Type:  float32
-[2024-05-22 17:38] Mask cut Data Type:  float32
-[2024-05-22 17:38] image cut min max 0.0 0.99607843
-[2024-05-22 17:38] mask cut min max 0.0 1.0
-[2024-05-22 17:38] Toona Upscale:
-[2024-05-22 17:38] torch.float32
-[2024-05-22 17:38] torch.float32
-[2024-05-22 17:38] Upscaling image with shape (768, 535, 3) ...
-[2024-05-22 17:38] post upscale shape (3072, 2140, 3)
-[2024-05-22 17:38] Image:  (1216, 832, 3)
-[2024-05-22 17:38] Image Data Type:  uint8
-[2024-05-22 17:38] Mask:  (1216, 832)
-[2024-05-22 17:38] Mask Data Type:  uint8
-[2024-05-22 17:38] image min max 0 255
-[2024-05-22 17:38] mask min max 0 255
-[2024-05-22 17:38] 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.99it/s]100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.98it/s]
-[2024-05-22 17:38] [ApplyFooocusInpaint] 960 Lora keys loaded, 0 remaining keys not found in model.
-[2024-05-22 17:38] Requested to load SDXL
-[2024-05-22 17:38] Loading 1 new model
-[2024-05-22 17:38] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 30/30 [00:10<00:00,  2.84it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 30/30 [00:10<00:00,  2.83it/s]
-[2024-05-22 17:38] Prompt executed in 22.13 seconds
-[2024-05-22 17:39] got prompt
-[2024-05-22 17:39] 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.91it/s]100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.86it/s]
-[2024-05-22 17:39] [ApplyFooocusInpaint] 960 Lora keys loaded, 0 remaining keys not found in model.
-[2024-05-22 17:39] Requested to load SDXL
-[2024-05-22 17:39] Loading 1 new model
-[2024-05-22 17:39] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 30/30 [00:10<00:00,  2.80it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 30/30 [00:10<00:00,  2.80it/s]
-[2024-05-22 17:39] Prompt executed in 19.03 seconds
-[2024-05-22 17:42] got prompt
-[2024-05-22 17:42] 
-[2024-05-22 17:42] !!! Exception during processing!!! Allocation on device 0 would exceed allowed memory. (out of memory)
-Currently allocated     : 7.71 GiB
-Requested               : 180.00 MiB
-Device limit            : 15.72 GiB
-Free (according to CUDA): 25.06 MiB
-PyTorch limit (set by user-supplied memory fraction)
-                        : 17179869184.00 GiB
-[2024-05-22 17:42] Traceback (most recent call last):
-  File "/workspace/ComfyUIScript/execution.py", line 151, in recursive_execute
-    output_data, output_ui = get_output_data(obj, input_data_all)
-  File "/workspace/ComfyUIScript/execution.py", line 81, in get_output_data
-    return_values = map_node_over_list(obj, input_data_all, obj.FUNCTION, allow_interrupt=True)
-  File "/workspace/ComfyUIScript/execution.py", line 74, in map_node_over_list
-    results.append(getattr(obj, func)(**slice_dict(input_data_all, i)))
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/nodes.py", line 381, in inpaint
-    work_image = inpaint_model(work_image.to(device), work_mask.to(device))
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1527, in _call_impl
-    return forward_call(*args, **kwargs)
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/mat/arch/MAT.py", line 1608, in forward
-    output = self.model(
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1527, in _call_impl
-    return forward_call(*args, **kwargs)
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/mat/arch/MAT.py", line 1583, in forward
-    img = self.synthesis(images_in, masks_in, ws, noise_mode=noise_mode)
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1527, in _call_impl
-    return forward_call(*args, **kwargs)
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/mat/arch/MAT.py", line 1500, in forward
-    out_stg1 = self.first_stage(images_in, masks_in, ws, noise_mode=noise_mode)
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1527, in _call_impl
-    return forward_call(*args, **kwargs)
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/mat/arch/MAT.py", line 1440, in forward
-    x, img = block(
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1527, in _call_impl
-    return forward_call(*args, **kwargs)
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/mat/arch/MAT.py", line 1285, in forward
-    x = self.conv1(x, style, noise_mode=noise_mode)
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1527, in _call_impl
-    return forward_call(*args, **kwargs)
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/mat/arch/MAT.py", line 150, in forward
-    out = bias_act(
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/mat/arch/utils.py", line 172, in bias_act
-    return _bias_act_ref(
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/mat/arch/utils.py", line 128, in _bias_act_ref
-    x = spec.func(x, alpha=alpha)
-  File "/workspace/ComfyUIScript/custom_nodes/comfyui-inpaint-nodes/mat/arch/utils.py", line 52, in <lambda>
-    func=lambda x, alpha, **_: torch.nn.functional.leaky_relu(x, alpha),
-  File "/usr/local/lib/python3.10/dist-packages/torch/nn/functional.py", line 1646, in leaky_relu
-    result = torch._C._nn.leaky_relu(input, negative_slope)
-torch.cuda.OutOfMemoryError: Allocation on device 0 would exceed allowed memory. (out of memory)
-Currently allocated     : 7.71 GiB
-Requested               : 180.00 MiB
-Device limit            : 15.72 GiB
-Free (according to CUDA): 25.06 MiB
-PyTorch limit (set by user-supplied memory fraction)
-                        : 17179869184.00 GiB
-
-[2024-05-22 17:42] Prompt executed in 2.62 seconds
-[2024-05-22 17:43] got prompt
-[2024-05-22 17:43] 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.09it/s]100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.09it/s]
-[2024-05-22 17:43] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 30/30 [00:10<00:00,  2.83it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 30/30 [00:10<00:00,  2.83it/s]
-[2024-05-22 17:43] Prompt executed in 11.57 seconds
-[2024-05-22 17:49] got prompt
-[2024-05-22 17:49] Toona Cut Mask:
-[2024-05-22 17:49] Inpaint Respective Field:  1.0
-[2024-05-22 17:49] Image:  (1600, 1115, 3)
-[2024-05-22 17:49] Mask:  (1600, 1115)
-[2024-05-22 17:49] Image cut Data Type:  float32
-[2024-05-22 17:49] Mask cut Data Type:  float32
-[2024-05-22 17:49] image cut min max 0.0 1.0
-[2024-05-22 17:49] mask cut min max 0.0 1.0
-[2024-05-22 17:49] Toona Upscale:
-[2024-05-22 17:49] torch.float32
-[2024-05-22 17:49] torch.float32
-[2024-05-22 17:49] Image:  (1216, 832, 3)
-[2024-05-22 17:49] Image Data Type:  uint8
-[2024-05-22 17:49] Mask:  (1216, 832)
-[2024-05-22 17:49] Mask Data Type:  uint8
-[2024-05-22 17:49] image min max 0 255
-[2024-05-22 17:49] mask min max 0 255
-[2024-05-22 17:49] 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.96it/s]100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.95it/s]
-[2024-05-22 17:49] [ApplyFooocusInpaint] 960 Lora keys loaded, 0 remaining keys not found in model.
-[2024-05-22 17:49] Requested to load SDXL
-[2024-05-22 17:49] Loading 1 new model
-[2024-05-22 17:49] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 30/30 [00:10<00:00,  2.87it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 30/30 [00:10<00:00,  2.86it/s]
-[2024-05-22 17:49] Prompt executed in 19.33 seconds
-[2024-05-22 17:49] got prompt
-[2024-05-22 17:49] 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.93it/s]100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.93it/s]
-[2024-05-22 17:49] [ApplyFooocusInpaint] 960 Lora keys loaded, 0 remaining keys not found in model.
-[2024-05-22 17:49] Requested to load SDXL
-[2024-05-22 17:49] Loading 1 new model
-[2024-05-22 17:49] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 30/30 [00:10<00:00,  2.84it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 30/30 [00:10<00:00,  2.83it/s]
-[2024-05-22 17:49] Prompt executed in 18.77 seconds
-[2024-05-22 18:02] got prompt
-[2024-05-22 18:02] 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.07it/s]100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.07it/s]
-[2024-05-22 18:02] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:06<00:00,  2.89it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [00:06<00:00,  2.87it/s]
-[2024-05-22 18:02] Prompt executed in 8.04 seconds
-[2024-05-22 18:04] got prompt
-[2024-05-22 18:04] 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.60it/s]100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.60it/s]
-[2024-05-22 18:04] model_type EPS
-[2024-05-22 18:04] Using pytorch attention in VAE
-[2024-05-22 18:04] Using pytorch attention in VAE
-[2024-05-22 18:04] Requested to load SDXLClipModel
-[2024-05-22 18:04] Loading 1 new model
-[2024-05-22 18:05] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 25/25 [00:08<00:00,  2.87it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 25/25 [00:08<00:00,  2.86it/s]
-[2024-05-22 18:05] Requested to load SDXL
-[2024-05-22 18:05] Loading 1 new model
-[2024-05-22 18:05] 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:01<00:00,  3.05it/s]100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:01<00:00,  3.26it/s]
-[2024-05-22 18:05] Requested to load AutoencoderKL
-[2024-05-22 18:05] Loading 1 new model
-[2024-05-22 18:05] Prompt executed in 17.90 seconds
-[2024-05-22 18:05] got prompt
-[2024-05-22 18:05] 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.11it/s]100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.10it/s]
-[2024-05-22 18:05] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 25/25 [00:08<00:00,  2.86it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 25/25 [00:08<00:00,  2.85it/s]
-[2024-05-22 18:05] 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:01<00:00,  2.88it/s]100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:01<00:00,  2.87it/s]
-[2024-05-22 18:05] Prompt executed in 11.53 seconds
-[2024-05-22 18:06] got prompt
-[2024-05-22 18:06] 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.29it/s]100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.28it/s]
-[2024-05-22 18:06] 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 25/25 [00:08<00:00,  2.82it/s]100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 25/25 [00:08<00:00,  2.81it/s]
-[2024-05-22 18:06] 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:01<00:00,  2.83it/s]100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:01<00:00,  2.82it/s]
-[2024-05-22 18:06] Prompt executed in 11.76 seconds
-[2024-05-22 18:08] 
+[2024-05-23 01:02] To see the GUI go to: http://127.0.0.1:8188
+[2024-05-23 01:02] 
 Stopped server
